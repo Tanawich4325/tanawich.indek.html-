@@ -1,7 +1,3 @@
-/* =========================================
-   BASE
-========================================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -13,62 +9,45 @@ html {
 }
 
 body {
-    background: #ffffff;
-    color: #0b1b35;
     font-family: "Prompt", sans-serif;
-    line-height: 1.7;
+    color: #172033;
+    background: #ffffff;
+    overflow-x: hidden;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
-}
-
-img {
-    width: 100%;
-    display: block;
-}
-
-::selection {
-    background: #1677ff;
-    color: white;
+    color: inherit;
 }
 
 
-/* =========================================
+/* =========================
    NAVBAR
-========================================= */
+========================= */
 
 .navbar {
     width: 100%;
-    height: 86px;
-
-    padding: 0 6vw;
-
+    height: 82px;
+    padding: 0 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    border-bottom: 1px solid #e7edf5;
-
-    background: rgba(255,255,255,.92);
-
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
+    border-bottom: 1px solid #edf0f5;
+    background: rgba(255,255,255,.94);
     backdrop-filter: blur(15px);
+    position: relative;
+    z-index: 20;
 }
 
 .logo {
     font-family: "Kanit", sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     letter-spacing: -2px;
 }
 
 .logo span {
-    color: #1677ff;
+    color: #168cff;
 }
 
 .navbar nav {
@@ -78,988 +57,985 @@ img {
 
 .navbar nav a {
     font-size: 14px;
-    color: #637086;
-    transition: .25s;
-}
-
-.navbar nav a:hover {
-    color: #1677ff;
-}
-
-.nav-button {
-    padding: 11px 20px;
-
-    background: #0b1b35;
-    color: white;
-
-    font-size: 13px;
-
+    color: #687386;
     transition: .3s;
 }
 
-.nav-button:hover {
-    background: #1677ff;
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #168cff;
 }
 
 
-/* =========================================
+/* =========================
    HERO
-========================================= */
+========================= */
 
 .hero {
-    min-height: calc(100vh - 86px);
-
-    padding: 8vw 7vw;
-
+    min-height: calc(100vh - 82px);
+    padding: 80px 9%;
     display: grid;
-    grid-template-columns: 1.3fr .7fr;
-
-    gap: 7vw;
-
+    grid-template-columns: 1.1fr .9fr;
     align-items: center;
-
-    background:
-        radial-gradient(circle at 85% 30%, #e4f1ff 0, transparent 25%),
-        #fff;
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
 }
 
-.small-label,
-.eyebrow {
-    color: #1677ff;
-
+.small-title {
+    color: #168cff;
     font-size: 12px;
     font-weight: 600;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
 
-    letter-spacing: 3px;
+.small-title span {
+    width: 28px;
+    height: 2px;
+    background: #168cff;
 }
 
 .hero h1 {
-    margin-top: 25px;
-
     font-family: "Kanit", sans-serif;
-
-    font-size: clamp(55px, 8vw, 125px);
-
-    line-height: .88;
-
-    letter-spacing: -5px;
-
-    color: #0b1b35;
-}
-
-.hero h1 span {
-    color: transparent;
-    -webkit-text-stroke: 1.5px #1677ff;
-}
-
-.hero-description {
-    max-width: 570px;
-
-    margin-top: 35px;
-
-    font-size: 17px;
-
-    color: #65748a;
-}
-
-.hero-actions {
-    margin-top: 40px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 30px;
-}
-
-.primary-button {
-    padding: 15px 25px;
-
-    background: #1677ff;
-    color: white;
-
-    display: inline-flex;
-    gap: 25px;
-    align-items: center;
-
-    font-size: 14px;
-
-    transition: .3s;
-}
-
-.primary-button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(22,119,255,.2);
-}
-
-.text-button {
-    color: #0b1b35;
-    font-size: 14px;
-}
-
-.hero-right {
-    position: relative;
-}
-
-.number {
-    position: absolute;
-
-    right: -20px;
-    top: -40px;
-
-    font-size: 12px;
-    color: #1677ff;
-}
-
-.profile-frame {
-    position: relative;
-
-    border: 1px solid #dbe5f2;
-
-    padding: 18px;
-
-    background: white;
-
-    transform: rotate(2deg);
-
-    box-shadow: 20px 20px 0 #eaf3ff;
-}
-
-.profile-frame img {
-    aspect-ratio: 4 / 5;
-
-    object-fit: cover;
-
-    filter: grayscale(15%);
-}
-
-.profile-tag {
-    position: absolute;
-
-    bottom: -18px;
-    left: -18px;
-
-    background: #0b1b35;
-
-    color: white;
-
-    padding: 12px 17px;
-
-    font-size: 10px;
-    letter-spacing: 2px;
-}
-
-.profile-tag span {
-    width: 7px;
-    height: 7px;
-
-    display: inline-block;
-
-    border-radius: 50%;
-
-    background: #1677ff;
-
-    margin-right: 8px;
-}
-
-
-/* =========================================
-   INTRO STRIP
-========================================= */
-
-.intro-strip {
-    padding: 25px 7vw;
-
-    border-top: 1px solid #e7edf5;
-    border-bottom: 1px solid #e7edf5;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: #f7fbff;
-}
-
-.intro-strip div {
-    font-size: 12px;
-    letter-spacing: 3px;
+    font-size: clamp(50px, 7vw, 92px);
+    line-height: .95;
+    letter-spacing: -4px;
     font-weight: 600;
 }
 
-.intro-strip span {
-    color: #1677ff;
-    margin-right: 20px;
+.hero h1 strong {
+    display: block;
+    color: #168cff;
 }
 
-.intro-strip p {
-    color: #718096;
-    font-size: 13px;
+.hero-text {
+    margin-top: 30px;
+    font-size: 21px;
+    font-weight: 500;
 }
 
-
-/* =========================================
-   GENERAL SECTION
-========================================= */
-
-.section {
-    padding: 130px 7vw;
-
-    display: grid;
-    grid-template-columns: 80px 1fr;
-
-    gap: 5vw;
-}
-
-.section-number {
-    color: #1677ff;
-    font-family: "Kanit";
-    font-size: 18px;
-}
-
-.section-content {
-    max-width: 1000px;
-}
-
-.section h2 {
-    margin-top: 20px;
-
-    font-family: "Kanit";
-
-    font-size: clamp(40px, 6vw, 80px);
-
-    line-height: 1;
-
-    letter-spacing: -2px;
-}
-
-.section h2 span {
-    color: #1677ff;
-}
-
-.about-grid {
-    margin-top: 60px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 70px;
-}
-
-.about-grid p {
-    color: #66758a;
-
+.hero-description {
+    margin-top: 12px;
+    max-width: 610px;
+    color: #687386;
+    line-height: 1.9;
     font-size: 15px;
 }
 
+.hero-buttons {
+    margin-top: 32px;
+    display: flex;
+    gap: 13px;
+}
 
-/* =========================================
-   INFO
-========================================= */
+.btn {
+    padding: 14px 23px;
+    border-radius: 9px;
+    font-size: 14px;
+    transition: .3s;
+}
 
-.info-section {
-    padding: 0 7vw 120px;
+.btn.primary {
+    color: white;
+    background: #168cff;
+    box-shadow: 0 10px 30px rgba(22,140,255,.22);
+}
 
+.btn.primary span {
+    margin-left: 12px;
+}
+
+.btn.primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    border: 1px solid #dce3ed;
+    color: #455166;
+}
+
+.btn.secondary:hover {
+    border-color: #168cff;
+    color: #168cff;
+}
+
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.hero-visual {
+    height: 470px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 400px;
+    height: 400px;
+    background: #eef8ff;
+}
+
+.circle-two {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #bfe3ff;
+}
+
+.tech-card {
+    width: 330px;
+    height: 240px;
+    background: #101827;
+    border-radius: 18px;
+    padding: 23px;
+    position: relative;
+    z-index: 2;
+    transform: rotate(-4deg);
+    box-shadow: 0 30px 60px rgba(10,25,50,.2);
+}
+
+.tech-top {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 25px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #6e7b91;
+}
+
+.code-line {
+    height: 7px;
+    border-radius: 20px;
+    background: #344157;
+    margin: 13px 0;
+}
+
+.code-line.short {
+    width: 28%;
+}
+
+.code-line.medium {
+    width: 53%;
+}
+
+.code-line.long {
+    width: 78%;
+}
+
+.code-box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #168cff;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #168cff;
+    font-size: 20px;
+    margin: 17px 0;
+}
+
+.floating-icon {
+    width: 62px;
+    height: 62px;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    position: absolute;
+    z-index: 4;
+    box-shadow: 0 15px 40px rgba(20,50,90,.12);
+    animation: float 4s ease-in-out infinite;
+}
+
+.icon-computer {
+    top: 60px;
+    right: 5%;
+}
+
+.icon-game {
+    bottom: 65px;
+    left: 4%;
+    animation-delay: 1s;
+}
+
+.icon-camera {
+    bottom: 30px;
+    right: 12%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 110px 9%;
+}
+
+.section-heading {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 55px;
+}
+
+.section-heading > span {
+    font-family: "Kanit";
+    font-size: 14px;
+    color: #168cff;
+    font-weight: 600;
+}
+
+.section-heading p {
+    color: #9ba5b5;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.section-heading h2 {
+    font-family: "Kanit";
+    font-size: 38px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
 
-    gap: 1px;
+.about-card {
+    padding: 40px;
+    border: 1px solid #e9edf3;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
 
-    background: #dce5ef;
+.about-card:hover {
+    transform: translateY(-5px);
+    border-color: #bfe3ff;
+}
+
+.about-card.highlight {
+    background: #f1f9ff;
+    border-color: #e0f2ff;
+}
+
+.about-card .number {
+    color: #b7c2d2;
+    font-size: 12px;
+    margin-bottom: 35px;
+}
+
+.about-card h3 {
+    font-family: "Kanit";
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #697589;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.about-card strong {
+    color: #168cff;
+}
+
+
+/* =========================
+   INTEREST
+========================= */
+
+.interest-section {
+    background: #f7f9fc;
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.interest-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 14px;
+    border: 1px solid #e9edf3;
+    transition: .3s;
+}
+
+.interest-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(30,60,100,.08);
+}
+
+.interest-icon {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.interest-card h3 {
+    font-family: "Kanit";
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+.interest-card p {
+    color: #7a8597;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education {
+    margin: 0 9%;
+    padding: 70px;
+    border-radius: 20px;
+    background: #101827;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.education::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(22,140,255,.35);
+    border-radius: 50%;
+    right: -100px;
+    top: -100px;
+}
+
+.education-label,
+.future-label {
+    color: #168cff;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.education h2 {
+    font-family: "Kanit";
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 16px 0;
+}
+
+.education h2 span {
+    color: #83c9ff;
+}
+
+.education p {
+    color: #aeb8c8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.education-year {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.education-year span {
+    display: block;
+    color: #168cff;
+    font-family: "Kanit";
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.education-year small {
+    color: #9aa6b9;
+}
+
+
+/* =========================
+   FUTURE
+========================= */
+
+.future {
+    margin: 110px 9%;
+    padding: 80px 0;
+    border-top: 1px solid #e8edf3;
+    border-bottom: 1px solid #e8edf3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.future h2 {
+    font-family: "Kanit";
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: 1;
+    margin: 18px 0;
+}
+
+.future h2 span {
+    color: #168cff;
+}
+
+.future p {
+    color: #7b8698;
+    max-width: 550px;
+    line-height: 1.8;
+}
+
+.future-arrow {
+    font-size: 65px;
+    color: #168cff;
+}
+
+
+/* =========================
+   PORTFOLIO PAGE
+========================= */
+
+.portfolio-hero {
+    padding: 120px 9% 100px;
+    background: #f5faff;
+}
+
+.portfolio-hero h1 {
+    font-family: "Kanit";
+    font-size: clamp(60px, 9vw, 120px);
+    line-height: .9;
+    letter-spacing: -4px;
+}
+
+.portfolio-hero h1 span {
+    color: #168cff;
+}
+
+.portfolio-hero > p {
+    max-width: 600px;
+    margin-top: 30px;
+    color: #6f7b8e;
+    line-height: 1.9;
+}
+
+.portfolio-section {
+    padding: 110px 9%;
+}
+
+.gray-section {
+    background: #f7f9fc;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.info-layout {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.profile-placeholder {
+    height: 380px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #edf8ff, #dcefff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-placeholder::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(22,140,255,.25);
+    border-radius: 50%;
+}
+
+.profile-symbol {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #168cff;
+    font-family: "Kanit";
+    font-size: 55px;
+    font-weight: 600;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(22,140,255,.12);
+}
+
+.profile-placeholder > span {
+    margin-top: 20px;
+    color: #168cff;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
 .info-item {
-    padding: 35px;
-
-    background: white;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e3e8ef;
 }
 
 .info-item span {
     display: block;
-
-    color: #1677ff;
-
-    font-size: 10px;
-    letter-spacing: 2px;
+    color: #9ba5b5;
+    font-size: 11px;
+    margin-bottom: 7px;
 }
 
 .info-item strong {
-    display: block;
-
-    margin-top: 8px;
-
-    font-family: "Kanit";
-
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 
-/* =========================================
-   SKILLS
-========================================= */
+/* =========================
+   LONG ABOUT
+========================= */
 
-.skills {
-    background: #f5f9fd;
+.long-about {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
 }
 
-.skill-list {
-    margin-top: 70px;
-
-    border-top: 1px solid #dce5ef;
+.quote-mark {
+    font-family: Georgia;
+    color: #168cff;
+    font-size: 100px;
+    line-height: .5;
+    margin-bottom: 25px;
 }
 
-.skill {
-    padding: 25px 0;
+.long-about p {
+    color: #697589;
+    line-height: 2;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
 
+.long-about strong {
+    color: #168cff;
+}
+
+
+/* =========================
+   PORTFOLIO INTEREST
+========================= */
+
+.portfolio-interest-grid {
     display: grid;
-    grid-template-columns: 70px 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
-    align-items: center;
-
-    border-bottom: 1px solid #dce5ef;
-
+.portfolio-interest-grid article {
+    padding: 40px;
+    min-height: 280px;
+    border: 1px solid #e7ebf1;
+    border-radius: 15px;
+    position: relative;
     transition: .3s;
 }
 
-.skill:hover {
-    padding-left: 15px;
+.portfolio-interest-grid article:hover {
+    border-color: #168cff;
+    transform: translateY(-5px);
 }
 
-.skill span {
-    color: #1677ff;
+.portfolio-interest-grid article > span {
+    color: #b0bac9;
     font-size: 12px;
 }
 
-.skill h3 {
+.big-icon {
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+.portfolio-interest-grid h3 {
     font-family: "Kanit";
     font-size: 25px;
+    margin-bottom: 8px;
 }
 
-.skill p {
-    color: #718096;
-    font-size: 13px;
-}
-
-
-/* =========================================
-   PROJECTS
-========================================= */
-
-.projects {
-    padding: 130px 7vw;
-}
-
-.projects-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-
-    margin-bottom: 70px;
-}
-
-.projects-header h2 {
-    margin-top: 15px;
-
-    font-family: "Kanit";
-
-    font-size: clamp(50px, 7vw, 90px);
-
-    line-height: .9;
-}
-
-.projects-header h2 span {
-    color: #1677ff;
-}
-
-.view-all {
-    border-bottom: 1px solid #0b1b35;
-
-    padding-bottom: 5px;
-
-    font-size: 13px;
-}
-
-.project-grid {
-    display: grid;
-
-    grid-template-columns: 1.3fr .7fr;
-
-    gap: 45px;
-}
-
-.project-card {
-    transition: .4s;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-}
-
-.project-large {
-    grid-row: span 2;
-}
-
-.project-image {
-    position: relative;
-
-    background: #eaf3ff;
-
-    overflow: hidden;
-}
-
-.project-large .project-image {
-    aspect-ratio: 4 / 5;
-}
-
-.project-card:not(.project-large) .project-image {
-    aspect-ratio: 4 / 3;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: .5s;
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.04);
-}
-
-.project-image > span {
-    position: absolute;
-
-    top: 15px;
-    left: 15px;
-
-    background: white;
-
-    padding: 6px 10px;
-
-    font-size: 11px;
-}
-
-.project-info {
-    padding-top: 20px;
-}
-
-.project-info p {
-    color: #1677ff;
-
-    font-size: 10px;
-    letter-spacing: 2px;
-}
-
-.project-info h3 {
-    margin-top: 5px;
-
-    font-family: "Kanit";
-
-    font-size: 28px;
-}
-
-.project-info a {
-    display: inline-block;
-
-    margin-top: 8px;
-
-    font-size: 12px;
-
-    color: #637086;
-}
-
-
-/* =========================================
-   CONTACT
-========================================= */
-
-.contact {
-    padding: 130px 7vw;
-
-    background: #0b1b35;
-    color: white;
-
-    display: grid;
-    grid-template-columns: 80px 1fr;
-
-    gap: 5vw;
-}
-
-.contact-number {
-    color: #4c91ff;
-}
-
-.contact h2 {
-    margin-top: 20px;
-
-    font-family: "Kanit";
-
-    font-size: clamp(50px, 8vw, 110px);
-
-    line-height: .9;
-
-    letter-spacing: -3px;
-}
-
-.contact h2 span {
-    color: #4c91ff;
-}
-
-.email {
-    display: inline-block;
-
-    margin-top: 45px;
-
-    font-size: 18px;
-
-    border-bottom: 1px solid #4c91ff;
-
-    padding-bottom: 5px;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    padding: 25px 7vw;
-
-    background: #08162b;
-
-    color: #8291a8;
-
-    display: flex;
-    justify-content: space-between;
-
-    font-size: 11px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 25px;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-
-/* =========================================
-   PORTFOLIO PAGE
-========================================= */
-
-.portfolio-page {
-    background: white;
-}
-
-.portfolio-hero {
-    padding: 130px 7vw 150px;
-
-    background:
-        radial-gradient(circle at 80% 30%, #dceeff, transparent 30%),
-        white;
-}
-
-.portfolio-hero h1 {
-    margin-top: 20px;
-
-    font-family: "Kanit";
-
-    font-size: clamp(70px, 12vw, 170px);
-
-    line-height: .8;
-
-    letter-spacing: -7px;
-}
-
-.portfolio-hero h1 span {
-    color: #1677ff;
-}
-
-.portfolio-hero > p:last-child {
-    max-width: 500px;
-
-    margin-top: 50px;
-
-    color: #68778d;
-
-    font-size: 15px;
-}
-
-
-/* =========================================
-   PORTFOLIO PROJECTS
-========================================= */
-
-.portfolio-projects,
-.activities,
-.certificates {
-    padding: 100px 7vw;
-}
-
-.portfolio-title {
-    display: flex;
-    align-items: baseline;
-
-    gap: 25px;
-
-    margin-bottom: 70px;
-}
-
-.portfolio-title span {
-    color: #1677ff;
-    font-size: 13px;
-}
-
-.portfolio-title h2 {
-    font-family: "Kanit";
-    font-size: 50px;
-}
-
-.portfolio-project {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-
-    gap: 7vw;
-
-    align-items: center;
-
-    margin-bottom: 140px;
-}
-
-.portfolio-project.reverse {
-    grid-template-columns: .8fr 1.2fr;
-}
-
-.portfolio-project.reverse .portfolio-project-image {
-    order: 2;
-}
-
-.portfolio-project.reverse .portfolio-project-content {
-    order: 1;
-}
-
-.portfolio-project-image {
-    overflow: hidden;
-
-    background: #eaf3ff;
-}
-
-.portfolio-project-image img {
-    aspect-ratio: 16 / 11;
-
-    object-fit: cover;
-
-    transition: .5s;
-}
-
-.portfolio-project-image:hover img {
-    transform: scale(1.04);
-}
-
-.project-number {
-    color: #1677ff;
-
-    font-size: 11px;
-    letter-spacing: 2px;
-}
-
-.portfolio-project-content h3 {
-    margin: 20px 0;
-
-    font-family: "Kanit";
-
-    font-size: clamp(45px, 6vw, 80px);
-
-    line-height: .9;
-}
-
-.portfolio-project-content > p:not(.project-number) {
-    color: #69788d;
-
+.portfolio-interest-grid p {
+    color: #788497;
+    line-height: 1.8;
     font-size: 14px;
 }
 
-.tags {
-    margin-top: 30px;
 
+/* =========================
+   GOAL
+========================= */
+
+.goal-section {
+    margin: 0 9%;
+    padding: 80px;
+    border-radius: 20px;
+    background: #101827;
+    color: white;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 50px;
+}
+
+.goal-number {
+    color: #168cff;
+    font-family: "Kanit";
+    font-size: 18px;
+}
+
+.goal-content > span {
+    color: #168cff;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.goal-content h2 {
+    font-family: "Kanit";
+    font-size: clamp(50px, 6vw, 80px);
+    line-height: .95;
+    margin: 20px 0;
+}
+
+.goal-content h2 strong {
+    color: #70c2ff;
+}
+
+.goal-content p {
+    color: #abb6c8;
+    max-width: 650px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   PROJECT EMPTY
+========================= */
+
+.empty-project {
+    min-height: 300px;
+    border: 1px dashed #cdd6e2;
+    border-radius: 15px;
     display: flex;
-    flex-wrap: wrap;
-
-    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.tags span {
-    padding: 7px 11px;
-
-    border: 1px solid #dce5ef;
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
+.empty-project > div {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #eef8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #168cff;
+    font-size: 30px;
 }
 
-
-/* =========================================
-   TIMELINE
-========================================= */
-
-.activities {
-    background: #f5f9fd;
-}
-
-.timeline {
-    border-top: 1px solid #dce5ef;
-}
-
-.timeline-item {
-    padding: 30px 0;
-
-    display: grid;
-
-    grid-template-columns: 150px 1fr;
-
-    border-bottom: 1px solid #dce5ef;
-}
-
-.timeline-date {
-    color: #1677ff;
-
+.empty-project h3 {
     font-family: "Kanit";
-
-    font-size: 20px;
+    font-size: 22px;
+    margin-top: 20px;
 }
 
-.timeline-item h3 {
-    font-family: "Kanit";
-    font-size: 25px;
-}
-
-.timeline-item p {
-    margin-top: 5px;
-
-    color: #6d7c91;
-
+.empty-project p {
+    color: #8a95a5;
     font-size: 13px;
+    margin-top: 5px;
 }
 
 
-/* =========================================
-   CERTIFICATES
-========================================= */
+/* =========================
+   FOOTER
+========================= */
 
-.certificate-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
+footer {
+    padding: 45px 9%;
+    border-top: 1px solid #e9edf3;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.certificate {
-    overflow: hidden;
-
-    background: #f5f9fd;
-
-    border: 1px solid #e1e8f0;
+.footer-name {
+    font-family: "Kanit";
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: -2px;
 }
 
-.certificate img {
-    aspect-ratio: 4 / 3;
-
-    object-fit: cover;
-
-    transition: .4s;
+.footer-name span {
+    color: #168cff;
 }
 
-.certificate:hover img {
-    transform: scale(1.03);
+footer h3 {
+    font-family: "Kanit";
+    font-size: 15px;
+}
+
+footer p {
+    color: #929dad;
+    font-size: 11px;
+}
+
+.footer-right {
+    margin-left: auto;
+    color: #9aa5b5;
+    font-size: 11px;
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     .navbar {
-        padding: 0 5vw;
+        padding: 0 5%;
     }
 
     .navbar nav {
-        display: none;
+        gap: 18px;
     }
 
     .hero {
-        padding: 80px 7vw;
-
-        grid-template-columns: 1fr;
-
-        gap: 70px;
-    }
-
-    .hero h1 {
-        font-size: 62px;
-        letter-spacing: -3px;
-    }
-
-    .hero-right {
-        max-width: 430px;
-        width: 90%;
-        margin: auto;
-    }
-
-    .intro-strip {
-        display: block;
-    }
-
-    .intro-strip p {
-        margin-top: 8px;
-    }
-
-    .section {
-        padding: 90px 7vw;
-
+        padding: 70px 6%;
         grid-template-columns: 1fr;
     }
 
-    .section-number {
-        margin-bottom: -20px;
+    .hero-visual {
+        height: 360px;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
-
-        gap: 25px;
-
-        margin-top: 40px;
     }
 
-    .info-section {
-        padding: 0 7vw 90px;
-
+    .info-layout {
         grid-template-columns: 1fr;
     }
 
-    .skill {
-        grid-template-columns: 45px 1fr;
-
-        gap: 10px;
+    .profile-placeholder {
+        height: 300px;
     }
 
-    .skill p {
-        grid-column: 2;
+    .education {
+        margin: 0 6%;
     }
 
-    .projects {
-        padding: 90px 7vw;
+    .portfolio-section,
+    .section {
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
-    .projects-header {
-        display: block;
+    .goal-section {
+        margin: 0 6%;
     }
-
-    .view-all {
-        display: inline-block;
-        margin-top: 30px;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-large {
-        grid-row: auto;
-    }
-
-    .contact {
-        padding: 90px 7vw;
-
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        display: block;
-    }
-
-    .footer-links {
-        margin-top: 15px;
-    }
-
-    .portfolio-hero {
-        padding: 90px 7vw;
-    }
-
-    .portfolio-hero h1 {
-        font-size: 80px;
-        letter-spacing: -4px;
-    }
-
-    .portfolio-projects,
-    .activities,
-    .certificates {
-        padding: 80px 7vw;
-    }
-
-    .portfolio-project,
-    .portfolio-project.reverse {
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-
-        margin-bottom: 90px;
-    }
-
-    .portfolio-project.reverse .portfolio-project-image,
-    .portfolio-project.reverse .portfolio-project-content {
-        order: initial;
-    }
-
-    .portfolio-project-content h3 {
-        font-size: 55px;
-    }
-
-    .timeline-item {
-        grid-template-columns: 80px 1fr;
-    }
-
-    .certificate-grid {
-        grid-template-columns: 1fr;
-    }
-
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
 
     .navbar {
         height: 70px;
     }
 
-    .nav-button {
-        padding: 8px 12px;
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding-top: 55px;
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 55px;
+        letter-spacing: -2px;
     }
 
     .hero-description {
-        font-size: 14px;
+        font-size: 13px;
     }
 
-    .hero-actions {
-        gap: 18px;
+    .hero-visual {
+        height: 300px;
     }
 
-    .section h2 {
-        font-size: 46px;
+    .tech-card {
+        width: 270px;
+        height: 195px;
     }
 
-    .projects-header h2 {
-        font-size: 60px;
+    .circle-one {
+        width: 280px;
+        height: 280px;
     }
 
+    .circle-two {
+        width: 220px;
+        height: 220px;
+    }
+
+    .floating-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+    }
+
+    .section {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education {
+        margin: 0;
+        border-radius: 0;
+        padding: 55px 6%;
+        display: block;
+    }
+
+    .education-year {
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .education-year span {
+        font-size: 50px;
+    }
+
+    .future {
+        margin: 70px 6%;
+        display: block;
+    }
+
+    .future-arrow {
+        margin-top: 30px;
+    }
+
+    .portfolio-hero {
+        padding: 80px 6%;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 65px;
+    }
+
+    .portfolio-section {
+        padding: 75px 6%;
+    }
+
+    .information {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .goal-section {
+        margin: 0;
+        border-radius: 0;
+        padding: 60px 6%;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .goal-content h2 {
+        font-size: 50px;
+    }
+
+    footer {
+        padding: 35px 6%;
+        flex-wrap: wrap;
+    }
+
+    .footer-right {
+        width: 100%;
+        margin-left: 0;
+    }
 }
