@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio | Tanawich Kajornkidakan</title>
+    <title>Tanawich Kajornkidakan | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <!-- Navigation -->
     <header class="navbar">
 
         <a href="index.html" class="logo">
@@ -25,94 +24,67 @@
         </a>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#interest">Interest</a>
-            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#interest">Interest</a>
+            <a href="portfolio.html">Portfolio</a>
         </nav>
 
     </header>
 
 
+    <!-- Hero -->
     <main>
 
-        <!-- Portfolio Hero -->
-        <section class="portfolio-hero">
+        <section class="hero">
 
-            <div class="small-title">
-                <span></span>
-                MY PORTFOLIO
-            </div>
+            <!-- Left Content -->
+            <div class="hero-content">
 
-            <h1>
-                About <span>Me.</span>
-            </h1>
-
-            <p>
-                ทำความรู้จักกับผมมากขึ้น
-                และเส้นทางที่ผมกำลังเดินไปสู่
-                Computer Engineering
-            </p>
-
-        </section>
-
-
-        <!-- Personal Information -->
-        <section class="portfolio-section">
-
-            <div class="section-heading">
-                <span>01</span>
-                <div>
-                    <p>PERSONAL INFORMATION</p>
-                    <h2>ข้อมูลส่วนตัว</h2>
+                <div class="small-title">
+                    <span></span>
+                    MY PORTFOLIO
                 </div>
-            </div>
 
+                <h1>
+                    Tanawich
+                    <strong>Kajornkidakan</strong>
+                </h1>
 
-            <div class="info-layout">
+                <p class="hero-text">
+                    สวัสดีครับ ผมนาย ธนวิชญ์ ขจรกิดาการ
+                </p>
 
-                <div class="profile-placeholder">
+                <p class="hero-description">
+                    แผนการเรียน: เตรียมวิทยาการคอมพิวเตอร์และวิศวกรรม
+                    ชั้นมัธยมศึกษาปีที่ 6
+                </p>
 
-                    <div class="profile-symbol">
-                        T
-                    </div>
+                <div class="hero-buttons">
 
-                    <span>TK</span>
+                    <a href="portfolio.html" class="btn primary">
+                        ดู Portfolio
+                        <span>→</span>
+                    </a>
+
+                    <a href="#about" class="btn secondary">
+                        เกี่ยวกับผม
+                    </a>
 
                 </div>
 
+            </div>
 
-                <div class="information">
 
-                    <div class="info-item">
-                        <span>ชื่อ</span>
-                        <strong>นาย ธนวิชญ์ ขจรกิดาการ</strong>
-                    </div>
+            <!-- Right Profile Image -->
+            <div class="hero-visual">
 
-                    <div class="info-item">
-                        <span>ชื่อภาษาอังกฤษ</span>
-                        <strong>Tanawich Kajornkidakan</strong>
-                    </div>
+                <div class="profile-circle">
 
-                    <div class="info-item">
-                        <span>ชื่อเล่น</span>
-                        <strong>พอล</strong>
-                    </div>
-
-                    <div class="info-item">
-                        <span>ระดับการศึกษา</span>
-                        <strong>มัธยมศึกษาปีที่ 6</strong>
-                    </div>
-
-                    <div class="info-item">
-                        <span>แผนการเรียน</span>
-                        <strong>เตรียมวิทยาการคอมพิวเตอร์และวิศวกรรม (CSE)</strong>
-                    </div>
-
-                    <div class="info-item">
-                        <span>โรงเรียน</span>
-                        <strong>บ้านบึง “อุตสาหกรรมนุเคราะห์”</strong>
-                    </div>
+                    <img
+                        src="images/IMG_0562.jpeg"
+                        alt="Tanawich Kajornkidakan"
+                    >
 
                 </div>
 
@@ -122,164 +94,192 @@
 
 
         <!-- About -->
-        <section class="portfolio-section gray-section">
+        <section class="section" id="about">
 
             <div class="section-heading">
-                <span>02</span>
+
+                <span>01</span>
+
                 <div>
                     <p>ABOUT ME</p>
-                    <h2>เกี่ยวกับตัวผม</h2>
+                    <h2>เกี่ยวกับผม</h2>
                 </div>
+
             </div>
 
 
-            <div class="long-about">
+            <div class="about-grid">
 
-                <div class="quote-mark">
-                    “
+                <div class="about-card">
+
+                    <div class="number">01</div>
+
+                    <h3>ตัวตนของผม</h3>
+
+                    <p>
+                        ผมเป็นนักเรียนที่มีความสนใจด้านคอมพิวเตอร์
+                        เกม และเทคโนโลยี รวมถึงการถ่ายภาพ
+                        ซึ่งเป็นสิ่งที่ผมชอบใช้ในการเรียนรู้
+                        และพัฒนาทักษะของตัวเอง
+                    </p>
+
                 </div>
 
-                <p>
-                    ผมเป็นนักเรียนที่มีความสนใจด้านคอมพิวเตอร์
-                    เกม และเทคโนโลยี รวมถึงการถ่ายภาพ
-                    ซึ่งเป็นสิ่งที่ผมชอบใช้ในการเรียนรู้และพัฒนาทักษะ
-                    ของตัวเอง
-                </p>
 
-                <p>
-                    ผมสนใจการทำงานของเทคโนโลยีและต้องการเรียนรู้
-                    สิ่งใหม่ ๆ อยู่เสมอ เพราะผมเชื่อว่าการเรียนรู้
-                    จากสิ่งที่สนใจสามารถช่วยพัฒนาทักษะและเปิดโอกาส
-                    ให้เราได้ค้นพบความสามารถใหม่ ๆ
-                </p>
+                <div class="about-card highlight">
 
-                <p>
-                    ในอนาคตผมมีความตั้งใจที่จะศึกษาต่อในสาขา
-                    <strong>วิศวกรรมคอมพิวเตอร์</strong>
-                    เพื่อนำความรู้และทักษะด้านเทคโนโลยี
-                    ไปต่อยอดและพัฒนาตนเองในสายงานที่สนใจ
-                </p>
+                    <div class="number">02</div>
+
+                    <h3>เป้าหมายในอนาคต</h3>
+
+                    <p>
+                        ผมมีความตั้งใจที่จะศึกษาต่อในสาขา
+                        <strong>วิศวกรรมคอมพิวเตอร์</strong>
+                        เพื่อนำความรู้และทักษะด้านเทคโนโลยี
+                        ไปต่อยอดและพัฒนาตนเองในสายงานที่สนใจ
+                    </p>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- Interests -->
-        <section class="portfolio-section">
+        <!-- Interest -->
+        <section class="section interest-section" id="interest">
 
             <div class="section-heading">
-                <span>03</span>
+
+                <span>02</span>
+
                 <div>
-                    <p>INTERESTS</p>
-                    <h2>ความสนใจ</h2>
+                    <p>MY INTERESTS</p>
+                    <h2>สิ่งที่ผมสนใจ</h2>
                 </div>
+
             </div>
 
 
-            <div class="portfolio-interest-grid">
+            <div class="interest-grid">
 
-                <article>
-                    <span>01</span>
-                    <div class="big-icon">💻</div>
+                <div class="interest-card">
+
+                    <div class="interest-icon">💻</div>
+
                     <h3>Computer</h3>
+
                     <p>
-                        การใช้คอมพิวเตอร์และการเรียนรู้
-                        เกี่ยวกับเทคโนโลยีคอมพิวเตอร์
+                        สนใจการใช้งานคอมพิวเตอร์
+                        และการทำงานของระบบต่าง ๆ
                     </p>
-                </article>
+
+                </div>
 
 
-                <article>
-                    <span>02</span>
-                    <div class="big-icon">🎮</div>
+                <div class="interest-card">
+
+                    <div class="interest-icon">🎮</div>
+
                     <h3>Gaming</h3>
+
                     <p>
-                        สนใจเกมและเทคโนโลยี
-                        ที่เกี่ยวข้องกับการเล่นเกม
+                        เกมเป็นหนึ่งในสิ่งที่ผมสนใจ
+                        และช่วยให้ได้เรียนรู้เทคโนโลยี
                     </p>
-                </article>
+
+                </div>
 
 
-                <article>
-                    <span>03</span>
-                    <div class="big-icon">⚡</div>
+                <div class="interest-card">
+
+                    <div class="interest-icon">⚙️</div>
+
                     <h3>Technology</h3>
+
                     <p>
-                        ติดตามและเรียนรู้เทคโนโลยีใหม่ ๆ
-                        ที่เกิดขึ้นอยู่เสมอ
+                        ชอบเรียนรู้เทคโนโลยีใหม่ ๆ
+                        และติดตามสิ่งที่เกิดขึ้นในโลกดิจิทัล
                     </p>
-                </article>
+
+                </div>
 
 
-                <article>
-                    <span>04</span>
-                    <div class="big-icon">📷</div>
+                <div class="interest-card">
+
+                    <div class="interest-icon">📷</div>
+
                     <h3>Photography</h3>
+
                     <p>
-                        สนใจการถ่ายภาพและการสร้าง
-                        ภาพในมุมมองของตัวเอง
+                        สนใจการถ่ายภาพและการสร้างมุมมอง
+                        ผ่านภาพถ่าย
                     </p>
-                </article>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- Goal -->
-        <section class="goal-section">
+        <!-- Education -->
+        <section class="education">
 
-            <div class="goal-number">
-                04
-            </div>
+            <div class="education-content">
 
-            <div class="goal-content">
-
-                <span>FUTURE GOAL</span>
+                <div class="education-label">
+                    EDUCATION
+                </div>
 
                 <h2>
-                    Computer<br>
-                    <strong>Engineering</strong>
+                    บ้านบึง<br>
+                    <span>“อุตสาหกรรมนุเคราะห์”</span>
                 </h2>
 
                 <p>
-                    เป้าหมายของผมคือการศึกษาต่อในสาขา
-                    วิศวกรรมคอมพิวเตอร์ และนำความรู้ที่ได้รับ
-                    มาพัฒนาทักษะของตัวเอง เพื่อสร้างผลงาน
-                    และเติบโตในสายงานด้านเทคโนโลยี
+                    ระดับชั้นมัธยมศึกษาปีที่ 6
+                    <br>
+                    แผนการเรียนเตรียมวิทยาการคอมพิวเตอร์และวิศวกรรม (CSE)
                 </p>
+
+            </div>
+
+
+            <div class="education-year">
+
+                <span>M.6</span>
+                <small>CSE</small>
 
             </div>
 
         </section>
 
 
-        <!-- Placeholder Projects -->
-        <section class="portfolio-section">
+        <!-- Future -->
+        <section class="future">
 
-            <div class="section-heading">
-                <span>05</span>
-                <div>
-                    <p>PROJECTS</p>
-                    <h2>ผลงาน</h2>
-                </div>
+            <div>
+
+                <span class="future-label">
+                    MY FUTURE
+                </span>
+
+                <h2>
+                    Becoming a<br>
+                    <span>Computer Engineer.</span>
+                </h2>
+
+                <p>
+                    เรียนรู้ สร้างสรรค์ และพัฒนาทักษะ
+                    เพื่อก้าวไปสู่สายงานด้านวิศวกรรมคอมพิวเตอร์
+                </p>
+
             </div>
 
 
-            <div class="empty-project">
-
-                <div>
-                    <span>+</span>
-                </div>
-
-                <h3>Coming Soon</h3>
-
-                <p>
-                    พื้นที่สำหรับเพิ่มโครงงาน กิจกรรม
-                    เกียรติบัตร หรือผลงานในอนาคต
-                </p>
-
+            <div class="future-arrow">
+                →
             </div>
 
         </section>
@@ -287,16 +287,26 @@
     </main>
 
 
+    <!-- Footer -->
     <footer>
 
         <div class="footer-name">
             <span>T</span>K
         </div>
 
+
         <div>
-            <h3>Tanawich Kajornkidakan</h3>
-            <p>Student Portfolio • Computer & Technology</p>
+
+            <h3>
+                Tanawich Kajornkidakan
+            </h3>
+
+            <p>
+                Student Portfolio • Computer & Technology
+            </p>
+
         </div>
+
 
         <div class="footer-right">
             © 2026 Tanawich
