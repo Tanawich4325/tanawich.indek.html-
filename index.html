@@ -1,513 +1,332 @@
-<
-      right: 0;
-
-      z-index: 100;
-
-      background: rgba(247,247,245,.88);
-      backdrop-filter: blur(18px);
-    }
-
-    .logo {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    nav a {
-      color: #111;
-      text-decoration: none;
-      margin-left: 28px;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      opacity: .5;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 100vh;
-
-      padding: 150px 5vw 80px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .label {
-      font-size: 13px;
-      letter-spacing: 2px;
-      color: #777;
-
-      margin-bottom: 35px;
-    }
-
-    .hero h1 {
-      font-size: clamp(65px, 12vw, 170px);
-
-      line-height: .86;
-
-      letter-spacing: -8px;
-
-      font-weight: 700;
-
-      max-width: 1200px;
-    }
-
-    .hero h1 span {
-      color: #888;
-      display: block;
-    }
-
-    .intro {
-      max-width: 520px;
-
-      margin-top: 70px;
-
-      font-size: 19px;
-
-      line-height: 1.7;
-
-      color: #555;
-    }
-
-    .hero-bottom {
-      margin-top: 70px;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 30px;
-    }
-
-    .button {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 15px;
-
-      background: #111;
-      color: white;
-
-      padding: 16px 24px;
-
-      text-decoration: none;
-
-      font-size: 14px;
-
-      transition: .3s;
-    }
-
-    .button:hover {
-      background: #444;
-      transform: translateY(-3px);
-    }
-
-    .arrow {
-      font-size: 20px;
-    }
-
-    .scroll {
-      color: #888;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    /* ABOUT */
-
-    .section {
-      padding: 120px 5vw;
-
-      border-top: 1px solid #d5d5d5;
-    }
-
-    .section-grid {
-      display: grid;
-
-      grid-template-columns: 180px 1fr;
-
-      gap: 50px;
-    }
-
-    .section-number {
-      color: #888;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    .section h2 {
-      font-size: clamp(42px, 6vw, 80px);
-
-      line-height: .95;
-
-      letter-spacing: -4px;
-
-      margin-bottom: 50px;
-    }
-
-    .about-text {
-      max-width: 750px;
-
-      font-size: 20px;
-
-      line-height: 1.8;
-
-      color: #555;
-    }
-
-    /* INFO */
-
-    .info-grid {
-      margin-top: 80px;
-
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      border-top: 1px solid #ccc;
-
-      border-left: 1px solid #ccc;
-    }
-
-    .info {
-      padding: 35px;
-
-      min-height: 180px;
-
-      border-right: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .info small {
-      color: #888;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-
-    .info h3 {
-      margin-top: 35px;
-
-      font-size: 24px;
-    }
-
-    /* CTA */
-
-    .cta {
-      min-height: 75vh;
-
-      padding: 120px 5vw;
-
-      background: #111;
-
-      color: white;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-    }
-
-    .cta small {
-      color: #888;
-
-      letter-spacing: 2px;
-
-      margin-bottom: 30px;
-    }
-
-    .cta h2 {
-      font-size: clamp(55px, 10vw, 140px);
-
-      line-height: .85;
-
-      letter-spacing: -7px;
-
-      margin-bottom: 60px;
-    }
-
-    .cta-button {
-      width: fit-content;
-
-      color: #111;
-      background: white;
-
-      padding: 17px 28px;
-
-      text-decoration: none;
-
-      font-size: 14px;
-
-      transition: .3s;
-    }
-
-    .cta-button:hover {
-      background: #ccc;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #111;
-
-      color: #777;
-
-      border-top: 1px solid #333;
-
-      padding: 35px 5vw;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      font-size: 13px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 700px) {
-
-      nav {
-        padding: 0 20px;
-      }
-
-      nav a {
-        display: none;
-      }
-
-      .hero {
-        padding: 130px 20px 70px;
-      }
-
-      .hero h1 {
-        font-size: 65px;
-
-        letter-spacing: -4px;
-      }
-
-      .intro {
-        font-size: 17px;
-
-        margin-top: 50px;
-      }
-
-      .hero-bottom {
-        align-items: flex-start;
-
-        flex-direction: column;
-
-        margin-top: 50px;
-      }
-
-      .section {
-        padding: 80px 20px;
-      }
-
-      .section-grid {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-      }
-
-      .section h2 {
-        font-size: 50px;
-      }
-
-      .about-text {
-        font-size: 17px;
-      }
-
-      .info-grid {
-        grid-template-columns: 1fr;
-
-        margin-top: 50px;
-      }
-
-      .cta {
-        padding: 90px 20px;
-      }
-
-      .cta h2 {
-        font-size: 65px;
-
-        letter-spacing: -4px;
-      }
-
-      footer {
-        padding: 30px 20px;
-
-        flex-direction: column;
-
-        gap: 10px;
-      }
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tanawich — Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- NAV -->
+<header class="navbar">
+    <a href="index.html" class="logo">TW<span>.</span></a>
 
-  <nav>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <div class="logo">
-      TANAWICH.
-    </div>
-
-    <div>
-      <a href="#about">About</a>
-      <a href="portfolio.html">Portfolio</a>
-    </div>
-
-  </nav>
-
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="label">
-      COMPUTER SCIENCE & ENGINEERING / 2026
-    </div>
-
-    <h1>
-      Hello,
-      <span>I'm Tanawich.</span>
-    </h1>
-
-    <p class="intro">
-      สวัสดีครับ ผมชื่อ ธนวิชญ์ ขจรกิดาการ
-      นักเรียนที่สนใจด้าน Computer Science,
-      Technology และ Web Development
-    </p>
-
-    <div class="hero-bottom">
-
-      <a href="portfolio.html" class="button">
-        VIEW PORTFOLIO
-        <span class="arrow">↗</span>
-      </a>
-
-      <div class="scroll">
-        SCROLL TO EXPLORE ↓
-      </div>
-
-    </div>
-
-  </section>
+    <a href="portfolio.html" class="nav-button">
+        Portfolio ↗
+    </a>
+</header>
 
 
-  <!-- ABOUT -->
+<main>
 
-  <section class="section" id="about">
+    <!-- HERO -->
+    <section class="hero">
 
-    <div class="section-grid">
+        <div class="hero-left">
 
-      <div class="section-number">
-        01 / ABOUT
-      </div>
+            <div class="small-label">
+                PORTFOLIO / 2026
+            </div>
 
-      <div>
+            <h1>
+                TANAWICH<br>
+                <span>KAJORNKIDAKAN</span>
+            </h1>
 
-        <h2>
-          Curious.<br>
-          Creative.<br>
-          Always Learning.
-        </h2>
+            <p class="hero-description">
+                นักเรียนสายวิทย์–คณิตที่สนใจด้านเทคโนโลยี
+                การเขียนโปรแกรม และวิศวกรรมคอมพิวเตอร์
+            </p>
 
-        <p class="about-text">
-          ผมสนใจการทำงานของเทคโนโลยี
-          และชอบทดลองสร้างสิ่งต่าง ๆ ด้วยตัวเอง
-          ตั้งแต่เว็บไซต์ โปรแกรม ไปจนถึงการทดลอง
-          กับเทคโนโลยีใหม่ ๆ
-          <br><br>
-          เป้าหมายของผมคือการพัฒนาทักษะด้าน
-          Computer Science และนำความรู้ไปสร้าง
-          ผลงานที่สามารถใช้งานได้จริง
+            <div class="hero-actions">
+                <a href="portfolio.html" class="primary-button">
+                    ดู Portfolio
+                    <span>↗</span>
+                </a>
+
+                <a href="#about" class="text-button">
+                    ทำความรู้จัก →
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="hero-right">
+
+            <div class="number">
+                01
+            </div>
+
+            <div class="profile-frame">
+
+                <img src="images/profile.jpg" alt="Tanawich">
+
+                <div class="profile-tag">
+                    <span></span>
+                    COMPUTER ENGINEERING
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRO STRIP -->
+    <section class="intro-strip">
+
+        <div>
+            <span>01</span>
+            ABOUT ME
+        </div>
+
+        <p>
+            Curious mind. Continuous learning.
+            Building something better every day.
         </p>
 
-      </div>
+    </section>
 
-    </div>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+
+        <div class="section-number">
+            01
+        </div>
+
+        <div class="section-content">
+
+            <p class="eyebrow">ABOUT ME</p>
+
+            <h2>
+                เรียนรู้จากสิ่งที่สนใจ<br>
+                แล้วเปลี่ยนมันให้เป็น <span>ผลงาน</span>
+            </h2>
+
+            <div class="about-grid">
+
+                <p>
+                    ผมเป็นนักเรียนระดับมัธยมศึกษาตอนปลาย
+                    สายวิทย์–คณิต มีความสนใจเกี่ยวกับคอมพิวเตอร์
+                    เทคโนโลยี และการสร้างสิ่งใหม่ ๆ
+                </p>
+
+                <p>
+                    สิ่งที่ผมให้ความสำคัญคือการเรียนรู้ด้วยตัวเอง
+                    การทดลอง และการพัฒนาทักษะอย่างต่อเนื่อง
+                    เพราะผมเชื่อว่าความผิดพลาดคือส่วนหนึ่ง
+                    ของการพัฒนาตัวเอง
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
     <!-- INFO -->
+    <section class="info-section">
 
-    <div class="info-grid">
+        <div class="info-item">
+            <span>EDUCATION</span>
+            <strong>SCIENCE — MATH</strong>
+        </div>
 
-      <div class="info">
+        <div class="info-item">
+            <span>INTEREST</span>
+            <strong>COMPUTER & TECHNOLOGY</strong>
+        </div>
 
-        <small>01 / INTEREST</small>
+        <div class="info-item">
+            <span>GOAL</span>
+            <strong>COMPUTER ENGINEERING</strong>
+        </div>
 
-        <h3>
-          Technology
-        </h3>
-
-      </div>
-
-
-      <div class="info">
-
-        <small>02 / FIELD</small>
-
-        <h3>
-          Computer Science
-        </h3>
-
-      </div>
+    </section>
 
 
-      <div class="info">
+    <!-- SKILLS -->
+    <section class="section skills" id="skills">
 
-        <small>03 / FOCUS</small>
+        <div class="section-number">
+            02
+        </div>
 
-        <h3>
-          Web Development
-        </h3>
+        <div class="section-content">
 
-      </div>
+            <p class="eyebrow">SKILLS</p>
 
+            <h2>
+                Things I<br>
+                <span>work with.</span>
+            </h2>
+
+            <div class="skill-list">
+
+                <div class="skill">
+                    <span>01</span>
+                    <h3>HTML / CSS</h3>
+                    <p>Web Structure & Interface</p>
+                </div>
+
+                <div class="skill">
+                    <span>02</span>
+                    <h3>JavaScript</h3>
+                    <p>Interactive Web Development</p>
+                </div>
+
+                <div class="skill">
+                    <span>03</span>
+                    <h3>Programming</h3>
+                    <p>Problem Solving & Logic</p>
+                </div>
+
+                <div class="skill">
+                    <span>04</span>
+                    <h3>Design</h3>
+                    <p>Visual Design & Presentation</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+
+        <div class="projects-header">
+
+            <div>
+                <p class="eyebrow">03 / SELECTED WORK</p>
+
+                <h2>
+                    Selected<br>
+                    <span>Projects.</span>
+                </h2>
+            </div>
+
+            <a href="portfolio.html" class="view-all">
+                View all projects ↗
+            </a>
+
+        </div>
+
+
+        <div class="project-grid">
+
+            <article class="project-card project-large">
+
+                <div class="project-image">
+                    <img src="images/project1.jpg" alt="Project 1">
+                    <span>01</span>
+                </div>
+
+                <div class="project-info">
+                    <p>WEB / DEVELOPMENT</p>
+                    <h3>Personal Portfolio</h3>
+                    <a href="portfolio.html">View project →</a>
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="images/project2.jpg" alt="Project 2">
+                    <span>02</span>
+                </div>
+
+                <div class="project-info">
+                    <p>TECHNOLOGY</p>
+                    <h3>School Project</h3>
+                    <a href="portfolio.html">View project →</a>
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="images/project3.jpg" alt="Project 3">
+                    <span>03</span>
+                </div>
+
+                <div class="project-info">
+                    <p>CREATIVE</p>
+                    <h3>Creative Project</h3>
+                    <a href="portfolio.html">View project →</a>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="contact-number">
+            04
+        </div>
+
+        <div>
+
+            <p class="eyebrow">GET IN TOUCH</p>
+
+            <h2>
+                Let's create<br>
+                something <span>great.</span>
+            </h2>
+
+            <a href="mailto:your@email.com" class="email">
+                your@email.com ↗
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        © 2026 TANAWICH
     </div>
 
-  </section>
+    <div class="footer-links">
+        <a href="#">GitHub</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+    </div>
 
-
-  <!-- CTA -->
-
-  <section class="cta">
-
-    <small>
-      02 / PORTFOLIO
-    </small>
-
-    <h2>
-      Explore<br>
-      my work.
-    </h2>
-
-    <a href="portfolio.html" class="cta-button">
-      VIEW ALL PROJECTS ↗
-    </a>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <span>
-      © 2026 Tanawich Kajornkidakan
-    </span>
-
-    <span>
-      Computer Science & Engineering
-    </span>
-
-  </footer>
+</footer>
 
 
 </body>
