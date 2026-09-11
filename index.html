@@ -1,622 +1,514 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tanawich — Profile</title>
+      right: 0;
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      z-index: 100;
 
-        :root {
-            --bg: #f5f5f7;
-            --text: #1d1d1f;
-            --muted: #6e6e73;
-            --glass: rgba(255,255,255,.68);
-            --border: rgba(255,255,255,.5);
-            --blue: #0071e3;
-        }
+      background: rgba(247,247,245,.88);
+      backdrop-filter: blur(18px);
+    }
 
-        body.dark {
-            --bg: #000;
-            --text: #f5f5f7;
-            --muted: #a1a1a6;
-            --glass: rgba(25,25,25,.68);
-            --border: rgba(255,255,255,.12);
-        }
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 14px;
+    }
 
-        body {
-            min-height: 100vh;
+    nav a:hover {
+      opacity: .5;
+    }
 
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "SF Pro Display",
-                "Helvetica Neue",
-                Arial,
-                sans-serif;
+    /* HERO */
 
-            background: var(--bg);
-            color: var(--text);
+    .hero {
+      min-height: 100vh;
 
-            overflow-x: hidden;
+      padding: 150px 5vw 80px;
 
-            transition:
-                background .5s ease,
-                color .5s ease;
-        }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-        /* =========================
-           NAVBAR
-        ========================= */
+    .label {
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #777;
 
-        nav {
-            position: fixed;
+      margin-bottom: 35px;
+    }
 
-            top: 15px;
-            left: 50%;
+    .hero h1 {
+      font-size: clamp(65px, 12vw, 170px);
 
-            transform: translateX(-50%);
+      line-height: .86;
 
-            width: min(900px, calc(100% - 30px));
+      letter-spacing: -8px;
 
-            height: 55px;
+      font-weight: 700;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+      max-width: 1200px;
+    }
 
-            padding: 0 20px;
+    .hero h1 span {
+      color: #888;
+      display: block;
+    }
 
-            background: var(--glass);
+    .intro {
+      max-width: 520px;
 
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
+      margin-top: 70px;
 
-            border: 1px solid var(--border);
+      font-size: 19px;
 
-            border-radius: 30px;
+      line-height: 1.7;
 
-            z-index: 1000;
+      color: #555;
+    }
 
-            box-shadow:
-                0 10px 40px rgba(0,0,0,.08);
-        }
+    .hero-bottom {
+      margin-top: 70px;
 
-        .logo {
-            font-size: 23px;
-            font-weight: 700;
-            letter-spacing: -2px;
-        }
+      display: flex;
 
-        .logo span {
-            color: var(--blue);
-        }
+      align-items: center;
 
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+      gap: 30px;
+    }
 
-        .theme-btn {
-            border: none;
+    .button {
+      display: inline-flex;
 
-            width: 36px;
-            height: 36px;
+      align-items: center;
 
-            border-radius: 50%;
+      gap: 15px;
 
-            background: transparent;
+      background: #111;
+      color: white;
 
-            color: var(--text);
+      padding: 16px 24px;
 
-            cursor: pointer;
+      text-decoration: none;
 
-            font-size: 18px;
-        }
+      font-size: 14px;
 
-        .theme-btn:hover {
-            background: rgba(127,127,127,.15);
-        }
+      transition: .3s;
+    }
 
+    .button:hover {
+      background: #444;
+      transform: translateY(-3px);
+    }
 
-        /* =========================
-           HERO
-        ========================= */
+    .arrow {
+      font-size: 20px;
+    }
 
-        .hero {
-            min-height: 100vh;
+    .scroll {
+      color: #888;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
 
-            display: flex;
+    /* ABOUT */
 
-            justify-content: center;
-            align-items: center;
+    .section {
+      padding: 120px 5vw;
 
-            text-align: center;
+      border-top: 1px solid #d5d5d5;
+    }
 
-            padding: 120px 25px 80px;
+    .section-grid {
+      display: grid;
 
-            position: relative;
+      grid-template-columns: 180px 1fr;
 
-            overflow: hidden;
-        }
+      gap: 50px;
+    }
 
-        .orb {
-            position: absolute;
+    .section-number {
+      color: #888;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
 
-            border-radius: 50%;
+    .section h2 {
+      font-size: clamp(42px, 6vw, 80px);
 
-            filter: blur(70px);
+      line-height: .95;
 
-            pointer-events: none;
+      letter-spacing: -4px;
 
-            z-index: -1;
-        }
+      margin-bottom: 50px;
+    }
 
-        .orb.one {
-            width: 500px;
-            height: 500px;
+    .about-text {
+      max-width: 750px;
 
-            background: rgba(0,113,227,.25);
+      font-size: 20px;
 
-            top: -150px;
-            left: -120px;
+      line-height: 1.8;
 
-            animation: float1 8s infinite ease-in-out;
-        }
+      color: #555;
+    }
 
-        .orb.two {
-            width: 450px;
-            height: 450px;
+    /* INFO */
 
-            background: rgba(170,80,255,.22);
+    .info-grid {
+      margin-top: 80px;
 
-            right: -100px;
-            bottom: -120px;
+      display: grid;
 
-            animation: float2 10s infinite ease-in-out;
-        }
+      grid-template-columns: repeat(3, 1fr);
 
-        @keyframes float1 {
-            50% {
-                transform: translate(80px, 50px) scale(1.15);
-            }
-        }
+      border-top: 1px solid #ccc;
 
-        @keyframes float2 {
-            50% {
-                transform: translate(-70px, -50px) scale(1.1);
-            }
-        }
+      border-left: 1px solid #ccc;
+    }
 
+    .info {
+      padding: 35px;
 
-        /* =========================
-           CARD
-        ========================= */
+      min-height: 180px;
 
-        .card {
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
 
-            width: min(850px, 100%);
+    .info small {
+      color: #888;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
 
-            padding: 70px 45px;
+    .info h3 {
+      margin-top: 35px;
 
-            background: var(--glass);
+      font-size: 24px;
+    }
 
-            backdrop-filter: blur(35px) saturate(150%);
-            -webkit-backdrop-filter: blur(35px) saturate(150%);
+    /* CTA */
 
-            border: 1px solid var(--border);
+    .cta {
+      min-height: 75vh;
 
-            border-radius: 40px;
+      padding: 120px 5vw;
 
-            box-shadow:
-                0 30px 80px rgba(0,0,0,.12);
+      background: #111;
 
-            animation: cardIn 1s cubic-bezier(.2,.8,.2,1);
-        }
+      color: white;
 
-        @keyframes cardIn {
-            from {
-                opacity: 0;
-                transform: translateY(50px) scale(.97);
-            }
+      display: flex;
 
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+      flex-direction: column;
 
+      justify-content: center;
+    }
 
-        /* =========================
-           TEXT
-        ========================= */
+    .cta small {
+      color: #888;
 
-        .eyebrow {
+      letter-spacing: 2px;
 
-            font-size: 12px;
+      margin-bottom: 30px;
+    }
 
-            letter-spacing: 3px;
+    .cta h2 {
+      font-size: clamp(55px, 10vw, 140px);
 
-            color: var(--muted);
+      line-height: .85;
 
-            margin-bottom: 25px;
-        }
+      letter-spacing: -7px;
 
-        h1 {
+      margin-bottom: 60px;
+    }
 
-            font-size:
-                clamp(45px, 8vw, 85px);
+    .cta-button {
+      width: fit-content;
 
-            line-height: .95;
+      color: #111;
+      background: white;
 
-            letter-spacing: -5px;
+      padding: 17px 28px;
 
-            margin-bottom: 35px;
-        }
+      text-decoration: none;
 
-        h1 span {
-            display: block;
+      font-size: 14px;
 
-            color: var(--muted);
-        }
+      transition: .3s;
+    }
 
-        .intro {
+    .cta-button:hover {
+      background: #ccc;
+    }
 
-            font-size:
-                clamp(18px, 3vw, 23px);
+    /* FOOTER */
 
-            color: var(--muted);
+    footer {
+      background: #111;
 
-            line-height: 1.6;
+      color: #777;
 
-            max-width: 650px;
+      border-top: 1px solid #333;
 
-            margin: auto;
-        }
+      padding: 35px 5vw;
 
-        .name {
-            color: var(--text);
+      display: flex;
 
-            font-weight: 600;
-        }
+      justify-content: space-between;
 
+      font-size: 13px;
+    }
 
-        /* =========================
-           BUTTON
-        ========================= */
+    /* MOBILE */
 
-        .btn {
+    @media (max-width: 700px) {
 
-            display: inline-flex;
+      nav {
+        padding: 0 20px;
+      }
 
-            align-items: center;
+      nav a {
+        display: none;
+      }
 
-            gap: 12px;
+      .hero {
+        padding: 130px 20px 70px;
+      }
 
-            margin-top: 40px;
+      .hero h1 {
+        font-size: 65px;
 
-            padding: 15px 25px;
+        letter-spacing: -4px;
+      }
 
-            background: var(--blue);
+      .intro {
+        font-size: 17px;
 
-            color: white;
+        margin-top: 50px;
+      }
 
-            border-radius: 30px;
+      .hero-bottom {
+        align-items: flex-start;
 
-            text-decoration: none;
+        flex-direction: column;
 
-            font-size: 15px;
+        margin-top: 50px;
+      }
 
-            font-weight: 500;
+      .section {
+        padding: 80px 20px;
+      }
 
-            transition:
-                transform .3s,
-                box-shadow .3s;
-        }
+      .section-grid {
+        grid-template-columns: 1fr;
 
-        .btn:hover {
+        gap: 20px;
+      }
 
-            transform:
-                translateY(-4px)
-                scale(1.03);
+      .section h2 {
+        font-size: 50px;
+      }
 
-            box-shadow:
-                0 15px 40px
-                rgba(0,113,227,.3);
-        }
+      .about-text {
+        font-size: 17px;
+      }
 
-        .arrow {
-            font-size: 18px;
-        }
+      .info-grid {
+        grid-template-columns: 1fr;
 
+        margin-top: 50px;
+      }
 
-        /* =========================
-           BOTTOM INFO
-        ========================= */
+      .cta {
+        padding: 90px 20px;
+      }
 
-        .info {
+      .cta h2 {
+        font-size: 65px;
 
-            display: grid;
+        letter-spacing: -4px;
+      }
 
-            grid-template-columns:
-                repeat(3, 1fr);
+      footer {
+        padding: 30px 20px;
 
-            gap: 15px;
+        flex-direction: column;
 
-            margin-top: 60px;
-        }
-
-        .info-box {
-
-            padding: 20px;
-
-            border-radius: 22px;
-
-            background:
-                rgba(127,127,127,.08);
-
-            border:
-                1px solid var(--border);
-        }
-
-        .info-box strong {
-
-            display: block;
-
-            font-size: 14px;
-
-            margin-bottom: 5px;
-        }
-
-        .info-box span {
-
-            color: var(--muted);
-
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-
-            text-align: center;
-
-            padding: 30px;
-
-            color: var(--muted);
-
-            font-size: 12px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 650px) {
-
-            nav {
-                top: 10px;
-            }
-
-            .card {
-
-                padding:
-                    55px 25px;
-
-                border-radius: 30px;
-            }
-
-            h1 {
-
-                font-size: 52px;
-
-                letter-spacing: -4px;
-            }
-
-            .intro {
-                font-size: 17px;
-            }
-
-            .info {
-
-                grid-template-columns: 1fr;
-
-                margin-top: 45px;
-            }
-
-            .orb.one {
-
-                width: 300px;
-                height: 300px;
-            }
-
-            .orb.two {
-
-                width: 300px;
-                height: 300px;
-            }
-        }
-    </style>
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
+  <!-- NAV -->
 
-    <nav>
+  <nav>
 
-        <div class="logo">
-            T<span>.</span>
-        </div>
+    <div class="logo">
+      TANAWICH.
+    </div>
 
-        <div class="nav-right">
+    <div>
+      <a href="#about">About</a>
+      <a href="portfolio.html">Portfolio</a>
+    </div>
 
-            <button
-                class="theme-btn"
-                id="themeBtn"
-                aria-label="เปลี่ยนธีม">
-                ☼
-            </button>
-
-        </div>
-
-    </nav>
+  </nav>
 
 
-    <!-- Hero -->
+  <!-- HERO -->
 
-    <main class="hero">
+  <section class="hero">
 
-        <div class="orb one"></div>
-        <div class="orb two"></div>
+    <div class="label">
+      COMPUTER SCIENCE & ENGINEERING / 2026
+    </div>
 
-        <div class="card">
+    <h1>
+      Hello,
+      <span>I'm Tanawich.</span>
+    </h1>
 
-            <p class="eyebrow">
-                ยินดีต้อนรับเข้าสู่เว็บไซต์ของผม
-            </p>
+    <p class="intro">
+      สวัสดีครับ ผมชื่อ ธนวิชญ์ ขจรกิดาการ
+      นักเรียนที่สนใจด้าน Computer Science,
+      Technology และ Web Development
+    </p>
 
-            <h1>
-                Hello,
-                <span>Portfolio</span></span>
-            </h1>
+    <div class="hero-bottom">
 
-            <div class="intro">
+      <a href="portfolio.html" class="button">
+        VIEW PORTFOLIO
+        <span class="arrow">↗</span>
+      </a>
 
-                <p>
-                    สวัสดีครับ! ผมชื่อ
-                    <span class="name">
-                        ธนวิชญ์ ขจรกิดาการ
-                    </span>
-                    (Tanawich)
-                </p>
+      <div class="scroll">
+        SCROLL TO EXPLORE ↓
+      </div>
 
-                <p>
-                    กำลังศึกษาอยู่เเผนการเรียน
-                    <strong>
-                        เตรียมวิทยาการคอมพิวเตอร์เเละวิศวกรรม
-                    </strong>
-            
-                </p>
+    </div>
 
-            </div>
+  </section>
 
 
-            <a
-                href="portfolio.html"
-                class="btn">
+  <!-- ABOUT -->
 
-                ดูแฟ้มสะสมงาน
+  <section class="section" id="about">
 
-                <span class="arrow">
-                    →
-                </span>
+    <div class="section-grid">
 
-            </a>
+      <div class="section-number">
+        01 / ABOUT
+      </div>
 
+      <div>
 
-            <div class="info">
+        <h2>
+          Curious.<br>
+          Creative.<br>
+          Always Learning.
+        </h2>
 
-                <div class="info-box">
+        <p class="about-text">
+          ผมสนใจการทำงานของเทคโนโลยี
+          และชอบทดลองสร้างสิ่งต่าง ๆ ด้วยตัวเอง
+          ตั้งแต่เว็บไซต์ โปรแกรม ไปจนถึงการทดลอง
+          กับเทคโนโลยีใหม่ ๆ
+          <br><br>
+          เป้าหมายของผมคือการพัฒนาทักษะด้าน
+          Computer Science และนำความรู้ไปสร้าง
+          ผลงานที่สามารถใช้งานได้จริง
+        </p>
 
-                    <strong>
-                        💻 Interest
-                    </strong>
+      </div>
 
-                    <span>
-                        Technology
-                    </span>
-
-                </div>
-
-
-                <div class="info-box">
-
-                    <strong>
-                        🎓 Education
-                    </strong>
-
-                    <span>
-                        Computer Science
-                    </span>
-
-                </div>
+    </div>
 
 
-                <div class="info-box">
+    <!-- INFO -->
 
-                    <strong>
-                        🚀 Goal
-                    </strong>
+    <div class="info-grid">
 
-                    <span>
-                        Create & Learn
-                    </span>
+      <div class="info">
 
-                </div>
+        <small>01 / INTEREST</small>
 
-            </div>
+        <h3>
+          Technology
+        </h3>
 
-        </div>
-
-    </main>
+      </div>
 
 
-    <footer>
-        © 2026 Tanawich • Hosted with GitHub Pages
-    </footer>
+      <div class="info">
+
+        <small>02 / FIELD</small>
+
+        <h3>
+          Computer Science
+        </h3>
+
+      </div>
 
 
-    <script>
+      <div class="info">
 
-        const themeBtn =
-            document.getElementById("themeBtn");
+        <small>03 / FOCUS</small>
 
-        const savedTheme =
-            localStorage.getItem("theme");
+        <h3>
+          Web Development
+        </h3>
 
-        if (savedTheme === "dark") {
+      </div>
 
-            document.body.classList.add("dark");
+    </div>
 
-            themeBtn.textContent = "☾";
-
-        }
+  </section>
 
 
-        themeBtn.addEventListener("click", () => {
+  <!-- CTA -->
 
-            document.body.classList.toggle("dark");
+  <section class="cta">
 
-            const dark =
-                document.body.classList.contains("dark");
+    <small>
+      02 / PORTFOLIO
+    </small>
 
-            localStorage.setItem(
-                "theme",
-                dark ? "dark" : "light"
-            );
+    <h2>
+      Explore<br>
+      my work.
+    </h2>
 
-            themeBtn.textContent =
-                dark ? "☾" : "☼";
+    <a href="portfolio.html" class="cta-button">
+      VIEW ALL PROJECTS ↗
+    </a>
 
-        });
+  </section>
 
-    </script>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <span>
+      © 2026 Tanawich Kajornkidakan
+    </span>
+
+    <span>
+      Computer Science & Engineering
+    </span>
+
+  </footer>
+
 
 </body>
 </html>
