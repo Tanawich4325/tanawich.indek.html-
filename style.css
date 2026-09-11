@@ -186,15 +186,36 @@ button {
 }
 
 
-.nav-menu a:hover,
-.nav-menu a.active {
-
-    color: #000;
-
-    background: #f1f1f1;
-
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
+.nav-menu a {
+    position: relative;
+    padding: 16px 28px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #172033;
+    background: transparent;
+    text-decoration: none;
+}
+
+/* ปุ่มที่เป็นหน้าปัจจุบัน */
+.nav-menu a.active {
+    background: #f1f1f1;
+}
+
+/* ป้องกัน hover ค้างบน iPad/iPhone */
+.nav-menu a:hover {
+    background: transparent;
+}
+
+.nav-menu a.active:hover {
+    background: #f1f1f1;
+}
 
 /* MOBILE BUTTON */
 
