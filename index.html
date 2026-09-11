@@ -4,155 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tanawich | Portfolio</title>
+    <title>ธนวิชญ์ ขจรกิดาการ | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
 <header class="navbar">
+
     <a href="index.html" class="logo">
         T<span>.</span>
     </a>
 
     <nav class="nav-menu">
         <a href="index.html" class="active">หน้าแรก</a>
-        <a href="personal.html">ข้อมูลส่วนตัว</a>
-        <a href="portfolio.html">แฟ้มสะสมผลงาน</a>
+        <a href="portfolio.html#personal">ข้อมูลส่วนตัว</a>
+        <a href="portfolio.html#portfolio">แฟ้มสะสมผลงาน</a>
     </nav>
 
-    <button class="menu-button">☰</button>
 </header>
 
 
-<!-- ================= HERO ================= -->
-
 <main>
 
-<section class="hero">
+    <section class="hero">
 
-    <div class="background-grid"></div>
-
-    <div class="hero-content">
-
-        <!-- PROFILE -->
-
-        <div class="profile-container">
-
-            <div class="profile-ring"></div>
-
-            <img
-                src="images/profile.jpg"
-                alt="รูปโปรไฟล์ นายธนวิชญ์ ขจรกิดาการ"
-                class="profile-image"
-            >
-
+        <div class="hero-image">
+            <img src="images/profile.jpg" alt="รูปโปรไฟล์">
         </div>
 
+        <div class="hero-content">
 
-        <p class="small-title">
-            MY PORTFOLIO
-        </p>
+            <p class="hello">
+                สวัสดีครับ ผม
+            </p>
 
-
-        <h1>
-
-            สวัสดีครับ ผม<br>
-
-            <strong>
+            <h1>
                 นาย ธนวิชญ์ ขจรกิดาการ
-            </strong>
+            </h1>
 
-        </h1>
-
-
-        <div class="student-info">
-
-            <p>
+            <p class="study">
                 แผนการเรียน: วิทยาการคอมพิวเตอร์และวิศวกรรม (CSE)
             </p>
 
-            <p>
+            <p class="study">
                 ชั้นมัธยมศึกษาปีที่ 6
             </p>
 
-        </div>
+            <div class="hero-buttons">
 
+                <a href="portfolio.html#portfolio" class="button">
+                    แฟ้มสะสมผลงาน
+                </a>
 
-        <!-- BUTTONS -->
+                <a href="portfolio.html#personal" class="button button-light">
+                    ข้อมูลส่วนตัว
+                </a>
 
-        <div class="hero-buttons">
-
-            <a
-                href="portfolio.html#portfolio"
-                class="main-button black-button"
-            >
-                แฟ้มสะสมผลงาน
-                <span>↗</span>
-            </a>
-
-
-            <a
-                href="portfolio.html#personal"
-                class="main-button white-button"
-            >
-                ข้อมูลส่วนตัว
-                <span>↗</span>
-            </a>
+            </div>
 
         </div>
 
-    </div>
-
-
-    <div class="scroll-text">
-
-        <span></span>
-
-        SCROLL
-
-    </div>
-
-</section>
+    </section>
 
 </main>
 
 
-<footer>
-
-    © 2026 Tanawich Kajornkidakan
-
+<footer class="footer">
+    <p>© 2026 Tanawich Kajornkidakan</p>
 </footer>
-
-
-<script>
-
-const menuButton = document.querySelector(".menu-button");
-
-const navMenu = document.querySelector(".nav-menu");
-
-
-menuButton.addEventListener("click", function () {
-
-    navMenu.classList.toggle("show");
-
-});
-
-
-document.querySelectorAll(".nav-menu a").forEach(function(link){
-
-    link.addEventListener("click", function(){
-
-        navMenu.classList.remove("show");
-
-    });
-
-});
-
-</script>
 
 </body>
 </html>
