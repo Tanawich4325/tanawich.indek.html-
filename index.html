@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,157 +11,162 @@
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
 
-    <header class="navbar">
+<header class="navbar">
 
-        <a href="index.html" class="logo">
-            T<span>.</span>
+    <a href="index.html" class="logo">
+        T<span>.</span>
+    </a>
+
+    <nav class="nav-menu">
+
+        <a href="index.html" class="active">
+            หน้าแรก
         </a>
 
-        <nav class="nav-menu">
+        <a href="portfolio.html#personal">
+            ข้อมูลส่วนตัว
+        </a>
 
-            <a href="index.html" class="active">
-                หน้าแรก
-            </a>
+        <a href="portfolio.html#portfolio">
+            แฟ้มสะสมผลงาน
+        </a>
 
-            <a href="personal.html">
-                ข้อมูลส่วนตัว
-            </a>
+    </nav>
 
-            <a href="portfolio.html">
+    <button class="menu-button">
+        ☰
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+<section class="hero">
+
+    <div class="background-grid"></div>
+
+    <div class="hero-content">
+
+        <!-- PROFILE -->
+
+        <div class="profile-container">
+
+            <div class="profile-ring"></div>
+
+            <img
+                src="images/profile.jpg"
+                alt="รูปโปรไฟล์ นายธนวิชญ์ ขจรกิดาการ"
+                class="profile-image"
+            >
+
+        </div>
+
+
+        <p class="small-title">
+            MY PORTFOLIO
+        </p>
+
+
+        <h1>
+
+            สวัสดีครับ ผม<br>
+
+            <strong>
+                นาย ธนวิชญ์ ขจรกิดาการ
+            </strong>
+
+        </h1>
+
+
+        <div class="student-info">
+
+            <p>
+                แผนการเรียน: วิทยาการคอมพิวเตอร์และวิศวกรรม (CSE)
+            </p>
+
+            <p>
+                ชั้นมัธยมศึกษาปีที่ 6
+            </p>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="hero-buttons">
+
+            <a
+                href="portfolio.html#portfolio"
+                class="main-button black-button"
+            >
                 แฟ้มสะสมผลงาน
+                <span>↗</span>
             </a>
 
-        </nav>
 
-        <button class="menu-button">
-            ☰
-        </button>
+            <a
+                href="portfolio.html#personal"
+                class="main-button white-button"
+            >
+                ข้อมูลส่วนตัว
+                <span>↗</span>
+            </a>
 
-    </header>
+        </div>
 
-
-    <!-- ================= HOME ================= -->
-
-    <main>
-
-        <section class="hero">
-
-            <div class="hero-content">
-
-                <!-- รูปโปรไฟล์ -->
-
-                <div class="profile-container">
-
-                    <img
-                        src="images/profile.jpg"
-                        alt="นายธนวิชญ์ ขจรกิดาการ"
-                        class="profile-image"
-                    >
-
-                </div>
+    </div>
 
 
-                <p class="small-title">
-                    MY PORTFOLIO
-                </p>
+    <div class="scroll-text">
+
+        <span></span>
+
+        SCROLL
+
+    </div>
+
+</section>
+
+</main>
 
 
-                <h1>
-                    สวัสดีครับ ผม
-                    <br>
+<footer>
 
-                    <strong>
-                        นาย ธนวิชญ์ ขจรกิดาการ
-                    </strong>
-                </h1>
+    © 2026 Tanawich Kajornkidakan
+
+</footer>
 
 
-                <div class="student-info">
+<script>
 
-                    <p>
-                        แผนการเรียน: วิทยาการคอมพิวเตอร์และวิศวกรรม (CSE)
-                    </p>
+const menuButton = document.querySelector(".menu-button");
 
-                    <p>
-                        ชั้นมัธยมศึกษาปีที่ 6
-                    </p>
-
-                </div>
+const navMenu = document.querySelector(".nav-menu");
 
 
-                <!-- ปุ่ม -->
+menuButton.addEventListener("click", function () {
 
-                <div class="hero-buttons">
+    navMenu.classList.toggle("show");
 
-                    <a
-                        href="portfolio.html"
-                        class="main-button black-button"
-                    >
-                        แฟ้มสะสมผลงาน
-                        <span>↗</span>
-                    </a>
+});
 
 
-                    <a
-                        href="personal.html"
-                        class="main-button white-button"
-                    >
-                        ข้อมูลส่วนตัว
-                        <span>↗</span>
-                    </a>
+document.querySelectorAll(".nav-menu a").forEach(function(link){
 
-                </div>
+    link.addEventListener("click", function(){
 
-            </div>
+        navMenu.classList.remove("show");
 
-        </section>
+    });
 
-    </main>
+});
 
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        © 2026 Tanawich Kajornkidakan
-
-    </footer>
-
-
-    <!-- ================= SCRIPT ================= -->
-
-    <script>
-
-        const menuButton =
-            document.querySelector(".menu-button");
-
-        const navMenu =
-            document.querySelector(".nav-menu");
-
-
-        menuButton.addEventListener("click", function () {
-
-            navMenu.classList.toggle("show");
-
-        });
-
-
-        document
-            .querySelectorAll(".nav-menu a")
-            .forEach(function(link) {
-
-                link.addEventListener("click", function() {
-
-                    navMenu.classList.remove("show");
-
-                });
-
-            });
-
-    </script>
+</script>
 
 </body>
-
 </html>
