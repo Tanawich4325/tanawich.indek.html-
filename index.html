@@ -1,84 +1,168 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tanawich Kajornkidakan | Portfolio</title>
+    <title>Tanawich | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- ================= NAVBAR ================= -->
+
     <header class="navbar">
 
-    <a href="index.html" class="logo">
-        T<span>.</span>
-    </a>
-
-    <nav class="nav-menu">
-
-        <a href="index.html" class="active">
-            หน้าแรก
+        <a href="index.html" class="logo">
+            T<span>.</span>
         </a>
 
-        <a href="portfolio.html#personal">
-            ข้อมูลส่วนตัว
-        </a>
+        <nav class="nav-menu">
 
-        <a href="portfolio.html#portfolio">
-            แฟ้มสะสมผลงาน
-        </a>
+            <a href="index.html" class="active">
+                หน้าแรก
+            </a>
 
-    </nav>
+            <a href="personal.html">
+                ข้อมูลส่วนตัว
+            </a>
 
-    <button class="menu-button">
-        ☰
-    </button>
+            <a href="portfolio.html">
+                แฟ้มสะสมผลงาน
+            </a>
 
-</header>
+        </nav>
 
-    <!-- Hero -->
+        <button class="menu-button">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
     <main>
 
         <section class="hero">
 
             <div class="hero-content">
 
-                <div class="small-title">
-                    <span></span>
-                    MY PORTFOLIO
+                <!-- รูปโปรไฟล์ -->
+
+                <div class="profile-container">
+
+                    <img
+                        src="images/profile.jpg"
+                        alt="นายธนวิชญ์ ขจรกิดาการ"
+                        class="profile-image"
+                    >
+
                 </div>
 
+
+                <p class="small-title">
+                    MY PORTFOLIO
+                </p>
+
+
                 <h1>
-                    Tanawich
-                    <strong>Kajornkidakan</strong>
+                    สวัสดีครับ ผม
+                    <br>
+
+                    <strong>
+                        นาย ธนวิชญ์ ขจรกิดาการ
+                    </strong>
                 </h1>
 
-                <p class="hero-text">
-                    สวัสดีครับ ผมนาย ธนวิชญ์ ขจรกิดาการ
-                </p>
 
-                <p class="hero-description">
-                    แผนการเรียน: เตรียมวิทยาการคอมพิวเตอร์และวิศวกรรม
-                    ชั้นมัธยมศึกษาปีที่ 6
-                </p>
+                <div class="student-info">
+
+                    <p>
+                        แผนการเรียน: วิทยาการคอมพิวเตอร์และวิศวกรรม (CSE)
+                    </p>
+
+                    <p>
+                        ชั้นมัธยมศึกษาปีที่ 6
+                    </p>
+
+                </div>
+
+
+                <!-- ปุ่ม -->
 
                 <div class="hero-buttons">
-                    <a href="portfolio.html" class="btn primary">
-                        ดู Portfolio
-                        <span>→</span>
+
+                    <a
+                        href="portfolio.html"
+                        class="main-button black-button"
+                    >
+                        แฟ้มสะสมผลงาน
+                        <span>↗</span>
                     </a>
 
-                    <a href="#about" class="btn secondary">
-                        เกี่ยวกับผม
+
+                    <a
+                        href="personal.html"
+                        class="main-button white-button"
+                    >
+                        ข้อมูลส่วนตัว
+                        <span>↗</span>
                     </a>
+
                 </div>
 
             </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Tanawich Kajornkidakan
+
+    </footer>
+
+
+    <!-- ================= SCRIPT ================= -->
+
+    <script>
+
+        const menuButton =
+            document.querySelector(".menu-button");
+
+        const navMenu =
+            document.querySelector(".nav-menu");
+
+
+        menuButton.addEventListener("click", function () {
+
+            navMenu.classList.toggle("show");
+
+        });
+
+
+        document
+            .querySelectorAll(".nav-menu a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    navMenu.classList.remove("show");
+
+                });
+
+            });
+
+    </script>
+
+</body>
+
+</html>
