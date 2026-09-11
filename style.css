@@ -331,9 +331,6 @@ button {
     box-shadow:
         0 25px 70px rgba(0,0,0,.16);
 
-    filter:
-        grayscale(100%);
-
     position: relative;
 
     z-index: 2;
@@ -343,6 +340,13 @@ button {
 
 }
 
+
+.profile-image:hover {
+
+    transform:
+        scale(1.04);
+
+}
 
 .profile-image:hover {
 
