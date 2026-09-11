@@ -1,513 +1,324 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
 
-      right: 0;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      z-index: 100;
+    <title>Portfolio — Tanawich</title>
 
-      background: rgba(247,247,245,.88);
-      backdrop-filter: blur(18px);
-    }
+    <link rel="stylesheet" href="style.css">
 
-    .logo {
-      font-size: 18px;
-      font-weight: 700;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    nav a {
-      color: #111;
-      text-decoration: none;
-      margin-left: 28px;
-      font-size: 14px;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    nav a:hover {
-      opacity: .5;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 100vh;
-
-      padding: 150px 5vw 80px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .label {
-      font-size: 13px;
-      letter-spacing: 2px;
-      color: #777;
-
-      margin-bottom: 35px;
-    }
-
-    .hero h1 {
-      font-size: clamp(65px, 12vw, 170px);
-
-      line-height: .86;
-
-      letter-spacing: -8px;
-
-      font-weight: 700;
-
-      max-width: 1200px;
-    }
-
-    .hero h1 span {
-      color: #888;
-      display: block;
-    }
-
-    .intro {
-      max-width: 520px;
-
-      margin-top: 70px;
-
-      font-size: 19px;
-
-      line-height: 1.7;
-
-      color: #555;
-    }
-
-    .hero-bottom {
-      margin-top: 70px;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 30px;
-    }
-
-    .button {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 15px;
-
-      background: #111;
-      color: white;
-
-      padding: 16px 24px;
-
-      text-decoration: none;
-
-      font-size: 14px;
-
-      transition: .3s;
-    }
-
-    .button:hover {
-      background: #444;
-      transform: translateY(-3px);
-    }
-
-    .arrow {
-      font-size: 20px;
-    }
-
-    .scroll {
-      color: #888;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    /* ABOUT */
-
-    .section {
-      padding: 120px 5vw;
-
-      border-top: 1px solid #d5d5d5;
-    }
-
-    .section-grid {
-      display: grid;
-
-      grid-template-columns: 180px 1fr;
-
-      gap: 50px;
-    }
-
-    .section-number {
-      color: #888;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    .section h2 {
-      font-size: clamp(42px, 6vw, 80px);
-
-      line-height: .95;
-
-      letter-spacing: -4px;
-
-      margin-bottom: 50px;
-    }
-
-    .about-text {
-      max-width: 750px;
-
-      font-size: 20px;
-
-      line-height: 1.8;
-
-      color: #555;
-    }
-
-    /* INFO */
-
-    .info-grid {
-      margin-top: 80px;
-
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      border-top: 1px solid #ccc;
-
-      border-left: 1px solid #ccc;
-    }
-
-    .info {
-      padding: 35px;
-
-      min-height: 180px;
-
-      border-right: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .info small {
-      color: #888;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-
-    .info h3 {
-      margin-top: 35px;
-
-      font-size: 24px;
-    }
-
-    /* CTA */
-
-    .cta {
-      min-height: 75vh;
-
-      padding: 120px 5vw;
-
-      background: #111;
-
-      color: white;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-    }
-
-    .cta small {
-      color: #888;
-
-      letter-spacing: 2px;
-
-      margin-bottom: 30px;
-    }
-
-    .cta h2 {
-      font-size: clamp(55px, 10vw, 140px);
-
-      line-height: .85;
-
-      letter-spacing: -7px;
-
-      margin-bottom: 60px;
-    }
-
-    .cta-button {
-      width: fit-content;
-
-      color: #111;
-      background: white;
-
-      padding: 17px 28px;
-
-      text-decoration: none;
-
-      font-size: 14px;
-
-      transition: .3s;
-    }
-
-    .cta-button:hover {
-      background: #ccc;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #111;
-
-      color: #777;
-
-      border-top: 1px solid #333;
-
-      padding: 35px 5vw;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      font-size: 13px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 700px) {
-
-      nav {
-        padding: 0 20px;
-      }
-
-      nav a {
-        display: none;
-      }
-
-      .hero {
-        padding: 130px 20px 70px;
-      }
-
-      .hero h1 {
-        font-size: 65px;
-
-        letter-spacing: -4px;
-      }
-
-      .intro {
-        font-size: 17px;
-
-        margin-top: 50px;
-      }
-
-      .hero-bottom {
-        align-items: flex-start;
-
-        flex-direction: column;
-
-        margin-top: 50px;
-      }
-
-      .section {
-        padding: 80px 20px;
-      }
-
-      .section-grid {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-      }
-
-      .section h2 {
-        font-size: 50px;
-      }
-
-      .about-text {
-        font-size: 17px;
-      }
-
-      .info-grid {
-        grid-template-columns: 1fr;
-
-        margin-top: 50px;
-      }
-
-      .cta {
-        padding: 90px 20px;
-      }
-
-      .cta h2 {
-        font-size: 65px;
-
-        letter-spacing: -4px;
-      }
-
-      footer {
-        padding: 30px 20px;
-
-        flex-direction: column;
-
-        gap: 10px;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
 
-  <nav>
+<header class="navbar">
 
-    <div class="logo">
-      TANAWICH.
-    </div>
-
-    <div>
-      <a href="#about">About</a>
-      <a href="portfolio.html">Portfolio</a>
-    </div>
-
-  </nav>
-
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="label">
-      COMPUTER SCIENCE & ENGINEERING / 2026
-    </div>
-
-    <h1>
-      Hello,
-      <span>I'm Tanawich.</span>
-    </h1>
-
-    <p class="intro">
-      สวัสดีครับ ผมชื่อ ธนวิชญ์ ขจรกิดาการ
-      นักเรียนที่สนใจด้าน Computer Science,
-      Technology และ Web Development
-    </p>
-
-    <div class="hero-bottom">
-
-      <a href="portfolio.html" class="button">
-        VIEW PORTFOLIO
-        <span class="arrow">↗</span>
-      </a>
-
-      <div class="scroll">
-        SCROLL TO EXPLORE ↓
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-
-  <section class="section" id="about">
-
-    <div class="section-grid">
-
-      <div class="section-number">
-        01 / ABOUT
-      </div>
-
-      <div>
-
-        <h2>
-          Curious.<br>
-          Creative.<br>
-          Always Learning.
-        </h2>
-
-        <p class="about-text">
-          ผมสนใจการทำงานของเทคโนโลยี
-          และชอบทดลองสร้างสิ่งต่าง ๆ ด้วยตัวเอง
-          ตั้งแต่เว็บไซต์ โปรแกรม ไปจนถึงการทดลอง
-          กับเทคโนโลยีใหม่ ๆ
-          <br><br>
-          เป้าหมายของผมคือการพัฒนาทักษะด้าน
-          Computer Science และนำความรู้ไปสร้าง
-          ผลงานที่สามารถใช้งานได้จริง
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- INFO -->
-
-    <div class="info-grid">
-
-      <div class="info">
-
-        <small>01 / INTEREST</small>
-
-        <h3>
-          Technology
-        </h3>
-
-      </div>
-
-
-      <div class="info">
-
-        <small>02 / FIELD</small>
-
-        <h3>
-          Computer Science
-        </h3>
-
-      </div>
-
-
-      <div class="info">
-
-        <small>03 / FOCUS</small>
-
-        <h3>
-          Web Development
-        </h3>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CTA -->
-
-  <section class="cta">
-
-    <small>
-      02 / PORTFOLIO
-    </small>
-
-    <h2>
-      Explore<br>
-      my work.
-    </h2>
-
-    <a href="portfolio.html" class="cta-button">
-      VIEW ALL PROJECTS ↗
+    <a href="index.html" class="logo">
+        TW<span>.</span>
     </a>
 
-  </section>
+    <nav>
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#activities">Activities</a>
+    </nav>
+
+    <a href="index.html" class="nav-button">
+        ← Home
+    </a>
+
+</header>
 
 
-  <!-- FOOTER -->
+<main class="portfolio-page">
 
-  <footer>
 
-    <span>
-      © 2026 Tanawich Kajornkidakan
-    </span>
+    <!-- PAGE HEADER -->
 
-    <span>
-      Computer Science & Engineering
-    </span>
+    <section class="portfolio-hero">
 
-  </footer>
+        <p class="eyebrow">
+            PORTFOLIO / 2026
+        </p>
+
+        <h1>
+            MY<br>
+            <span>WORK.</span>
+        </h1>
+
+        <p>
+            รวมผลงาน กิจกรรม และประสบการณ์
+            ที่สะท้อนความสนใจด้านเทคโนโลยี
+            และการพัฒนาตัวเอง
+        </p>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section class="portfolio-projects" id="projects">
+
+        <div class="portfolio-title">
+
+            <span>01</span>
+
+            <h2>
+                Projects
+            </h2>
+
+        </div>
+
+
+        <article class="portfolio-project">
+
+            <div class="portfolio-project-image">
+
+                <img src="images/project1.jpg" alt="Project 1">
+
+            </div>
+
+            <div class="portfolio-project-content">
+
+                <p class="project-number">
+                    PROJECT / 001
+                </p>
+
+                <h3>
+                    Personal<br>
+                    Portfolio
+                </h3>
+
+                <p>
+                    เว็บไซต์ Portfolio ส่วนตัวที่ออกแบบและพัฒนา
+                    เพื่อรวบรวมข้อมูลเกี่ยวกับตัวเอง ทักษะ
+                    ผลงาน และกิจกรรมต่าง ๆ
+                </p>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>WEB DESIGN</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="portfolio-project reverse">
+
+            <div class="portfolio-project-image">
+
+                <img src="images/project2.jpg" alt="Project 2">
+
+            </div>
+
+            <div class="portfolio-project-content">
+
+                <p class="project-number">
+                    PROJECT / 002
+                </p>
+
+                <h3>
+                    School<br>
+                    Project
+                </h3>
+
+                <p>
+                    ผลงานจากการเรียนและการทำโครงงาน
+                    ที่ได้ฝึกการคิด วิเคราะห์ และแก้ไขปัญหา
+                    ด้วยกระบวนการของตัวเอง
+                </p>
+
+                <div class="tags">
+                    <span>RESEARCH</span>
+                    <span>TECHNOLOGY</span>
+                    <span>TEAMWORK</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="portfolio-project">
+
+            <div class="portfolio-project-image">
+
+                <img src="images/project3.jpg" alt="Project 3">
+
+            </div>
+
+            <div class="portfolio-project-content">
+
+                <p class="project-number">
+                    PROJECT / 003
+                </p>
+
+                <h3>
+                    Creative<br>
+                    Work
+                </h3>
+
+                <p>
+                    ผลงานที่เกิดจากความสนใจส่วนตัว
+                    และการทดลองสร้างสิ่งใหม่ ๆ
+                    เพื่อพัฒนาทักษะด้านความคิดสร้างสรรค์
+                </p>
+
+                <div class="tags">
+                    <span>CREATIVE</span>
+                    <span>DESIGN</span>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ACTIVITIES -->
+
+    <section class="activities" id="activities">
+
+        <div class="portfolio-title">
+
+            <span>02</span>
+
+            <h2>
+                Activities
+            </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    2026
+                </div>
+
+                <div>
+                    <h3>
+                        กิจกรรม / การอบรม
+                    </h3>
+
+                    <p>
+                        เพิ่มรายละเอียดกิจกรรม
+                        และสิ่งที่ได้รับจากกิจกรรมที่นี่
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    2025
+                </div>
+
+                <div>
+                    <h3>
+                        กิจกรรมโรงเรียน
+                    </h3>
+
+                    <p>
+                        เพิ่มรายละเอียดกิจกรรม
+                        หรือประสบการณ์ที่เคยเข้าร่วม
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    2024
+                </div>
+
+                <div>
+                    <h3>
+                        กิจกรรมอื่น ๆ
+                    </h3>
+
+                    <p>
+                        เพิ่มรายละเอียดกิจกรรม
+                        และประสบการณ์ของคุณ
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CERTIFICATES -->
+
+    <section class="certificates">
+
+        <div class="portfolio-title">
+
+            <span>03</span>
+
+            <h2>
+                Certificates
+            </h2>
+
+        </div>
+
+
+        <div class="certificate-grid">
+
+            <div class="certificate">
+                <img src="images/certificate1.jpg" alt="Certificate 1">
+            </div>
+
+            <div class="certificate">
+                <img src="images/certificate2.jpg" alt="Certificate 2">
+            </div>
+
+            <div class="certificate">
+                <img src="images/certificate3.jpg" alt="Certificate 3">
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <div>
+        © 2026 TANAWICH
+    </div>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="#">GitHub</a>
+        <a href="#">Instagram</a>
+    </div>
+
+</footer>
 
 
 </body>
