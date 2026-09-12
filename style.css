@@ -1593,3 +1593,271 @@ footer {
     }
 
 }
+
+/* =====================================================
+   IPAD LANDSCAPE
+   บังคับ iPad แนวนอนให้เหมือนมือถือ
+===================================================== */
+
+@media (orientation: landscape) and (pointer: coarse) {
+
+    /* =========================================
+       CERTIFICATE
+       1 ใบต่อ 1 แถว
+    ========================================= */
+
+    .certificate-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+        width: 100% !important;
+    }
+
+    .certificate-card {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        overflow: hidden !important;
+
+        position: static !important;
+
+        background: #fff !important;
+
+        border: 1px solid #ddd !important;
+        border-radius: 22px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =========================================
+       รูปเกียรติบัตร
+       เห็นครบทั้งใบ
+    ========================================= */
+
+    .certificate-card .image-placeholder {
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        padding: 25px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        overflow: hidden !important;
+
+        background: #f7f7f7 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .certificate-card .image-placeholder img {
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        max-width: 100% !important;
+        max-height: none !important;
+
+        object-fit: contain !important;
+
+        object-position: center !important;
+
+        margin: 0 auto !important;
+
+        position: static !important;
+
+        transform: none !important;
+    }
+
+
+    /* =========================================
+       คำอธิบาย
+       อยู่ใต้รูปเท่านั้น
+    ========================================= */
+
+    .certificate-card .card-description {
+        display: block !important;
+
+        position: static !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        padding: 20px !important;
+
+        margin: 0 !important;
+
+        background: #fff !important;
+
+        border-top: 1px solid #eee !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .certificate-card .card-description h3 {
+        display: block !important;
+
+        position: static !important;
+
+        margin: 0 0 8px !important;
+
+        font-size: 18px !important;
+
+        line-height: 1.5 !important;
+
+        color: #111 !important;
+    }
+
+    .certificate-card .card-description p {
+        display: block !important;
+
+        position: static !important;
+
+        margin: 0 !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.7 !important;
+
+        color: #777 !important;
+    }
+
+
+    /* =========================================
+       รูปรับรางวัล
+       1 รูปต่อ 1 แถว
+    ========================================= */
+
+    .event-grid {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 28px !important;
+
+        width: 100% !important;
+    }
+
+    .event-card {
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        overflow: hidden !important;
+
+        position: static !important;
+
+        background: #fff !important;
+
+        border: 1px solid #ddd !important;
+
+        border-radius: 22px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* รูปรางวัล */
+
+    .event-card .image-placeholder.large {
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        padding: 25px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        overflow: hidden !important;
+
+        background: #f7f7f7 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .event-card .image-placeholder.large img {
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        max-width: 100% !important;
+        max-height: none !important;
+
+        object-fit: contain !important;
+
+        object-position: center !important;
+
+        margin: 0 auto !important;
+
+        position: static !important;
+
+        transform: none !important;
+    }
+
+
+    /* คำอธิบายอยู่ใต้รูป */
+
+    .event-card .card-description {
+        display: block !important;
+
+        position: static !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        padding: 20px !important;
+
+        margin: 0 !important;
+
+        background: #fff !important;
+
+        border-top: 1px solid #eee !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .event-card .card-description h3 {
+        display: block !important;
+
+        position: static !important;
+
+        margin: 0 0 8px !important;
+
+        font-size: 18px !important;
+
+        line-height: 1.5 !important;
+
+        color: #111 !important;
+    }
+
+    .event-card .card-description p {
+        display: block !important;
+
+        position: static !important;
+
+        margin: 0 !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.7 !important;
+
+        color: #777 !important;
+    }
+}
