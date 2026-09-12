@@ -216,7 +216,7 @@ button {
     position: relative;
     margin: 0 auto 32px;
     border-radius: 50%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .profile-image {
@@ -242,10 +242,10 @@ button {
     inset: -10px;
 
     border: 1px solid #aaa;
-
     border-radius: 50%;
 
     animation: rotate-ring 14s linear infinite;
+    z-index: 1;
 }
 
 .profile-ring::before,
