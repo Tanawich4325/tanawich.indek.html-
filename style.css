@@ -1372,3 +1372,20 @@ and (orientation: landscape) {
         padding: 18px 22px;
     }
 }
+
+/* จัดเกียรติบัตรให้อยู่ตรงกลางบน iPad */
+@media (min-width: 651px) and (max-width: 1400px) {
+    .certificate-grid {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificate-card {
+        width: 70%;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
