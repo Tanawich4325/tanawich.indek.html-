@@ -13,6 +13,7 @@
 <!-- =========================
      NAVBAR
 ========================= -->
+
 <header class="navbar">
 
     <a href="index.html" class="logo">
@@ -20,9 +21,19 @@
     </a>
 
     <nav class="nav-menu">
-        <a href="index.html">หน้าแรก</a>
-        <a href="#personal" class="active">ข้อมูลส่วนตัว</a>
-        <a href="#portfolio">แฟ้มสะสมผลงาน</a>
+
+        <a href="index.html">
+            หน้าแรก
+        </a>
+
+        <a href="#personal" class="active">
+            ข้อมูลส่วนตัว
+        </a>
+
+        <a href="#portfolio">
+            แฟ้มสะสมผลงาน
+        </a>
+
     </nav>
 
     <button class="menu-button">☰</button>
@@ -40,20 +51,32 @@
 <section id="personal" class="content-section">
 
     <div class="section-header">
-        <p class="small-title">ABOUT ME</p>
-        <h1>ข้อมูลส่วนตัว</h1>
+
+        <p class="small-title">
+            ABOUT ME
+        </p>
+
+        <h1>
+            ข้อมูลส่วนตัว
+        </h1>
+
         <div class="title-line"></div>
+
     </div>
 
 
     <!-- UNIVERSITY + PERSONAL INFO -->
+
     <div class="personal-grid">
 
 
         <!-- UNIVERSITY -->
+
         <div class="university-box">
 
-            <span class="box-number">01</span>
+            <span class="box-number">
+                01
+            </span>
 
             <p class="box-label">
                 UNIVERSITIES
@@ -67,7 +90,9 @@
 
             <div class="university-item">
 
-                <span>01</span>
+                <span>
+                    01
+                </span>
 
                 <div>
 
@@ -87,7 +112,9 @@
 
             <div class="university-item">
 
-                <span>02</span>
+                <span>
+                    02
+                </span>
 
                 <div>
 
@@ -107,11 +134,13 @@
         </div>
 
 
-
         <!-- PERSONAL INFORMATION -->
+
         <div class="personal-box">
 
-            <span class="box-number">02</span>
+            <span class="box-number">
+                02
+            </span>
 
             <p class="box-label">
                 PERSONAL INFORMATION
@@ -210,7 +239,6 @@
     </div>
 
 
-
     <!-- =========================
          INTERESTS
     ========================= -->
@@ -234,7 +262,6 @@
         </p>
 
     </div>
-
 
 
     <!-- =========================
@@ -269,7 +296,6 @@
         </p>
 
     </div>
-
 
 
     <!-- =========================
@@ -314,7 +340,6 @@
             </div>
 
 
-
             <div class="contact-card">
 
                 <div class="contact-icon">
@@ -330,7 +355,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="contact-card">
@@ -350,7 +374,6 @@
             </div>
 
 
-
             <div class="contact-card">
 
                 <div class="contact-icon">
@@ -366,7 +389,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="contact-card">
@@ -416,14 +438,12 @@
     </div>
 
 
-
     <!-- =========================
          PORTFOLIO 01
          CERTIFICATES
     ========================= -->
 
     <div class="portfolio-block">
-
 
         <div class="portfolio-heading">
 
@@ -444,7 +464,6 @@
             </div>
 
         </div>
-
 
 
         <div class="certificate-grid">
@@ -478,7 +497,6 @@
             </div>
 
 
-
             <!-- CERTIFICATE 2 -->
 
             <div class="certificate-card">
@@ -505,7 +523,6 @@
                 </div>
 
             </div>
-
 
 
             <!-- CERTIFICATE 3 -->
@@ -536,7 +553,6 @@
             </div>
 
 
-
             <!-- CERTIFICATE 4 -->
 
             <div class="certificate-card">
@@ -565,7 +581,6 @@
             </div>
 
 
-
             <!-- CERTIFICATE 5 -->
 
             <div class="certificate-card">
@@ -592,7 +607,6 @@
                 </div>
 
             </div>
-
 
 
             <!-- CERTIFICATE 6 -->
@@ -626,8 +640,6 @@
         </div>
 
     </div>
-    <!-- ปิด PORTFOLIO 01 ตรงนี้ -->
-
 
 
     <!-- =========================
@@ -636,7 +648,6 @@
     ========================= -->
 
     <div class="portfolio-block">
-
 
         <div class="portfolio-heading">
 
@@ -657,7 +668,6 @@
             </div>
 
         </div>
-
 
 
         <div class="event-grid">
@@ -691,7 +701,6 @@
             </div>
 
 
-
             <!-- EVENT 2 -->
 
             <div class="event-card">
@@ -723,7 +732,6 @@
         </div>
 
 
-
         <!-- BACK BUTTON -->
 
         <div class="back-button-container">
@@ -737,15 +745,12 @@
 
         </div>
 
-
     </div>
-    <!-- ปิด PORTFOLIO 02 -->
 
 
 </section>
 
 </main>
-
 
 
 <!-- =========================
@@ -764,61 +769,42 @@
 
 <script>
 
-const menuButton = document.querySelector(".menu-button");
+/* =========================
+   MENU
+========================= */
 
+const menuButton = document.querySelector(".menu-button");
 const navMenu = document.querySelector(".nav-menu");
 
+if (menuButton && navMenu) {
 
-/* เปิด / ปิดเมนูบน iPad / มือถือ */
+    menuButton.addEventListener("click", function () {
 
-menuButton.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
 
-    navMenu.classList.toggle("show");
+    });
+
+}
+
+
+document.querySelectorAll(".nav-menu a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        if (navMenu) {
+            navMenu.classList.remove("show");
+        }
+
+    });
 
 });
 
 
-/* กดเมนูแล้วปิดเมนู */
 
-document
-    .querySelectorAll(".nav-menu a")
-    .forEach(function(link) {
-
-        link.addEventListener("click", function() {
-
-            navMenu.classList.remove("show");
-
-        });
-
-    });
-
-
-
-/* Animation ตอนเลื่อนหน้า */
-
-const observer = new IntersectionObserver(
-
-    function(entries) {
-
-        entries.forEach(function(entry) {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("show-animation");
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold: 0.12
-    }
-
-);
-
-
+/* =========================
+   แสดงเนื้อหาทั้งหมดทันที
+   ป้องกันปัญหาหน้าขาวบน iPad
+========================= */
 
 document
     .querySelectorAll(
@@ -826,9 +812,145 @@ document
     )
     .forEach(function(element) {
 
-        observer.observe(element);
+        element.classList.add("show-animation");
 
     });
+
+
+
+/* =========================
+   SCROLL TO HASH
+   แก้ปัญหา portfolio.html#portfolio
+   บน iPad Landscape
+========================= */
+
+function scrollToHash() {
+
+    const hash = window.location.hash;
+
+    if (!hash) {
+        return;
+    }
+
+    const target = document.querySelector(hash);
+
+    if (!target) {
+        return;
+    }
+
+    const navbar = document.querySelector(".navbar");
+
+    const navbarHeight = navbar
+        ? navbar.offsetHeight
+        : 70;
+
+    const targetPosition =
+        target.getBoundingClientRect().top +
+        window.pageYOffset -
+        navbarHeight -
+        25;
+
+    window.scrollTo({
+        top: targetPosition,
+        behavior: "auto"
+    });
+
+}
+
+
+
+/* =========================
+   เมื่อหน้าโหลดเสร็จ
+========================= */
+
+window.addEventListener("load", function() {
+
+    setTimeout(function() {
+
+        scrollToHash();
+
+    }, 300);
+
+});
+
+
+
+/* =========================
+   เมื่อเปลี่ยนแนวหน้าจอ
+   Portrait ↔ Landscape
+========================= */
+
+window.addEventListener("orientationchange", function() {
+
+    setTimeout(function() {
+
+        scrollToHash();
+
+    }, 500);
+
+});
+
+
+
+/* =========================
+   คลิก #personal / #portfolio
+========================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+
+    link.addEventListener("click", function(event) {
+
+        const hash = link.getAttribute("href");
+
+        const target = document.querySelector(hash);
+
+        if (!target) {
+            return;
+        }
+
+        event.preventDefault();
+
+        history.pushState(null, "", hash);
+
+        const navbar = document.querySelector(".navbar");
+
+        const navbarHeight = navbar
+            ? navbar.offsetHeight
+            : 70;
+
+        const targetPosition =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            navbarHeight -
+            25;
+
+        window.scrollTo({
+
+            top: targetPosition,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+});
+
+
+
+/* =========================
+   Browser Back / Forward
+========================= */
+
+window.addEventListener("popstate", function() {
+
+    setTimeout(function() {
+
+        scrollToHash();
+
+    }, 100);
+
+});
 
 </script>
 
