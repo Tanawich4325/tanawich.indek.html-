@@ -165,9 +165,6 @@ button {
     overflow: hidden;
 }
 
-
-/* GRID BACKGROUND */
-
 .background-grid {
     position: absolute;
     inset: 0;
@@ -243,9 +240,6 @@ button {
 .profile-image:hover {
     transform: scale(1.04);
 }
-
-
-/* RING */
 
 .profile-ring {
     position: absolute;
@@ -332,9 +326,6 @@ button {
         transform: translateY(0);
     }
 }
-
-
-/* STUDENT INFO */
 
 .student-info {
     margin-top: 25px;
@@ -513,6 +504,8 @@ button {
 
 /* =====================================================
    PERSONAL GRID
+   มหาวิทยาลัย = ซ้าย
+   ข้อมูลส่วนตัว = ขวา
 ===================================================== */
 
 .personal-grid {
@@ -521,7 +514,12 @@ button {
     grid-template-columns: .9fr 1.1fr;
 
     gap: 18px;
+
+    width: 100%;
 }
+
+
+/* กล่องทั้งสอง */
 
 .university-box,
 .personal-box {
@@ -534,10 +532,13 @@ button {
     position: relative;
 
     transition: .45s;
+
+    width: 100%;
 }
 
 .university-box {
     color: white;
+
     background: #080808;
 }
 
@@ -586,7 +587,9 @@ button {
 }
 
 
-/* UNIVERSITIES */
+/* =====================================================
+   UNIVERSITIES
+===================================================== */
 
 .university-item {
     display: grid;
@@ -603,11 +606,13 @@ button {
 
 .university-item > span {
     font-size: 11px;
+
     opacity: .5;
 }
 
 .university-item h3 {
     font-size: 17px;
+
     line-height: 1.5;
 }
 
@@ -787,7 +792,7 @@ button {
 
 
 /* =====================================================
-   CERTIFICATES - DESKTOP
+   CERTIFICATES
 ===================================================== */
 
 .certificate-grid {
@@ -852,16 +857,15 @@ button {
     overflow: hidden;
 }
 
-
-/* รูปทุกใบตามสัดส่วนจริง */
-
 .image-placeholder img {
     display: block;
 
     width: auto;
+
     max-width: 100%;
 
     height: auto;
+
     max-height: 100%;
 
     object-fit: contain;
@@ -939,15 +943,17 @@ footer {
 
 
 /* =====================================================
-   SCROLL ANIMATION
+   ANIMATION
 ===================================================== */
+
+/* ไม่ซ่อนเนื้อหา ป้องกันหน้าขาว */
 
 .content-section,
 .portfolio-block,
 .contact-section {
-    opacity: 0;
+    opacity: 1;
 
-    transform: translateY(35px);
+    transform: translateY(0);
 
     transition:
         opacity .9s ease,
@@ -964,24 +970,94 @@ footer {
 
 
 /* =====================================================
-   TABLET + IPAD
-   1 ใบต่อ 1 แถว
+   TABLET
 ===================================================== */
 
-@media (max-width: 1400px) {
-
-    .personal-grid {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 900px) {
 
     .contact-grid {
         grid-template-columns: repeat(2,1fr);
     }
 
+}
 
-    /* =================================================
-       CERTIFICATE
-    ================================================= */
+
+/* =====================================================
+   IPAD PORTRAIT
+   บน/ล่าง
+===================================================== */
+
+@media (min-width: 651px)
+and (max-width: 1100px)
+and (orientation: portrait) {
+
+    .page-container {
+        width: calc(100% - 60px);
+
+        padding-top: 125px;
+    }
+
+    .personal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+
+/* =====================================================
+   IPAD LANDSCAPE
+   ซ้าย/ขวา
+===================================================== */
+
+@media (min-width: 651px)
+and (max-width: 1400px)
+and (orientation: landscape) {
+
+    .page-container {
+        width: calc(100% - 60px);
+
+        max-width: 1180px;
+
+        padding-top: 125px;
+    }
+
+
+    /* ================================================
+       มหาวิทยาลัยซ้าย
+       ข้อมูลส่วนตัวขวา
+    ================================================ */
+
+    .personal-grid {
+        display: grid !important;
+
+        grid-template-columns: .9fr 1.1fr !important;
+
+        gap: 18px !important;
+
+        width: 100% !important;
+    }
+
+    .university-box,
+    .personal-box {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        min-height: 520px;
+    }
+
+
+    /* ================================================
+       CERTIFICATE 1 ใบ / 1 แถว
+    ================================================ */
 
     .certificate-grid {
         display: grid !important;
@@ -989,40 +1065,21 @@ footer {
         grid-template-columns: 1fr !important;
 
         gap: 28px !important;
-
-        width: 100% !important;
     }
 
     .certificate-card {
+        width: 100% !important;
+
         display: flex !important;
 
         flex-direction: column !important;
 
-        width: 100% !important;
-
         height: auto !important;
 
         min-width: 0 !important;
-
-        overflow: hidden !important;
-
-        position: static !important;
-
-        background: #fff !important;
-
-        border: 1px solid #ddd !important;
-
-        border-radius: 22px !important;
-
-        box-sizing: border-box !important;
     }
 
     .certificate-card .image-placeholder {
-        display: flex !important;
-
-        align-items: center !important;
-        justify-content: center !important;
-
         width: 100% !important;
 
         height: auto !important;
@@ -1030,17 +1087,9 @@ footer {
         min-height: 0 !important;
 
         padding: 20px !important;
-
-        overflow: hidden !important;
-
-        background: #f7f7f7 !important;
-
-        box-sizing: border-box !important;
     }
 
     .certificate-card .image-placeholder img {
-        display: block !important;
-
         width: 100% !important;
 
         height: auto !important;
@@ -1050,70 +1099,20 @@ footer {
         max-height: none !important;
 
         object-fit: contain !important;
-
-        object-position: center !important;
-
-        margin: 0 auto !important;
-
-        position: static !important;
-
-        transform: none !important;
     }
 
     .certificate-card .card-description {
-        display: block !important;
-
-        position: static !important;
-
         width: 100% !important;
 
         height: auto !important;
 
-        min-height: 0 !important;
-
         padding: 20px !important;
-
-        margin: 0 !important;
-
-        background: #fff !important;
-
-        border-top: 1px solid #eee !important;
-
-        box-sizing: border-box !important;
-    }
-
-    .certificate-card .card-description h3 {
-        display: block !important;
-
-        position: static !important;
-
-        margin: 0 0 8px !important;
-
-        font-size: 18px !important;
-
-        line-height: 1.5 !important;
-
-        color: #111 !important;
-    }
-
-    .certificate-card .card-description p {
-        display: block !important;
-
-        position: static !important;
-
-        margin: 0 !important;
-
-        font-size: 14px !important;
-
-        line-height: 1.7 !important;
-
-        color: #777 !important;
     }
 
 
-    /* =================================================
-       EVENT / AWARD
-    ================================================= */
+    /* ================================================
+       EVENTS 1 ใบ / 1 แถว
+    ================================================ */
 
     .event-grid {
         display: grid !important;
@@ -1121,40 +1120,19 @@ footer {
         grid-template-columns: 1fr !important;
 
         gap: 28px !important;
-
-        width: 100% !important;
     }
 
     .event-card {
+        width: 100% !important;
+
         display: flex !important;
 
         flex-direction: column !important;
 
-        width: 100% !important;
-
         height: auto !important;
-
-        min-width: 0 !important;
-
-        overflow: hidden !important;
-
-        position: static !important;
-
-        background: #fff !important;
-
-        border: 1px solid #ddd !important;
-
-        border-radius: 22px !important;
-
-        box-sizing: border-box !important;
     }
 
     .event-card .image-placeholder.large {
-        display: flex !important;
-
-        align-items: center !important;
-        justify-content: center !important;
-
         width: 100% !important;
 
         height: auto !important;
@@ -1162,17 +1140,9 @@ footer {
         min-height: 0 !important;
 
         padding: 20px !important;
-
-        overflow: hidden !important;
-
-        background: #f7f7f7 !important;
-
-        box-sizing: border-box !important;
     }
 
     .event-card .image-placeholder.large img {
-        display: block !important;
-
         width: 100% !important;
 
         height: auto !important;
@@ -1182,65 +1152,8 @@ footer {
         max-height: none !important;
 
         object-fit: contain !important;
-
-        object-position: center !important;
-
-        margin: 0 auto !important;
-
-        position: static !important;
-
-        transform: none !important;
     }
 
-    .event-card .card-description {
-        display: block !important;
-
-        position: static !important;
-
-        width: 100% !important;
-
-        height: auto !important;
-
-        min-height: 0 !important;
-
-        padding: 20px !important;
-
-        margin: 0 !important;
-
-        background: #fff !important;
-
-        border-top: 1px solid #eee !important;
-
-        box-sizing: border-box !important;
-    }
-
-    .event-card .card-description h3 {
-        display: block !important;
-
-        position: static !important;
-
-        margin: 0 0 8px !important;
-
-        font-size: 18px !important;
-
-        line-height: 1.5 !important;
-
-        color: #111 !important;
-    }
-
-    .event-card .card-description p {
-        display: block !important;
-
-        position: static !important;
-
-        margin: 0 !important;
-
-        font-size: 14px !important;
-
-        line-height: 1.7 !important;
-
-        color: #777 !important;
-    }
 }
 
 
@@ -1403,15 +1316,23 @@ footer {
     .event-card .card-description {
         padding: 18px !important;
     }
+
 }
 
 
 /* =====================================================
    DESKTOP
-   จอใหญ่จริงเท่านั้น
 ===================================================== */
 
 @media (min-width: 1401px) {
+
+    .personal-grid {
+        display: grid;
+
+        grid-template-columns: .9fr 1.1fr;
+
+        gap: 18px;
+    }
 
     .certificate-grid {
         grid-template-columns: repeat(3,1fr);
@@ -1420,4 +1341,5 @@ footer {
     .event-grid {
         grid-template-columns: repeat(2,1fr);
     }
+
 }
