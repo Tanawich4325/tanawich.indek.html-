@@ -213,27 +213,23 @@ button {
 .profile-container {
     width: 180px;
     height: 180px;
-
     position: relative;
-
     margin: 0 auto 32px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .profile-image {
     width: 100%;
     height: 100%;
-
+    display: block;
     object-fit: cover;
     object-position: center top;
-
     border-radius: 50%;
-    border: 7px solid white;
-
-    box-shadow: 0 25px 70px rgba(0,0,0,.16);
-
+    border: 7px solid #fff;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .16);
     position: relative;
     z-index: 2;
-
     transition: .5s;
 }
 
