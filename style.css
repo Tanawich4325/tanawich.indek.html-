@@ -2442,3 +2442,196 @@ footer {
     }
 
 }
+
+   /* =========================================
+   PC PORTFOLIO FIX
+========================================= */
+
+@media (min-width: 1101px) {
+
+    /* การ์ดเกียรติบัตร */
+    .certificate-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px !important;
+        align-items: start !important;
+    }
+
+    .certificate-card {
+        display: flex !important;
+        flex-direction: column !important;
+        position: relative !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        overflow: hidden !important;
+
+        background: #fff !important;
+        border: 1px solid #ddd !important;
+        border-radius: 22px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* ===============================
+       รูปเกียรติบัตร
+    =============================== */
+
+    .certificate-card .image-placeholder {
+        position: relative !important;
+
+        width: 100% !important;
+        height: 360px !important;
+
+        padding: 15px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        overflow: hidden !important;
+
+        background: #f7f7f7 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .certificate-card .image-placeholder img {
+        position: static !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        margin: 0 !important;
+
+        object-fit: contain !important;
+        object-position: center !important;
+
+        transform: none !important;
+    }
+
+
+    /* ===============================
+       ข้อความใต้รูป
+    =============================== */
+
+    .certificate-card .card-description {
+        position: static !important;
+
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        min-height: 130px !important;
+
+        padding: 20px !important;
+        margin: 0 !important;
+
+        background: #fff !important;
+
+        border-top: 1px solid #eee !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .certificate-card .card-description h3 {
+        margin: 0 0 8px !important;
+
+        font-size: 18px !important;
+        line-height: 1.5 !important;
+
+        color: #111 !important;
+    }
+
+    .certificate-card .card-description p {
+        margin: 0 !important;
+
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+
+        color: #777 !important;
+    }
+
+
+    /* ===============================
+       รูปกิจกรรม
+    =============================== */
+
+    .event-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+    }
+
+    .event-card {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        overflow: hidden !important;
+
+        background: #fff !important;
+        border: 1px solid #ddd !important;
+        border-radius: 22px !important;
+    }
+
+    .event-card .image-placeholder.large {
+        position: relative !important;
+
+        width: 100% !important;
+        height: 420px !important;
+
+        padding: 15px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        overflow: hidden !important;
+
+        background: #f7f7f7 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .event-card .image-placeholder img {
+        position: static !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        object-fit: contain !important;
+
+        margin: 0 !important;
+
+        transform: none !important;
+    }
+
+    .event-card .card-description {
+        position: static !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        padding: 20px !important;
+        margin: 0 !important;
+
+        background: #fff !important;
+
+        border-top: 1px solid #eee !important;
+
+        box-sizing: border-box !important;
+    }
+
+}
