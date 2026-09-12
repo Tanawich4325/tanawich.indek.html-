@@ -348,6 +348,13 @@ button {
 
 }
 
+.profile-image:hover {
+
+    transform:
+        scale(1.04);
+
+}
+
 
 /* RING */
 
