@@ -1343,3 +1343,36 @@ and (orientation: landscape) {
     }
 
 }
+
+/* =========================
+   IPAD - ขนาดเกียรติบัตร
+========================= */
+
+@media (min-width: 651px) and (max-width: 1400px) {
+
+    .certificate-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .certificate-card {
+        width: 70%;
+        max-width: 650px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .certificate-card img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+        display: block;
+    }
+
+    .card-description {
+        padding: 18px 22px;
+    }
+}
