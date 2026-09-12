@@ -1435,3 +1435,26 @@ and (orientation: landscape) {
         padding: 18px 22px;
     }
 }
+
+/* =====================================================
+   UNIVERSITY LOGO - ข้อความซ้าย โลโก้ขวา
+===================================================== */
+
+.university-item {
+    display: grid !important;
+    grid-template-columns: 38px 1fr 90px !important;
+    align-items: center;
+    gap: 15px;
+}
+
+.university-info {
+    min-width: 0;
+}
+
+.university-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    justify-self: end;
+    display: block;
+}
