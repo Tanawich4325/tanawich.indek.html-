@@ -1385,3 +1385,53 @@ and (orientation: landscape) {
         padding: 18px 22px;
     }
 }
+/* =====================================================
+   IPAD - รูปภาพการรับรางวัล / ร่วมอบรม
+===================================================== */
+
+@media (min-width: 651px) and (max-width: 1400px) {
+
+    .event-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+        width: 100%;
+    }
+
+    .event-card {
+        width: 70% !important;
+        max-width: 650px;
+        margin: 0 auto;
+        height: auto !important;
+        overflow: hidden;
+    }
+
+    .event-card .image-placeholder.large {
+        width: 100%;
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 15px !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+    .event-card .image-placeholder.large img {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+
+        max-width: 100% !important;
+        max-height: none !important;
+
+        object-fit: contain !important;
+    }
+
+    .event-card .card-description {
+        width: 100%;
+        padding: 18px 22px;
+    }
+}
