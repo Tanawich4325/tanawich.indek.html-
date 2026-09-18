@@ -48,14 +48,16 @@ button {
 
 .navbar {
     position: fixed;
+
     top: 18px;
     left: 50%;
+
     transform: translateX(-50%);
 
     width: calc(100% - 40px);
     max-width: var(--max-width);
 
-    height: 70px;
+    min-height: 70px;
 
     display: flex;
     align-items: center;
@@ -66,9 +68,12 @@ button {
     z-index: 999;
 
     background: rgba(255, 255, 255, 0.88);
+
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     border: 1px solid rgba(0, 0, 0, 0.08);
+
     border-radius: 50px;
 
     box-shadow:
@@ -83,6 +88,8 @@ button {
 .logo {
     width: 42px;
     height: 42px;
+
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
@@ -114,11 +121,14 @@ button {
 
 .nav-menu {
     display: flex;
-    gap: 5px;
+
+    align-items: center;
+
+    gap: 4px;
 }
 
 .nav-menu a {
-    padding: 9px 18px;
+    padding: 9px 15px;
 
     border-radius: 30px;
 
@@ -127,29 +137,38 @@ button {
     font-size: 14px;
     font-weight: 600;
 
-    transition: 0.35s;
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
     color: #000;
+
     background: #f1f1f1;
 }
 
 
 /* =====================================================
-   MOBILE MENU
+   MOBILE MENU BUTTON
 ===================================================== */
 
 .menu-button {
     display: none;
 
     border: none;
+
     background: transparent;
 
     font-size: 24px;
 
     cursor: pointer;
+
+    padding: 5px;
 }
 
 
@@ -175,6 +194,7 @@ button {
 
 .background-grid {
     position: absolute;
+
     inset: 0;
 
     z-index: -1;
@@ -197,6 +217,7 @@ button {
 }
 
 @keyframes grid-animation {
+
     from {
         transform: translateY(0);
     }
@@ -213,6 +234,7 @@ button {
 
 .hero-content {
     width: 100%;
+
     max-width: 950px;
 }
 
@@ -244,12 +266,14 @@ button {
     object-position: center top;
 
     border-radius: 50%;
+
     border: 7px solid #fff;
 
     box-shadow:
         0 25px 70px rgba(0, 0, 0, 0.16);
 
     position: relative;
+
     z-index: 2;
 
     transition: 0.5s;
@@ -299,6 +323,7 @@ button {
 }
 
 @keyframes rotate-ring {
+
     to {
         transform: rotate(360deg);
     }
@@ -339,13 +364,16 @@ button {
 }
 
 @keyframes text-up {
+
     from {
         opacity: 0;
+
         transform: translateY(25px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 }
@@ -360,7 +388,7 @@ button {
 
 
 /* =====================================================
-   BUTTONS
+   HERO BUTTONS
 ===================================================== */
 
 .hero-buttons {
@@ -390,6 +418,7 @@ button {
     gap: 15px;
 
     font-size: 14px;
+
     font-weight: 700;
 
     transition: 0.4s;
@@ -406,11 +435,13 @@ button {
 
 .black-button {
     color: white;
+
     background: black;
 }
 
 .black-button:hover {
     color: black;
+
     background: white;
 
     transform:
@@ -422,11 +453,13 @@ button {
 
 .white-button {
     color: black;
+
     background: white;
 }
 
 .white-button:hover {
     color: white;
+
     background: black;
 
     transform:
@@ -472,6 +505,7 @@ button {
 }
 
 @keyframes scroll-line {
+
     0%,
     100% {
         transform: scaleY(0.5);
@@ -513,6 +547,7 @@ button {
 
 .section-header h1,
 .section-header h2 {
+
     font-size:
         clamp(34px, 5vw, 60px);
 
@@ -543,6 +578,7 @@ button {
 ===================================================== */
 
 .personal-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -560,6 +596,7 @@ button {
 
 .university-box,
 .personal-box {
+
     min-height: 520px;
 
     padding: 38px;
@@ -574,11 +611,14 @@ button {
 }
 
 .university-box {
+
     color: white;
+
     background: #080808;
 }
 
 .personal-box {
+
     background: #f4f4f4;
 
     border: 1px solid #ddd;
@@ -586,6 +626,7 @@ button {
 
 .university-box:hover,
 .personal-box:hover {
+
     transform:
         translateY(-8px);
 
@@ -599,6 +640,7 @@ button {
 ===================================================== */
 
 .box-number {
+
     position: absolute;
 
     top: 30px;
@@ -610,6 +652,7 @@ button {
 }
 
 .box-label {
+
     font-size: 10px;
 
     letter-spacing: 0.2em;
@@ -621,6 +664,7 @@ button {
 
 .university-box h2,
 .personal-box h2 {
+
     font-size: 32px;
 
     line-height: 1.3;
@@ -635,6 +679,7 @@ button {
 ===================================================== */
 
 .university-item {
+
     display: grid;
 
     grid-template-columns:
@@ -649,16 +694,21 @@ button {
 }
 
 .university-item > span {
+
     font-size: 11px;
+
     opacity: 0.5;
 }
 
 .university-item h3 {
+
     font-size: 17px;
+
     line-height: 1.5;
 }
 
 .university-item p {
+
     margin-top: 5px;
 
     color: #aaa;
@@ -672,11 +722,13 @@ button {
 ===================================================== */
 
 .information-list {
+
     border-top:
         1px solid #d4d4d4;
 }
 
 .information-row {
+
     display: grid;
 
     grid-template-columns:
@@ -702,18 +754,22 @@ button {
 
 
 /* =====================================================
-   SKILLS & ABILITIES
+   SKILLS
+   DESKTOP = 3 x 3
 ===================================================== */
 
 .skills-section {
+
     margin-top: 75px;
 }
 
 .skills-header {
+
     margin-bottom: 35px;
 }
 
 .skills-header h2 {
+
     font-size:
         clamp(30px, 4vw, 45px);
 
@@ -726,12 +782,8 @@ button {
     margin-top: 5px;
 }
 
-
-/* =====================================================
-   SKILLS GRID — DESKTOP 3 x 3
-===================================================== */
-
 .skills-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -748,6 +800,7 @@ button {
 ===================================================== */
 
 .skill-card {
+
     position: relative;
 
     min-height: 250px;
@@ -771,6 +824,7 @@ button {
 }
 
 .skill-card:hover {
+
     transform:
         translateY(-8px);
 
@@ -783,6 +837,7 @@ button {
 }
 
 .skill-number {
+
     position: absolute;
 
     top: 20px;
@@ -795,12 +850,13 @@ button {
     font-weight: 700;
 }
 
-.skill-card:hover
-.skill-number {
+.skill-card:hover .skill-number {
+
     color: #777;
 }
 
 .skill-icon {
+
     width: 52px;
     height: 52px;
 
@@ -822,13 +878,15 @@ button {
     transition: 0.4s;
 }
 
-.skill-card:hover
-.skill-icon {
+.skill-card:hover .skill-icon {
+
     background: #fff;
+
     color: #000;
 }
 
 .skill-card h3 {
+
     font-size: 17px;
 
     line-height: 1.4;
@@ -839,6 +897,7 @@ button {
 }
 
 .skill-card p {
+
     color: #777;
 
     font-size: 13px;
@@ -847,6 +906,7 @@ button {
 }
 
 .skill-card:hover p {
+
     color: #aaa;
 }
 
@@ -856,12 +916,14 @@ button {
 ===================================================== */
 
 .text-content {
+
     max-width: 950px;
 
     margin-top: 75px;
 }
 
 .text-content h2 {
+
     font-size: 28px;
 
     font-weight: 800;
@@ -870,6 +932,7 @@ button {
 }
 
 .text-content p {
+
     color: #555;
 
     font-size: 16px;
@@ -879,10 +942,12 @@ button {
 
 
 /* =====================================================
-   CONTACT
+   OLD CONTACT
+   ใช้เฉพาะกรณีมี contact-section เก่าในหน้าอื่น
 ===================================================== */
 
 .contact-section {
+
     margin-top: 90px;
 
     padding:
@@ -893,15 +958,17 @@ button {
 }
 
 .contact-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(5, 1fr);
+        repeat(5, minmax(0, 1fr));
 
     gap: 12px;
 }
 
 .contact-card {
+
     min-height: 180px;
 
     padding: 25px;
@@ -915,6 +982,7 @@ button {
 }
 
 .contact-card:hover {
+
     color: white;
 
     background: black;
@@ -924,12 +992,14 @@ button {
 }
 
 .contact-icon {
+
     font-size: 25px;
 
     margin-bottom: 18px;
 }
 
 .contact-card small {
+
     display: block;
 
     color: #888;
@@ -944,6 +1014,7 @@ button {
 }
 
 .contact-card p {
+
     font-size: 13px;
 
     font-weight: 600;
@@ -957,6 +1028,7 @@ button {
 ===================================================== */
 
 .portfolio-section {
+
     margin-top: 80px;
 
     padding-top: 80px;
@@ -966,10 +1038,12 @@ button {
 }
 
 .portfolio-block {
+
     margin-top: 65px;
 }
 
 .portfolio-heading {
+
     display: flex;
 
     gap: 20px;
@@ -978,6 +1052,7 @@ button {
 }
 
 .portfolio-heading > span {
+
     font-size: 11px;
 
     color: #888;
@@ -986,6 +1061,7 @@ button {
 }
 
 .portfolio-heading h2 {
+
     font-size:
         clamp(24px, 3vw, 34px);
 
@@ -995,9 +1071,11 @@ button {
 
 /* =====================================================
    CERTIFICATES
+   DESKTOP = 3 COLUMNS
 ===================================================== */
 
 .certificate-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -1010,6 +1088,7 @@ button {
 
 .certificate-card,
 .event-card {
+
     overflow: hidden;
 
     border:
@@ -1024,6 +1103,7 @@ button {
 
 .certificate-card:hover,
 .event-card:hover {
+
     transform:
         translateY(-8px);
 
@@ -1037,6 +1117,7 @@ button {
 ===================================================== */
 
 .image-placeholder {
+
     width: 100%;
 
     min-height: 240px;
@@ -1067,14 +1148,17 @@ button {
 }
 
 .image-placeholder img {
+
     display: block;
 
     width: 100%;
+
     max-width: 100%;
 
     height: auto;
 
     object-fit: contain;
+
     object-position: center;
 }
 
@@ -1084,16 +1168,19 @@ button {
 ===================================================== */
 
 .card-description {
+
     padding: 20px;
 }
 
 .card-description h3 {
+
     font-size: 16px;
 
     margin-bottom: 5px;
 }
 
 .card-description p {
+
     color: #777;
 
     font-size: 13px;
@@ -1105,10 +1192,11 @@ button {
 ===================================================== */
 
 .event-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2, minmax(0, 1fr));
 
     gap: 18px;
 
@@ -1116,6 +1204,7 @@ button {
 }
 
 .image-placeholder.large {
+
     min-height: 380px;
 }
 
@@ -1125,6 +1214,7 @@ button {
 ===================================================== */
 
 .back-button-container {
+
     display: flex;
 
     justify-content: center;
@@ -1138,6 +1228,7 @@ button {
 ===================================================== */
 
 footer {
+
     text-align: center;
 
     padding:
@@ -1159,6 +1250,7 @@ footer {
 .content-section,
 .portfolio-block,
 .contact-section {
+
     opacity: 1;
 
     transform: translateY(0);
@@ -1171,6 +1263,7 @@ footer {
 .content-section.show-animation,
 .portfolio-block.show-animation,
 .contact-section.show-animation {
+
     opacity: 1;
 
     transform: translateY(0);
@@ -1178,534 +1271,8 @@ footer {
 
 
 /* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 1100px) {
-
-    .skills-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-}
-
-
-/* =====================================================
-   CONTACT TABLET
-===================================================== */
-
-@media (max-width: 900px) {
-
-    .contact-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-}
-
-
-/* =====================================================
-   IPAD PORTRAIT
-===================================================== */
-
-@media (min-width: 651px)
-and (max-width: 1100px)
-and (orientation: portrait) {
-
-    .page-container {
-        width:
-            calc(100% - 60px);
-
-        padding-top: 125px;
-    }
-
-    .personal-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .university-box,
-    .personal-box {
-        min-height: auto;
-    }
-
-    .skills-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 18px;
-    }
-
-    .skill-card {
-        min-height: 230px;
-    }
-
-    .certificate-grid {
-        grid-template-columns:
-            1fr;
-
-        gap: 28px;
-
-        justify-items: center;
-    }
-
-    .certificate-card {
-        width: 70%;
-        max-width: 650px;
-        margin: 0 auto;
-    }
-
-    .certificate-card
-    .image-placeholder {
-        min-height: 0;
-        padding: 15px;
-    }
-
-    .certificate-card
-    .image-placeholder img {
-        width: 100%;
-    }
-
-    .event-grid {
-        grid-template-columns:
-            1fr;
-
-        gap: 28px;
-
-        justify-items: center;
-    }
-
-    .event-card {
-        width: 70%;
-        max-width: 650px;
-        margin: 0 auto;
-    }
-
-    .event-card
-    .image-placeholder.large {
-        min-height: 0;
-        padding: 15px;
-    }
-
-    .event-card
-    .image-placeholder.large img {
-        width: 100%;
-    }
-}
-
-
-/* =====================================================
-   IPAD LANDSCAPE
-===================================================== */
-
-@media (min-width: 651px)
-and (max-width: 1400px)
-and (orientation: landscape) {
-
-    .page-container {
-        width:
-            calc(100% - 60px);
-
-        max-width: 1180px;
-
-        padding-top: 125px;
-    }
-
-    .personal-grid {
-        grid-template-columns:
-            0.9fr 1.1fr;
-    }
-
-    .university-box,
-    .personal-box {
-        width: 100%;
-        min-width: 0;
-        min-height: 520px;
-    }
-
-    .skills-grid {
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
-        gap: 18px;
-    }
-
-    .certificate-grid {
-        grid-template-columns:
-            1fr;
-
-        gap: 28px;
-
-        justify-items: center;
-    }
-
-    .certificate-card {
-        width: 70%;
-        max-width: 650px;
-        margin: 0 auto;
-    }
-
-    .certificate-card
-    .image-placeholder {
-        min-height: 0;
-        padding: 15px;
-    }
-
-    .certificate-card
-    .image-placeholder img {
-        width: 100%;
-    }
-
-    .certificate-card
-    .card-description {
-        padding:
-            18px 22px;
-    }
-
-    .event-grid {
-        grid-template-columns:
-            1fr;
-
-        gap: 28px;
-
-        justify-items: center;
-    }
-
-    .event-card {
-        width: 70%;
-        max-width: 650px;
-        margin: 0 auto;
-    }
-
-    .event-card
-    .image-placeholder.large {
-        min-height: 0;
-        padding: 15px;
-    }
-
-    .event-card
-    .image-placeholder.large img {
-        width: 100%;
-    }
-
-    .event-card
-    .card-description {
-        padding:
-            18px 22px;
-    }
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 650px) {
-
-    .navbar {
-        width:
-            calc(100% - 24px);
-
-        top: 12px;
-
-        height: 62px;
-    }
-
-    .menu-button {
-        display: block;
-    }
-
-    .nav-menu {
-        display: none;
-
-        position: absolute;
-
-        top: 70px;
-
-        left: 0;
-        right: 0;
-
-        padding: 10px;
-
-        flex-direction: column;
-
-        background:
-            rgba(255, 255, 255, 0.97);
-
-        border:
-            1px solid #ddd;
-
-        border-radius: 22px;
-
-        box-shadow:
-            0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-menu.show {
-        display: flex;
-    }
-
-    .nav-menu a {
-        text-align: center;
-    }
-
-
-    /* =================================================
-       HERO MOBILE
-    ================================================= */
-
-    .hero {
-        padding:
-            120px 16px 80px;
-    }
-
-    .profile-container {
-        width: 150px;
-        height: 150px;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .student-info {
-        font-size: 14px;
-    }
-
-
-    /* =================================================
-       BUTTONS MOBILE
-    ================================================= */
-
-    .hero-buttons {
-        flex-direction: column;
-
-        width:
-            min(100%, 330px);
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .main-button {
-        width: 100%;
-    }
-
-
-    /* =================================================
-       PAGE MOBILE
-    ================================================= */
-
-    .page-container {
-        width:
-            calc(100% - 28px);
-
-        padding-top: 115px;
-    }
-
-
-    /* =================================================
-       PERSONAL MOBILE
-    ================================================= */
-
-    .personal-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .university-box,
-    .personal-box {
-        min-height: auto;
-
-        padding:
-            28px 22px;
-    }
-
-    .university-box h2,
-    .personal-box h2 {
-        font-size: 28px;
-    }
-
-    .information-row {
-        grid-template-columns:
-            1fr;
-
-        gap: 3px;
-
-        padding:
-            14px 0;
-    }
-
-    .information-row strong {
-        font-size: 14px;
-    }
-
-
-    /* =================================================
-       SKILLS MOBILE
-    ================================================= */
-
-    .skills-section {
-        margin-top: 60px;
-    }
-
-    .skills-header {
-        margin-bottom: 28px;
-    }
-
-    .skills-grid {
-        grid-template-columns:
-            1fr;
-
-        gap: 15px;
-    }
-
-    .skill-card {
-        min-height: auto;
-
-        padding: 25px;
-    }
-
-    .skill-icon {
-        margin-bottom: 22px;
-    }
-
-
-    /* =================================================
-       TEXT MOBILE
-    ================================================= */
-
-    .text-content {
-        margin-top: 60px;
-    }
-
-    .text-content h2 {
-        font-size: 24px;
-    }
-
-    .text-content p {
-        font-size: 15px;
-    }
-
-
-    /* =================================================
-       CONTACT MOBILE
-    ================================================= */
-
-    .contact-section {
-        margin-top: 70px;
-
-        padding:
-            60px 0 70px;
-    }
-
-    .contact-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .contact-card {
-        min-height: auto;
-    }
-
-
-    /* =================================================
-       CERTIFICATE MOBILE
-    ================================================= */
-
-    .certificate-grid {
-        grid-template-columns:
-            1fr;
-
-        gap: 25px;
-    }
-
-    .certificate-card {
-        width: 100%;
-    }
-
-    .certificate-card
-    .image-placeholder {
-        padding: 15px;
-        min-height: 0;
-    }
-
-    .certificate-card
-    .image-placeholder img {
-        width: 100%;
-    }
-
-    .certificate-card
-    .card-description {
-        padding: 18px;
-    }
-
-
-    /* =================================================
-       EVENT MOBILE
-    ================================================= */
-
-    .event-grid {
-        grid-template-columns:
-            1fr;
-
-        gap: 25px;
-    }
-
-    .event-card {
-        width: 100%;
-    }
-
-    .event-card
-    .image-placeholder.large {
-        padding: 15px;
-        min-height: 0;
-    }
-
-    .event-card
-    .image-placeholder.large img {
-        width: 100%;
-    }
-
-    .event-card
-    .card-description {
-        padding: 18px;
-    }
-}
-
-
-/* =====================================================
-   LARGE DESKTOP
-===================================================== */
-
-@media (min-width: 1401px) {
-
-    .personal-grid {
-        grid-template-columns:
-            0.9fr 1.1fr;
-    }
-
-    /* 3 x 3 */
-    .skills-grid {
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
-        gap: 20px;
-    }
-
-    .certificate-grid {
-        grid-template-columns:
-            repeat(3, 1fr);
-    }
-
-    .event-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-}
-/* =====================================================
    CONTACT PAGE
+   DESKTOP = 3 x 3
 ===================================================== */
 
 .contact-page-grid {
@@ -1721,6 +1288,10 @@ and (orientation: landscape) {
 }
 
 
+/* =====================================================
+   CONTACT PAGE CARD
+===================================================== */
+
 .contact-page-card {
 
     position: relative;
@@ -1731,7 +1302,8 @@ and (orientation: landscape) {
 
     background: #f4f4f4;
 
-    border: 1px solid #dedede;
+    border:
+        1px solid #dedede;
 
     border-radius: 28px;
 
@@ -1743,7 +1315,6 @@ and (orientation: landscape) {
         color 0.4s ease,
         box-shadow 0.4s ease;
 }
-
 
 .contact-page-card:hover {
 
@@ -1759,6 +1330,10 @@ and (orientation: landscape) {
 }
 
 
+/* =====================================================
+   CONTACT NUMBER
+===================================================== */
+
 .contact-page-number {
 
     position: absolute;
@@ -1773,16 +1348,17 @@ and (orientation: landscape) {
     font-weight: 700;
 }
 
-
-.contact-page-card:hover
-.contact-page-number {
+.contact-page-card:hover .contact-page-number {
 
     color: #777;
 }
 
 
-.contact-page-card
-.contact-icon {
+/* =====================================================
+   CONTACT ICON
+===================================================== */
+
+.contact-page-card .contact-icon {
 
     width: 58px;
     height: 58px;
@@ -1802,14 +1378,13 @@ and (orientation: landscape) {
 
     margin-bottom: 35px;
 
-    border: 1px solid #ddd;
+    border:
+        1px solid #ddd;
 
     transition: 0.4s;
 }
 
-
-.contact-page-card:hover
-.contact-icon {
+.contact-page-card:hover .contact-icon {
 
     background: #ffffff;
 
@@ -1818,6 +1393,10 @@ and (orientation: landscape) {
     border-color: #ffffff;
 }
 
+
+/* =====================================================
+   CONTACT LABEL
+===================================================== */
 
 .contact-page-card small {
 
@@ -1834,12 +1413,15 @@ and (orientation: landscape) {
     margin-bottom: 7px;
 }
 
-
 .contact-page-card:hover small {
 
     color: #999;
 }
 
+
+/* =====================================================
+   CONTACT TITLE
+===================================================== */
 
 .contact-page-card h2 {
 
@@ -1853,6 +1435,10 @@ and (orientation: landscape) {
 }
 
 
+/* =====================================================
+   CONTACT TEXT
+===================================================== */
+
 .contact-page-card p {
 
     color: #666;
@@ -1864,7 +1450,6 @@ and (orientation: landscape) {
     word-break: break-word;
 }
 
-
 .contact-page-card:hover p {
 
     color: #aaa;
@@ -1872,26 +1457,604 @@ and (orientation: landscape) {
 
 
 /* =====================================================
-   CONTACT PAGE TABLET
+   TABLET
 ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+
+    .skills-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
 
     .contact-page-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
-
     }
 
 }
 
 
 /* =====================================================
-   CONTACT PAGE MOBILE
+   TABLET CONTACT
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .contact-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   IPAD PORTRAIT
+===================================================== */
+
+@media (min-width: 651px)
+and (max-width: 1100px)
+and (orientation: portrait) {
+
+    .page-container {
+
+        width:
+            calc(100% - 60px);
+
+        padding-top: 125px;
+    }
+
+    .personal-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .university-box,
+    .personal-box {
+
+        min-height: auto;
+    }
+
+    .skills-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .skill-card {
+
+        min-height: 230px;
+    }
+
+    .certificate-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 28px;
+
+        justify-items: center;
+    }
+
+    .certificate-card {
+
+        width: 70%;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    .certificate-card .image-placeholder {
+
+        min-height: 0;
+
+        padding: 15px;
+    }
+
+    .certificate-card .image-placeholder img {
+
+        width: 100%;
+    }
+
+    .event-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 28px;
+
+        justify-items: center;
+    }
+
+    .event-card {
+
+        width: 70%;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    .event-card .image-placeholder.large {
+
+        min-height: 0;
+
+        padding: 15px;
+    }
+
+    .event-card .image-placeholder.large img {
+
+        width: 100%;
+    }
+
+    .contact-page-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   IPAD LANDSCAPE
+===================================================== */
+
+@media (min-width: 651px)
+and (max-width: 1400px)
+and (orientation: landscape) {
+
+    .page-container {
+
+        width:
+            calc(100% - 60px);
+
+        max-width: 1180px;
+
+        padding-top: 125px;
+    }
+
+    .personal-grid {
+
+        grid-template-columns:
+            0.9fr 1.1fr;
+    }
+
+    .university-box,
+    .personal-box {
+
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 520px;
+    }
+
+    .skills-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .certificate-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 28px;
+
+        justify-items: center;
+    }
+
+    .certificate-card {
+
+        width: 70%;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    .certificate-card .image-placeholder {
+
+        min-height: 0;
+
+        padding: 15px;
+    }
+
+    .certificate-card .image-placeholder img {
+
+        width: 100%;
+    }
+
+    .certificate-card .card-description {
+
+        padding:
+            18px 22px;
+    }
+
+    .event-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 28px;
+
+        justify-items: center;
+    }
+
+    .event-card {
+
+        width: 70%;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    .event-card .image-placeholder.large {
+
+        min-height: 0;
+
+        padding: 15px;
+    }
+
+    .event-card .image-placeholder.large img {
+
+        width: 100%;
+    }
+
+    .event-card .card-description {
+
+        padding:
+            18px 22px;
+    }
+
+    .contact-page-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
 ===================================================== */
 
 @media (max-width: 650px) {
+
+    .navbar {
+
+        width:
+            calc(100% - 24px);
+
+        top: 12px;
+
+        min-height: 62px;
+
+        height: 62px;
+
+        padding: 0 16px;
+    }
+
+    .menu-button {
+
+        display: block;
+    }
+
+    .nav-menu {
+
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+        right: 0;
+
+        padding: 10px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        background:
+            rgba(255, 255, 255, 0.97);
+
+        border:
+            1px solid #ddd;
+
+        border-radius: 22px;
+
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.show {
+
+        display: flex;
+    }
+
+    .nav-menu a {
+
+        width: 100%;
+
+        text-align: center;
+
+        padding: 12px 15px;
+    }
+
+
+    /* =================================================
+       HERO MOBILE
+    ================================================= */
+
+    .hero {
+
+        padding:
+            120px 16px 80px;
+    }
+
+    .profile-container {
+
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero h1 {
+
+        font-size: 35px;
+    }
+
+    .student-info {
+
+        font-size: 14px;
+    }
+
+
+    /* =================================================
+       BUTTONS MOBILE
+    ================================================= */
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width:
+            min(100%, 330px);
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-button {
+
+        width: 100%;
+    }
+
+
+    /* =================================================
+       PAGE MOBILE
+    ================================================= */
+
+    .page-container {
+
+        width:
+            calc(100% - 28px);
+
+        padding-top: 115px;
+    }
+
+
+    /* =================================================
+       PERSONAL MOBILE
+    ================================================= */
+
+    .personal-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .university-box,
+    .personal-box {
+
+        min-height: auto;
+
+        padding:
+            28px 22px;
+    }
+
+    .university-box h2,
+    .personal-box h2 {
+
+        font-size: 28px;
+    }
+
+    .information-row {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 3px;
+
+        padding:
+            14px 0;
+    }
+
+    .information-row strong {
+
+        font-size: 14px;
+    }
+
+
+    /* =================================================
+       SKILLS MOBILE
+    ================================================= */
+
+    .skills-section {
+
+        margin-top: 60px;
+    }
+
+    .skills-header {
+
+        margin-bottom: 28px;
+    }
+
+    .skills-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+    }
+
+    .skill-card {
+
+        min-height: auto;
+
+        padding: 25px;
+    }
+
+    .skill-icon {
+
+        margin-bottom: 22px;
+    }
+
+
+    /* =================================================
+       TEXT MOBILE
+    ================================================= */
+
+    .text-content {
+
+        margin-top: 60px;
+    }
+
+    .text-content h2 {
+
+        font-size: 24px;
+    }
+
+    .text-content p {
+
+        font-size: 15px;
+    }
+
+
+    /* =================================================
+       OLD CONTACT MOBILE
+    ================================================= */
+
+    .contact-section {
+
+        margin-top: 70px;
+
+        padding:
+            60px 0 70px;
+    }
+
+    .contact-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .contact-card {
+
+        min-height: auto;
+    }
+
+
+    /* =================================================
+       CERTIFICATE MOBILE
+    ================================================= */
+
+    .certificate-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 25px;
+    }
+
+    .certificate-card {
+
+        width: 100%;
+    }
+
+    .certificate-card .image-placeholder {
+
+        padding: 15px;
+
+        min-height: 0;
+    }
+
+    .certificate-card .image-placeholder img {
+
+        width: 100%;
+    }
+
+    .certificate-card .card-description {
+
+        padding: 18px;
+    }
+
+
+    /* =================================================
+       EVENT MOBILE
+    ================================================= */
+
+    .event-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 25px;
+    }
+
+    .event-card {
+
+        width: 100%;
+    }
+
+    .event-card .image-placeholder.large {
+
+        padding: 15px;
+
+        min-height: 0;
+    }
+
+    .event-card .image-placeholder.large img {
+
+        width: 100%;
+    }
+
+    .event-card .card-description {
+
+        padding: 18px;
+    }
+
+
+    /* =================================================
+       CONTACT PAGE MOBILE
+    ================================================= */
 
     .contact-page-grid {
 
@@ -1899,24 +2062,83 @@ and (orientation: landscape) {
             1fr;
 
         gap: 15px;
-
     }
-
 
     .contact-page-card {
 
         min-height: 250px;
 
-        padding: 28px 24px;
-
+        padding:
+            28px 24px;
     }
 
-
-    .contact-page-card
-    .contact-icon {
+    .contact-page-card .contact-icon {
 
         margin-bottom: 28px;
+    }
 
+}
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1401px) {
+
+    .page-container {
+
+        max-width: 1180px;
+    }
+
+    .personal-grid {
+
+        grid-template-columns:
+            0.9fr 1.1fr;
+    }
+
+    /* ==============================
+       SKILLS = 3 x 3
+    ============================== */
+
+    .skills-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+    /* ==============================
+       CERTIFICATE = 3 COLUMNS
+    ============================== */
+
+    .certificate-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    /* ==============================
+       EVENTS = 2 COLUMNS
+    ============================== */
+
+    .event-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    /* ==============================
+       CONTACT = 3 x 3
+    ============================== */
+
+    .contact-page-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 20px;
     }
 
 }
