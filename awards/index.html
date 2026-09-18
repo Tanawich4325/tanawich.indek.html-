@@ -23,8 +23,11 @@
 <body>
 
 
-<header class="navbar">
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
+<header class="navbar">
 
     <a
         href="../index.html"
@@ -36,29 +39,17 @@
 
     <nav class="nav-menu">
 
-
-        <!-- หน้าแรก -->
-
         <a href="../index.html">
             หน้าแรก
         </a>
-
-
-        <!-- ข้อมูลส่วนตัว -->
 
         <a href="../personal/index.html">
             ข้อมูลส่วนตัว
         </a>
 
-
-        <!-- แฟ้มสะสมผลงาน -->
-
         <a href="../portfolio/index.html">
             แฟ้มสะสมผลงาน
         </a>
-
-
-        <!-- รูปภาพการรับรางวัล -->
 
         <a
             href="index.html"
@@ -67,13 +58,9 @@
             รูปภาพการรับรางวัล
         </a>
 
-
-        <!-- ช่องทางการติดต่อ -->
-
         <a href="../contact/index.html">
             ช่องทางการติดต่อ
         </a>
-
 
     </nav>
 
@@ -85,16 +72,23 @@
         ☰
     </button>
 
-
 </header>
 
 
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
 <main class="page-container">
 
 
 <section class="content-section">
 
+
+    <!-- =================================================
+         HEADER
+    ================================================= -->
 
     <div class="section-header">
 
@@ -112,12 +106,11 @@
 
 
 
-    <!-- =========================
+    <!-- =================================================
          AWARD 01
-    ========================== -->
+    ================================================= -->
 
     <div class="portfolio-block">
-
 
         <div class="portfolio-heading">
 
@@ -144,8 +137,9 @@
         <div class="event-grid">
 
 
-            <div class="event-card">
+            <!-- AWARD IMAGE 01 -->
 
+            <div class="event-card">
 
                 <div class="image-placeholder large">
 
@@ -156,14 +150,12 @@
 
                 </div>
 
-
                 <div class="card-description">
 
                     <h3>
                         รับรางวัลการแข่งขันสื่อสร้างสรรค์
                         ภาพยนตร์สั้นต่อต้านการทุจริต
                     </h3>
-
 
                     <p>
                         ให้ไว้ วันที่ 3 กรกฎาคม พ.ศ. 2568
@@ -172,13 +164,13 @@
 
                 </div>
 
-
             </div>
 
 
 
-            <div class="event-card">
+            <!-- AWARD IMAGE 02 -->
 
+            <div class="event-card">
 
                 <div class="image-placeholder large">
 
@@ -189,14 +181,12 @@
 
                 </div>
 
-
                 <div class="card-description">
 
                     <h3>
                         รับรางวัลการแข่งขันสื่อสร้างสรรค์
                         ภาพยนตร์สั้นต่อต้านการทุจริต
                     </h3>
-
 
                     <p>
                         ให้ไว้ วันที่ 3 กรกฎาคม พ.ศ. 2568
@@ -205,26 +195,38 @@
 
                 </div>
 
-
             </div>
 
 
         </div>
 
-
     </div>
 
 
 
-    <!-- BACK BUTTON -->
+    <!-- =================================================
+         PAGE NAVIGATION
+    ================================================= -->
 
-    <div class="back-button-container">
+    <div class="page-navigation">
+
+        <!-- ย้อนกลับไปแฟ้มสะสมผลงาน -->
 
         <a
-            href="../index.html"
+            href="../portfolio/index.html"
+            class="main-button white-button"
+        >
+            ← ย้อนกลับ
+        </a>
+
+
+        <!-- ไปช่องทางการติดต่อ -->
+
+        <a
+            href="../contact/index.html"
             class="main-button black-button"
         >
-            ← กลับไปหน้าแรก
+            ต่อไป →
         </a>
 
     </div>
@@ -237,6 +239,10 @@
 
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
     © 2026 Tanawich Kajornkidakan
@@ -245,12 +251,14 @@
 
 
 
-<script>
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
+<script>
 
 const menuButton =
     document.querySelector(".menu-button");
-
 
 const navMenu =
     document.querySelector(".nav-menu");
@@ -288,7 +296,6 @@ document
         );
 
     });
-
 
 </script>
 
