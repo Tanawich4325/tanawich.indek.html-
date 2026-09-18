@@ -31,6 +31,10 @@ button {
     font-family: inherit;
 }
 
+img {
+    max-width: 100%;
+}
+
 :root {
     --black: #080808;
     --dark: #151515;
@@ -67,9 +71,9 @@ button {
 
     padding: 0 18px;
 
-    z-index: 999;
+    z-index: 9999;
 
-    background: rgba(255, 255, 255, 0.90);
+    background: rgba(255, 255, 255, 0.92);
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -152,7 +156,7 @@ button {
 
 
 /* =====================================================
-   MOBILE MENU BUTTON
+   MOBILE MENU
 ===================================================== */
 
 .menu-button {
@@ -208,8 +212,7 @@ button {
 
     background-size: 65px 65px;
 
-    animation:
-        grid-animation 18s linear infinite;
+    animation: grid-animation 18s linear infinite;
 }
 
 @keyframes grid-animation {
@@ -230,6 +233,9 @@ button {
 .hero-content {
     width: 100%;
     max-width: 850px;
+
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -284,8 +290,7 @@ button {
 
     border-radius: 50%;
 
-    animation:
-        rotate-ring 14s linear infinite;
+    animation: rotate-ring 14s linear infinite;
 
     z-index: 1;
 }
@@ -346,8 +351,7 @@ button {
 
     font-weight: 400;
 
-    animation:
-        text-up 0.8s ease both;
+    animation: text-up 0.8s ease both;
 }
 
 .hero h1 strong {
@@ -480,8 +484,7 @@ button {
 
     background: #999;
 
-    animation:
-        scroll-line 1.5s infinite;
+    animation: scroll-line 1.5s infinite;
 }
 
 @keyframes scroll-line {
@@ -513,6 +516,11 @@ button {
 
 .content-section {
     scroll-margin-top: 95px;
+
+    /* สำคัญ: บังคับให้แสดง */
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
 }
 
 
@@ -526,8 +534,7 @@ button {
 
 .section-header h1,
 .section-header h2 {
-    font-size:
-        clamp(30px, 4.2vw, 52px);
+    font-size: clamp(30px, 4.2vw, 52px);
 
     line-height: 1.2;
 
@@ -537,8 +544,7 @@ button {
 }
 
 .section-header h2 {
-    font-size:
-        clamp(27px, 3.5vw, 42px);
+    font-size: clamp(27px, 3.5vw, 42px);
 }
 
 .title-line {
@@ -584,6 +590,8 @@ button {
     transition: 0.35s;
 
     width: 100%;
+
+    overflow: hidden;
 }
 
 .university-box {
@@ -594,14 +602,12 @@ button {
 .personal-box {
     background: #f4f4f4;
 
-    border:
-        1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
 .university-box:hover,
 .personal-box:hover {
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.10);
@@ -639,8 +645,7 @@ button {
 
     line-height: 1.3;
 
-    margin:
-        10px 0 24px;
+    margin: 10px 0 24px;
 }
 
 
@@ -753,11 +758,6 @@ button {
     width: 100%;
 }
 
-
-/* =====================================================
-   SKILL CARD
-===================================================== */
-
 .skill-card {
     position: relative;
 
@@ -782,8 +782,7 @@ button {
 }
 
 .skill-card:hover {
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
     background: #080808;
 
@@ -888,7 +887,7 @@ button {
 
 
 /* =====================================================
-   OLD CONTACT
+   CONTACT
 ===================================================== */
 
 .contact-section {
@@ -927,8 +926,7 @@ button {
     color: white;
     background: black;
 
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .contact-icon {
@@ -971,10 +969,18 @@ button {
 
     border-top:
         1px solid #ddd;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
 }
 
 .portfolio-block {
     margin-top: 50px;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
 }
 
 .portfolio-heading {
@@ -1032,8 +1038,7 @@ button {
 
 .certificate-card:hover,
 .event-card:hover {
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
     box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.08);
@@ -1078,13 +1083,11 @@ button {
     display: block;
 
     width: 100%;
-
     max-width: 100%;
 
     height: auto;
 
     object-fit: contain;
-
     object-position: center;
 }
 
@@ -1133,8 +1136,7 @@ button {
 
 
 /* =====================================================
-   BACK / NEXT BUTTONS
-   แก้ขนาดปุ่มไม่ให้โดน CSS ตัวอื่นขยาย
+   BACK / NEXT BUTTON
 ===================================================== */
 
 .back-button-container {
@@ -1148,8 +1150,7 @@ button {
 
     gap: 10px;
 
-    margin:
-        35px auto 20px;
+    margin: 35px auto 20px;
 
     padding: 0;
 
@@ -1157,10 +1158,6 @@ button {
 
     clear: both;
 }
-
-
-/* รองรับทั้งปุ่มที่อยู่ใน container
-   และปุ่มที่ใช้ class .back-button / .next-button */
 
 .back-button-container a,
 .back-button-container button,
@@ -1171,9 +1168,11 @@ button {
     align-items: center !important;
     justify-content: center !important;
 
-    width: auto !important;
+    flex: 0 0 auto !important;
 
+    width: auto !important;
     min-width: 95px !important;
+    max-width: max-content !important;
 
     height: 36px !important;
 
@@ -1181,8 +1180,7 @@ button {
 
     margin: 0 !important;
 
-    border:
-        1px solid #d8d8d8 !important;
+    border: 1px solid #d8d8d8 !important;
 
     border-radius: 50px !important;
 
@@ -1204,7 +1202,7 @@ button {
 
     cursor: pointer;
 
-    white-space: nowrap;
+    white-space: nowrap !important;
 
     box-sizing: border-box !important;
 
@@ -1216,9 +1214,6 @@ button {
         box-shadow 0.25s ease;
 }
 
-
-/* Hover */
-
 .back-button-container a:hover,
 .back-button-container button:hover,
 .back-button:hover,
@@ -1229,8 +1224,7 @@ button {
 
     border-color: #080808 !important;
 
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
     box-shadow:
         0 7px 16px rgba(0, 0, 0, 0.10);
@@ -1257,27 +1251,28 @@ footer {
 
 
 /* =====================================================
-   ANIMATION
+   IMPORTANT
+   ป้องกัน JS animation ทำให้หน้าเว็บกลายเป็นว่าง
 ===================================================== */
 
 .content-section,
 .portfolio-block,
 .contact-section {
-    opacity: 1;
+    opacity: 1 !important;
 
-    transform: translateY(0);
+    visibility: visible !important;
 
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+    transform: none !important;
 }
 
 .content-section.show-animation,
 .portfolio-block.show-animation,
 .contact-section.show-animation {
-    opacity: 1;
+    opacity: 1 !important;
 
-    transform: translateY(0);
+    visibility: visible !important;
+
+    transform: none !important;
 }
 
 
@@ -1295,11 +1290,6 @@ footer {
 
     width: 100%;
 }
-
-
-/* =====================================================
-   CONTACT PAGE CARD
-===================================================== */
 
 .contact-page-card {
     position: relative;
@@ -1329,8 +1319,7 @@ footer {
 
     color: #ffffff;
 
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.12);
@@ -1501,15 +1490,13 @@ and (orientation: portrait) {
     }
 
     .page-container {
-        width:
-            calc(100% - 70px);
+        width: calc(100% - 70px);
 
         padding-top: 115px;
     }
 
     .personal-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .university-box,
@@ -1528,14 +1515,8 @@ and (orientation: portrait) {
         min-height: 215px;
     }
 
-
-    /* ==============================
-       CERTIFICATE
-    ============================== */
-
     .certificate-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         gap: 22px;
 
@@ -1560,18 +1541,8 @@ and (orientation: portrait) {
         width: 100%;
     }
 
-    .certificate-card .card-description {
-        padding: 16px 18px;
-    }
-
-
-    /* ==============================
-       EVENTS
-    ============================== */
-
     .event-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         gap: 22px;
 
@@ -1594,10 +1565,6 @@ and (orientation: portrait) {
 
     .event-card .image-placeholder.large img {
         width: 100%;
-    }
-
-    .event-card .card-description {
-        padding: 16px 18px;
     }
 
     .contact-page-grid {
@@ -1615,13 +1582,19 @@ and (orientation: portrait) {
 and (max-width: 1400px)
 and (orientation: landscape) {
 
+    .navbar {
+        width: calc(100% - 50px);
+    }
+
     .page-container {
-        width:
-            calc(100% - 70px);
+        width: calc(100% - 70px);
 
         max-width: 1080px;
 
         padding-top: 115px;
+
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .personal-grid {
@@ -1638,11 +1611,6 @@ and (orientation: landscape) {
         min-height: 455px;
     }
 
-
-    /* ==============================
-       SKILLS
-    ============================== */
-
     .skills-grid {
         grid-template-columns:
             repeat(3, minmax(0, 1fr));
@@ -1650,22 +1618,13 @@ and (orientation: landscape) {
         gap: 15px;
     }
 
-
-    /* ==============================
-       CERTIFICATE
-    ============================== */
-
     .certificate-grid {
-        display: grid;
-
         grid-template-columns:
             repeat(3, minmax(0, 1fr));
 
         gap: 15px;
 
         width: 100%;
-
-        justify-items: stretch;
     }
 
     .certificate-card {
@@ -1685,11 +1644,6 @@ and (orientation: landscape) {
     .certificate-card .image-placeholder img {
         width: 100%;
     }
-
-
-    /* ==============================
-       EVENTS
-    ============================== */
 
     .event-grid {
         grid-template-columns:
@@ -1716,11 +1670,6 @@ and (orientation: landscape) {
         width: 100%;
     }
 
-
-    /* ==============================
-       CONTACT
-    ============================== */
-
     .contact-page-grid {
         grid-template-columns:
             repeat(3, minmax(0, 1fr));
@@ -1736,13 +1685,8 @@ and (orientation: landscape) {
 
 @media (max-width: 650px) {
 
-    /* ==============================
-       NAVBAR
-    ============================== */
-
     .navbar {
-        width:
-            calc(100% - 24px);
+        width: calc(100% - 24px);
 
         top: 10px;
 
@@ -1808,9 +1752,7 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       HERO MOBILE
-    ============================== */
+    /* HERO */
 
     .hero {
         min-height: 100svh;
@@ -1851,15 +1793,12 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       HERO BUTTONS
-    ============================== */
+    /* HERO BUTTONS */
 
     .hero-buttons {
         flex-direction: column;
 
-        width:
-            min(100%, 290px);
+        width: min(100%, 290px);
 
         margin-left: auto;
         margin-right: auto;
@@ -1880,13 +1819,10 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       PAGE MOBILE
-    ============================== */
+    /* PAGE */
 
     .page-container {
-        width:
-            calc(100% - 28px);
+        width: calc(100% - 28px);
 
         padding-top: 105px;
 
@@ -1894,9 +1830,7 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       SECTION HEADER
-    ============================== */
+    /* HEADER */
 
     .section-header {
         margin-bottom: 28px;
@@ -1917,13 +1851,10 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       PERSONAL
-    ============================== */
+    /* PERSONAL */
 
     .personal-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         gap: 12px;
     }
@@ -1964,18 +1895,14 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       INFORMATION
-    ============================== */
+    /* INFORMATION */
 
     .information-row {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         gap: 2px;
 
-        padding:
-            12px 0;
+        padding: 12px 0;
 
         font-size: 12px;
     }
@@ -1985,9 +1912,7 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       SKILLS
-    ============================== */
+    /* SKILLS */
 
     .skills-section {
         margin-top: 50px;
@@ -2002,8 +1927,7 @@ and (orientation: landscape) {
     }
 
     .skills-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         gap: 12px;
     }
@@ -2034,9 +1958,7 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       TEXT
-    ============================== */
+    /* TEXT */
 
     .text-content {
         margin-top: 50px;
@@ -2055,9 +1977,7 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       CONTACT
-    ============================== */
+    /* CONTACT */
 
     .contact-section {
         margin-top: 60px;
@@ -2067,8 +1987,7 @@ and (orientation: landscape) {
     }
 
     .contact-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         gap: 10px;
     }
@@ -2082,9 +2001,7 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       PORTFOLIO
-    ============================== */
+    /* PORTFOLIO */
 
     .portfolio-section {
         margin-top: 55px;
@@ -2111,13 +2028,10 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       CERTIFICATE MOBILE
-    ============================== */
+    /* CERTIFICATE */
 
     .certificate-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         gap: 18px;
     }
@@ -2151,13 +2065,10 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       EVENT MOBILE
-    ============================== */
+    /* EVENTS */
 
     .event-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         gap: 18px;
     }
@@ -2183,13 +2094,10 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       CONTACT PAGE
-    ============================== */
+    /* CONTACT PAGE */
 
     .contact-page-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         gap: 12px;
     }
@@ -2221,9 +2129,7 @@ and (orientation: landscape) {
     }
 
 
-    /* ==============================
-       BACK / NEXT MOBILE
-    ============================== */
+    /* BACK BUTTON */
 
     .back-button-container {
         width: 100%;
@@ -2236,8 +2142,7 @@ and (orientation: landscape) {
 
         gap: 7px;
 
-        margin:
-            28px auto 18px;
+        margin: 28px auto 18px;
 
         padding: 0;
     }
@@ -2246,7 +2151,10 @@ and (orientation: landscape) {
     .back-button-container button,
     .back-button,
     .next-button {
+        flex: 0 0 auto !important;
+
         min-width: 88px !important;
+        max-width: max-content !important;
 
         width: auto !important;
 
@@ -2256,14 +2164,10 @@ and (orientation: landscape) {
             6px 12px !important;
 
         font-size: 10px !important;
-
-        line-height: 1.4 !important;
     }
 
 
-    /* ==============================
-       FOOTER
-    ============================== */
+    /* FOOTER */
 
     footer {
         padding:
@@ -2298,8 +2202,7 @@ and (orientation: landscape) {
     }
 
     .page-container {
-        width:
-            calc(100% - 24px);
+        width: calc(100% - 24px);
     }
 
     .section-header h1,
@@ -2310,11 +2213,6 @@ and (orientation: landscape) {
     .portfolio-heading h2 {
         font-size: 19px;
     }
-
-
-    /* ==============================
-       BACK / NEXT SMALL PHONE
-    ============================== */
 
     .back-button-container {
         gap: 6px;
@@ -2390,8 +2288,7 @@ and (orientation: landscape) {
 
         gap: 8px;
 
-        margin:
-            35px auto 20px;
+        margin: 35px auto 20px;
     }
 
     .back-button-container a,
