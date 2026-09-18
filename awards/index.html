@@ -2,22 +2,36 @@
 <html lang="th">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Tanawich | Awards</title>
+    <title>รูปภาพการรับรางวัล | Tanawich</title>
 
-    <link rel="stylesheet" href="../style.css">
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
 </head>
+
 
 <body>
 
+
 <header class="navbar">
 
-    <a href="../index.html" class="logo">
+    <a
+        href="../index.html"
+        class="logo"
+    >
         T<span>.</span>
     </a>
+
 
     <nav class="nav-menu">
 
@@ -25,50 +39,93 @@
             หน้าแรก
         </a>
 
-        <a href="../personal/personal.html">
+        <a href="../personal/index.html">
             ข้อมูลส่วนตัว
         </a>
 
-        <a href="../portfolio/portfolio.html">
+        <a href="../portfolio/index.html">
             แฟ้มสะสมผลงาน
         </a>
 
-        <a href="award.html" class="active">
+        <a
+            href="index.html"
+            class="active"
+        >
             รูปภาพการรับรางวัล
         </a>
 
     </nav>
 
-    <button class="menu-button" type="button">
+
+    <button
+        class="menu-button"
+        type="button"
+    >
         ☰
     </button>
 
 </header>
 
 
+
 <main class="page-container">
 
-    <section class="content-section">
+<section class="content-section">
 
-        <div class="section-header">
 
-            <p class="small-title">
-                AWARDS
-            </p>
+    <!-- =================================================
+         HEADER
+    ================================================= -->
 
-            <h1>
-                รูปภาพการรับรางวัล
-            </h1>
+    <div class="section-header">
 
-            <div class="title-line"></div>
+        <p class="small-title">
+            EVENTS
+        </p>
+
+        <h1>
+            รูปภาพการรับรางวัล
+        </h1>
+
+        <div class="title-line"></div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         AWARD
+    ================================================= -->
+
+    <div class="portfolio-block">
+
+
+        <div class="portfolio-heading">
+
+            <span>
+                01
+            </span>
+
+            <div>
+
+                <p class="small-title">
+                    AWARD
+                </p>
+
+                <h2>
+                    ภาพการรับรางวัลและกิจกรรม
+                </h2>
+
+            </div>
 
         </div>
+
 
 
         <div class="event-grid">
 
 
-            <!-- รูปที่ 1 -->
+            <!-- AWARD 1 -->
 
             <div class="event-card">
 
@@ -81,6 +138,7 @@
 
                 </div>
 
+
                 <div class="card-description">
 
                     <h3>
@@ -90,8 +148,7 @@
 
                     <p>
                         ให้ไว้ วันที่ 3 กรกฎาคม พ.ศ.2568
-                        ณ โรงเรียนบ้านบึง
-                        "อุตสาหกรรมนุเคราะห์"
+                        ณ โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
                     </p>
 
                 </div>
@@ -99,7 +156,8 @@
             </div>
 
 
-            <!-- รูปที่ 2 -->
+
+            <!-- AWARD 2 -->
 
             <div class="event-card">
 
@@ -112,6 +170,7 @@
 
                 </div>
 
+
                 <div class="card-description">
 
                     <h3>
@@ -121,8 +180,7 @@
 
                     <p>
                         ให้ไว้ วันที่ 3 กรกฎาคม พ.ศ.2568
-                        ณ โรงเรียนบ้านบึง
-                        "อุตสาหกรรมนุเคราะห์"
+                        ณ โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
                     </p>
 
                 </div>
@@ -133,20 +191,38 @@
         </div>
 
 
-        <div class="back-button-container">
+    </div>
 
-            <a
-                href="../index.html"
-                class="main-button black-button"
-            >
-                ← กลับไปหน้าแรก
-            </a>
 
-        </div>
 
-    </section>
+    <!-- =================================================
+         BACK BUTTON
+    ================================================= -->
+
+    <div class="back-button-container">
+
+        <a
+            href="../portfolio/index.html"
+            class="main-button black-button"
+        >
+            ← กลับไปแฟ้มสะสมผลงาน
+        </a>
+
+        <a
+            href="../index.html"
+            class="main-button white-button"
+        >
+            กลับหน้าแรก
+            <span>↗</span>
+        </a>
+
+    </div>
+
+
+</section>
 
 </main>
+
 
 
 <footer>
@@ -156,13 +232,17 @@
 </footer>
 
 
+
 <script>
+
 
 const menuButton =
     document.querySelector(".menu-button");
 
+
 const navMenu =
     document.querySelector(".nav-menu");
+
 
 if (menuButton && navMenu) {
 
@@ -177,6 +257,7 @@ if (menuButton && navMenu) {
 
 }
 
+
 document
     .querySelectorAll(".nav-menu a")
     .forEach(function(link) {
@@ -186,7 +267,9 @@ document
             function() {
 
                 if (navMenu) {
+
                     navMenu.classList.remove("show");
+
                 }
 
             }
@@ -194,7 +277,9 @@ document
 
     });
 
+
 </script>
+
 
 </body>
 
