@@ -48,10 +48,8 @@ button {
 
 .navbar {
     position: fixed;
-
     top: 18px;
     left: 50%;
-
     transform: translateX(-50%);
 
     width: calc(100% - 40px);
@@ -73,7 +71,6 @@ button {
     -webkit-backdrop-filter: blur(20px);
 
     border: 1px solid rgba(0, 0, 0, 0.08);
-
     border-radius: 50px;
 
     box-shadow:
@@ -121,9 +118,7 @@ button {
 
 .nav-menu {
     display: flex;
-
     align-items: center;
-
     gap: 4px;
 }
 
@@ -148,7 +143,6 @@ button {
 .nav-menu a:hover,
 .nav-menu a.active {
     color: #000;
-
     background: #f1f1f1;
 }
 
@@ -161,13 +155,11 @@ button {
     display: none;
 
     border: none;
-
     background: transparent;
 
     font-size: 24px;
 
     cursor: pointer;
-
     padding: 5px;
 }
 
@@ -194,7 +186,6 @@ button {
 
 .background-grid {
     position: absolute;
-
     inset: 0;
 
     z-index: -1;
@@ -234,7 +225,6 @@ button {
 
 .hero-content {
     width: 100%;
-
     max-width: 950px;
 }
 
@@ -252,7 +242,6 @@ button {
     margin: 0 auto 32px;
 
     border-radius: 50%;
-
     overflow: visible;
 }
 
@@ -266,14 +255,12 @@ button {
     object-position: center top;
 
     border-radius: 50%;
-
     border: 7px solid #fff;
 
     box-shadow:
         0 25px 70px rgba(0, 0, 0, 0.16);
 
     position: relative;
-
     z-index: 2;
 
     transition: 0.5s;
@@ -285,11 +272,9 @@ button {
 
 .profile-ring {
     position: absolute;
-
     inset: -10px;
 
     border: 1px solid #aaa;
-
     border-radius: 50%;
 
     animation:
@@ -308,7 +293,6 @@ button {
     height: 8px;
 
     background: #000;
-
     border-radius: 50%;
 }
 
@@ -367,13 +351,11 @@ button {
 
     from {
         opacity: 0;
-
         transform: translateY(25px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 }
@@ -407,7 +389,6 @@ button {
     padding: 14px 24px;
 
     border: 1px solid #000;
-
     border-radius: 50px;
 
     display: inline-flex;
@@ -418,7 +399,6 @@ button {
     gap: 15px;
 
     font-size: 14px;
-
     font-weight: 700;
 
     transition: 0.4s;
@@ -435,13 +415,11 @@ button {
 
 .black-button {
     color: white;
-
     background: black;
 }
 
 .black-button:hover {
     color: black;
-
     background: white;
 
     transform:
@@ -453,13 +431,11 @@ button {
 
 .white-button {
     color: black;
-
     background: white;
 }
 
 .white-button:hover {
     color: white;
-
     background: black;
 
     transform:
@@ -611,16 +587,12 @@ button {
 }
 
 .university-box {
-
     color: white;
-
     background: #080808;
 }
 
 .personal-box {
-
     background: #f4f4f4;
-
     border: 1px solid #ddd;
 }
 
@@ -696,14 +668,12 @@ button {
 .university-item > span {
 
     font-size: 11px;
-
     opacity: 0.5;
 }
 
 .university-item h3 {
 
     font-size: 17px;
-
     line-height: 1.5;
 }
 
@@ -755,16 +725,13 @@ button {
 
 /* =====================================================
    SKILLS
-   DESKTOP = 3 x 3
 ===================================================== */
 
 .skills-section {
-
     margin-top: 75px;
 }
 
 .skills-header {
-
     margin-bottom: 35px;
 }
 
@@ -851,7 +818,6 @@ button {
 }
 
 .skill-card:hover .skill-number {
-
     color: #777;
 }
 
@@ -881,7 +847,6 @@ button {
 .skill-card:hover .skill-icon {
 
     background: #fff;
-
     color: #000;
 }
 
@@ -906,7 +871,6 @@ button {
 }
 
 .skill-card:hover p {
-
     color: #aaa;
 }
 
@@ -943,7 +907,6 @@ button {
 
 /* =====================================================
    OLD CONTACT
-   ใช้เฉพาะกรณีมี contact-section เก่าในหน้าอื่น
 ===================================================== */
 
 .contact-section {
@@ -984,7 +947,6 @@ button {
 .contact-card:hover {
 
     color: white;
-
     background: black;
 
     transform:
@@ -1038,7 +1000,6 @@ button {
 }
 
 .portfolio-block {
-
     margin-top: 65px;
 }
 
@@ -1071,7 +1032,7 @@ button {
 
 /* =====================================================
    CERTIFICATES
-   DESKTOP = 3 COLUMNS
+   3 COLUMNS
 ===================================================== */
 
 .certificate-grid {
@@ -1168,7 +1129,6 @@ button {
 ===================================================== */
 
 .card-description {
-
     padding: 20px;
 }
 
@@ -1204,7 +1164,6 @@ button {
 }
 
 .image-placeholder.large {
-
     min-height: 380px;
 }
 
@@ -1272,7 +1231,6 @@ footer {
 
 /* =====================================================
    CONTACT PAGE
-   DESKTOP = 3 x 3
 ===================================================== */
 
 .contact-page-grid {
@@ -1349,7 +1307,6 @@ footer {
 }
 
 .contact-page-card:hover .contact-page-number {
-
     color: #777;
 }
 
@@ -1414,7 +1371,6 @@ footer {
 }
 
 .contact-page-card:hover small {
-
     color: #999;
 }
 
@@ -1451,7 +1407,6 @@ footer {
 }
 
 .contact-page-card:hover p {
-
     color: #aaa;
 }
 
@@ -1529,9 +1484,14 @@ and (orientation: portrait) {
     }
 
     .skill-card {
-
         min-height: 230px;
     }
+
+
+    /* ==============================
+       CERTIFICATE
+       IPAD PORTRAIT = 1 COLUMN
+    ============================== */
 
     .certificate-grid {
 
@@ -1560,9 +1520,13 @@ and (orientation: portrait) {
     }
 
     .certificate-card .image-placeholder img {
-
         width: 100%;
     }
+
+
+    /* ==============================
+       EVENTS
+    ============================== */
 
     .event-grid {
 
@@ -1591,7 +1555,6 @@ and (orientation: portrait) {
     }
 
     .event-card .image-placeholder.large img {
-
         width: 100%;
     }
 
@@ -1605,7 +1568,8 @@ and (orientation: portrait) {
 
 
 /* =====================================================
-   IPAD LANDSCAPE
+   IPAD LANDSCAPE / SMALL DESKTOP
+   CERTIFICATE = 3 COLUMNS
 ===================================================== */
 
 @media (min-width: 651px)
@@ -1638,6 +1602,11 @@ and (orientation: landscape) {
         min-height: 520px;
     }
 
+
+    /* ==============================
+       SKILLS = 3 COLUMNS
+    ============================== */
+
     .skills-grid {
 
         grid-template-columns:
@@ -1646,23 +1615,32 @@ and (orientation: landscape) {
         gap: 18px;
     }
 
+
+    /* ==============================
+       CERTIFICATE = 3 COLUMNS
+    ============================== */
+
     .certificate-grid {
 
+        display: grid;
+
         grid-template-columns:
-            1fr;
+            repeat(3, minmax(0, 1fr));
 
-        gap: 28px;
+        gap: 18px;
 
-        justify-items: center;
+        width: 100%;
+
+        justify-items: stretch;
     }
 
     .certificate-card {
 
-        width: 70%;
+        width: 100%;
 
-        max-width: 650px;
+        max-width: none;
 
-        margin: 0 auto;
+        margin: 0;
     }
 
     .certificate-card .image-placeholder {
@@ -1673,7 +1651,6 @@ and (orientation: landscape) {
     }
 
     .certificate-card .image-placeholder img {
-
         width: 100%;
     }
 
@@ -1683,23 +1660,26 @@ and (orientation: landscape) {
             18px 22px;
     }
 
+
+    /* ==============================
+       EVENTS = 2 COLUMNS
+    ============================== */
+
     .event-grid {
 
         grid-template-columns:
-            1fr;
+            repeat(2, minmax(0, 1fr));
 
-        gap: 28px;
-
-        justify-items: center;
+        gap: 18px;
     }
 
     .event-card {
 
-        width: 70%;
+        width: 100%;
 
-        max-width: 650px;
+        max-width: none;
 
-        margin: 0 auto;
+        margin: 0;
     }
 
     .event-card .image-placeholder.large {
@@ -1710,7 +1690,6 @@ and (orientation: landscape) {
     }
 
     .event-card .image-placeholder.large img {
-
         width: 100%;
     }
 
@@ -1719,6 +1698,11 @@ and (orientation: landscape) {
         padding:
             18px 22px;
     }
+
+
+    /* ==============================
+       CONTACT = 3 COLUMNS
+    ============================== */
 
     .contact-page-grid {
 
@@ -1745,14 +1729,12 @@ and (orientation: landscape) {
         top: 12px;
 
         min-height: 62px;
-
         height: 62px;
 
         padding: 0 16px;
     }
 
     .menu-button {
-
         display: block;
     }
 
@@ -1786,7 +1768,6 @@ and (orientation: landscape) {
     }
 
     .nav-menu.show {
-
         display: flex;
     }
 
@@ -1805,7 +1786,6 @@ and (orientation: landscape) {
     ================================================= */
 
     .hero {
-
         padding:
             120px 16px 80px;
     }
@@ -1817,12 +1797,10 @@ and (orientation: landscape) {
     }
 
     .hero h1 {
-
         font-size: 35px;
     }
 
     .student-info {
-
         font-size: 14px;
     }
 
@@ -1843,7 +1821,6 @@ and (orientation: landscape) {
     }
 
     .main-button {
-
         width: 100%;
     }
 
@@ -1882,7 +1859,6 @@ and (orientation: landscape) {
 
     .university-box h2,
     .personal-box h2 {
-
         font-size: 28px;
     }
 
@@ -1898,7 +1874,6 @@ and (orientation: landscape) {
     }
 
     .information-row strong {
-
         font-size: 14px;
     }
 
@@ -1908,12 +1883,10 @@ and (orientation: landscape) {
     ================================================= */
 
     .skills-section {
-
         margin-top: 60px;
     }
 
     .skills-header {
-
         margin-bottom: 28px;
     }
 
@@ -1933,7 +1906,6 @@ and (orientation: landscape) {
     }
 
     .skill-icon {
-
         margin-bottom: 22px;
     }
 
@@ -1943,17 +1915,14 @@ and (orientation: landscape) {
     ================================================= */
 
     .text-content {
-
         margin-top: 60px;
     }
 
     .text-content h2 {
-
         font-size: 24px;
     }
 
     .text-content p {
-
         font-size: 15px;
     }
 
@@ -1977,13 +1946,13 @@ and (orientation: landscape) {
     }
 
     .contact-card {
-
         min-height: auto;
     }
 
 
     /* =================================================
        CERTIFICATE MOBILE
+       = 1 COLUMN
     ================================================= */
 
     .certificate-grid {
@@ -1995,7 +1964,6 @@ and (orientation: landscape) {
     }
 
     .certificate-card {
-
         width: 100%;
     }
 
@@ -2007,12 +1975,10 @@ and (orientation: landscape) {
     }
 
     .certificate-card .image-placeholder img {
-
         width: 100%;
     }
 
     .certificate-card .card-description {
-
         padding: 18px;
     }
 
@@ -2030,7 +1996,6 @@ and (orientation: landscape) {
     }
 
     .event-card {
-
         width: 100%;
     }
 
@@ -2042,12 +2007,10 @@ and (orientation: landscape) {
     }
 
     .event-card .image-placeholder.large img {
-
         width: 100%;
     }
 
     .event-card .card-description {
-
         padding: 18px;
     }
 
@@ -2073,7 +2036,6 @@ and (orientation: landscape) {
     }
 
     .contact-page-card .contact-icon {
-
         margin-bottom: 28px;
     }
 
@@ -2087,7 +2049,6 @@ and (orientation: landscape) {
 @media (min-width: 1401px) {
 
     .page-container {
-
         max-width: 1180px;
     }
 
@@ -2097,8 +2058,9 @@ and (orientation: landscape) {
             0.9fr 1.1fr;
     }
 
+
     /* ==============================
-       SKILLS = 3 x 3
+       SKILLS = 3 COLUMNS
     ============================== */
 
     .skills-grid {
@@ -2109,6 +2071,7 @@ and (orientation: landscape) {
         gap: 20px;
     }
 
+
     /* ==============================
        CERTIFICATE = 3 COLUMNS
     ============================== */
@@ -2117,7 +2080,10 @@ and (orientation: landscape) {
 
         grid-template-columns:
             repeat(3, minmax(0, 1fr));
+
+        gap: 20px;
     }
+
 
     /* ==============================
        EVENTS = 2 COLUMNS
@@ -2127,10 +2093,13 @@ and (orientation: landscape) {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
     }
 
+
     /* ==============================
-       CONTACT = 3 x 3
+       CONTACT = 3 COLUMNS
     ============================== */
 
     .contact-page-grid {
