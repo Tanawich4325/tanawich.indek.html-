@@ -17,7 +17,7 @@ html {
 body {
     font-family: "Noto Sans Thai", sans-serif;
     color: #0a0a0a;
-    background: #fff;
+    background: #ffffff;
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -33,13 +33,13 @@ button {
 
 :root {
     --black: #080808;
-    --white: #fff;
+    --dark: #151515;
+    --white: #ffffff;
     --light: #f4f4f4;
-    --gray: #777;
+    --gray: #777777;
     --border: #dedede;
     --max-width: 1180px;
 }
-
 
 /* =====================================================
    NAVBAR
@@ -63,15 +63,14 @@ button {
 
     z-index: 999;
 
-    background: rgba(255,255,255,.88);
+    background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(20px);
 
-    border: 1px solid rgba(0,0,0,.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 50px;
 
-    box-shadow: 0 15px 50px rgba(0,0,0,.07);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.07);
 }
-
 
 /* =====================================================
    LOGO
@@ -93,7 +92,7 @@ button {
     font-size: 20px;
     font-weight: 800;
 
-    transition: .35s;
+    transition: 0.35s;
 }
 
 .logo span {
@@ -104,14 +103,12 @@ button {
     transform: rotate(-10deg) scale(1.1);
 }
 
-
 /* =====================================================
    NAV MENU
 ===================================================== */
 
 .nav-menu {
     display: flex;
-    align-items: center;
     gap: 5px;
 }
 
@@ -125,7 +122,7 @@ button {
     font-size: 14px;
     font-weight: 600;
 
-    transition: .35s;
+    transition: 0.35s;
 }
 
 .nav-menu a:hover,
@@ -134,9 +131,8 @@ button {
     background: #f1f1f1;
 }
 
-
 /* =====================================================
-   MOBILE MENU
+   MOBILE BUTTON
 ===================================================== */
 
 .menu-button {
@@ -149,7 +145,6 @@ button {
 
     cursor: pointer;
 }
-
 
 /* =====================================================
    HERO
@@ -179,12 +174,12 @@ button {
 
     background-image:
         linear-gradient(
-            rgba(0,0,0,.045) 1px,
+            rgba(0, 0, 0, 0.045) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(0,0,0,.045) 1px,
+            rgba(0, 0, 0, 0.045) 1px,
             transparent 1px
         );
 
@@ -203,7 +198,6 @@ button {
     }
 }
 
-
 /* =====================================================
    HERO CONTENT
 ===================================================== */
@@ -212,7 +206,6 @@ button {
     width: 100%;
     max-width: 950px;
 }
-
 
 /* =====================================================
    PROFILE
@@ -227,6 +220,8 @@ button {
     margin: 0 auto 32px;
 
     border-radius: 50%;
+
+    overflow: visible;
 }
 
 .profile-image {
@@ -241,18 +236,17 @@ button {
     border-radius: 50%;
     border: 7px solid #fff;
 
-    box-shadow: 0 25px 70px rgba(0,0,0,.16);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.16);
 
     position: relative;
     z-index: 2;
 
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .profile-image:hover {
     transform: scale(1.04);
 }
-
 
 /* =====================================================
    PROFILE RING
@@ -302,28 +296,32 @@ button {
     }
 }
 
-
 /* =====================================================
    HERO TEXT
 ===================================================== */
 
 .small-title {
     font-size: 11px;
-    letter-spacing: .2em;
+
+    letter-spacing: 0.2em;
+
     color: #888;
+
     font-weight: 800;
+
     margin-bottom: 10px;
 }
 
 .hero h1 {
-    font-size: clamp(36px,5vw,68px);
+    font-size: clamp(36px, 5vw, 68px);
 
     line-height: 1.2;
-    letter-spacing: -.045em;
+
+    letter-spacing: -0.045em;
 
     font-weight: 400;
 
-    animation: text-up .9s ease both;
+    animation: text-up 0.9s ease both;
 }
 
 .hero h1 strong {
@@ -331,7 +329,6 @@ button {
 }
 
 @keyframes text-up {
-
     from {
         opacity: 0;
         transform: translateY(25px);
@@ -341,15 +338,15 @@ button {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 .student-info {
     margin-top: 25px;
+
     color: #555;
+
     font-size: 16px;
 }
-
 
 /* =====================================================
    BUTTONS
@@ -384,43 +381,42 @@ button {
     font-size: 14px;
     font-weight: 700;
 
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .main-button span {
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .main-button:hover span {
-    transform: translate(5px,-3px);
+    transform: translate(5px, -3px);
 }
 
 .black-button {
-    color: #fff;
-    background: #000;
+    color: white;
+    background: black;
 }
 
 .black-button:hover {
-    color: #000;
-    background: #fff;
+    color: black;
+    background: white;
 
     transform: translateY(-5px);
 
-    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .white-button {
-    color: #000;
-    background: #fff;
+    color: black;
+    background: white;
 }
 
 .white-button:hover {
-    color: #fff;
-    background: #000;
+    color: white;
+    background: black;
 
     transform: translateY(-5px);
 }
-
 
 /* =====================================================
    SCROLL
@@ -435,11 +431,13 @@ button {
     transform: translateX(-50%);
 
     font-size: 9px;
-    letter-spacing: .2em;
+
+    letter-spacing: 0.2em;
 
     color: #999;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
@@ -457,18 +455,15 @@ button {
 }
 
 @keyframes scroll-line {
-
     0%,
     100% {
-        transform: scaleY(.5);
+        transform: scaleY(0.5);
     }
 
     50% {
         transform: scaleY(1);
     }
-
 }
-
 
 /* =====================================================
    PAGE
@@ -495,16 +490,17 @@ button {
 
 .section-header h1,
 .section-header h2 {
-    font-size: clamp(34px,5vw,60px);
+    font-size: clamp(34px, 5vw, 60px);
 
     line-height: 1.2;
-    letter-spacing: -.04em;
+
+    letter-spacing: -0.04em;
 
     font-weight: 800;
 }
 
 .section-header h2 {
-    font-size: clamp(30px,4vw,48px);
+    font-size: clamp(30px, 4vw, 48px);
 }
 
 .title-line {
@@ -516,20 +512,26 @@ button {
     margin-top: 20px;
 }
 
-
 /* =====================================================
    PERSONAL GRID
+   DESKTOP
+   มหาวิทยาลัย = ซ้าย
+   ข้อมูลส่วนตัว = ขวา
 ===================================================== */
 
 .personal-grid {
     display: grid;
 
-    grid-template-columns: .9fr 1.1fr;
+    grid-template-columns: 0.9fr 1.1fr;
 
     gap: 18px;
 
     width: 100%;
 }
+
+/* =====================================================
+   PERSONAL BOXES
+===================================================== */
 
 .university-box,
 .personal-box {
@@ -541,15 +543,14 @@ button {
 
     position: relative;
 
-    transition: .45s;
+    transition: 0.45s;
 
     width: 100%;
-
-    min-width: 0;
 }
 
 .university-box {
-    color: #fff;
+    color: white;
+
     background: #080808;
 }
 
@@ -564,7 +565,7 @@ button {
     transform: translateY(-8px);
 
     box-shadow:
-        0 25px 60px rgba(0,0,0,.12);
+        0 25px 60px rgba(0, 0, 0, 0.12);
 }
 
 .box-number {
@@ -575,17 +576,17 @@ button {
 
     font-size: 12px;
 
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .box-label {
     font-size: 10px;
 
-    letter-spacing: .2em;
+    letter-spacing: 0.2em;
 
     font-weight: 800;
 
-    opacity: .55;
+    opacity: 0.55;
 }
 
 .university-box h2,
@@ -596,7 +597,6 @@ button {
 
     margin: 12px 0 30px;
 }
-
 
 /* =====================================================
    UNIVERSITIES
@@ -611,16 +611,18 @@ button {
 
     padding: 20px 0;
 
-    border-top: 1px solid rgba(255,255,255,.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .university-item > span {
     font-size: 11px;
-    opacity: .5;
+
+    opacity: 0.5;
 }
 
 .university-item h3 {
     font-size: 17px;
+
     line-height: 1.5;
 }
 
@@ -631,7 +633,6 @@ button {
 
     font-size: 13px;
 }
-
 
 /* =====================================================
    PERSONAL INFORMATION
@@ -663,7 +664,6 @@ button {
     font-weight: 700;
 }
 
-
 /* =====================================================
    TEXT CONTENT
 ===================================================== */
@@ -690,7 +690,6 @@ button {
     margin-bottom: 20px;
 }
 
-
 /* =====================================================
    CONTACT
 ===================================================== */
@@ -706,7 +705,7 @@ button {
 .contact-grid {
     display: grid;
 
-    grid-template-columns: repeat(5,minmax(0,1fr));
+    grid-template-columns: repeat(5, 1fr);
 
     gap: 12px;
 }
@@ -720,20 +719,20 @@ button {
 
     border-radius: 20px;
 
-    transition: .4s;
-
-    min-width: 0;
+    transition: 0.4s;
 }
 
 .contact-card:hover {
-    color: #fff;
-    background: #000;
+    color: white;
+
+    background: black;
 
     transform: translateY(-7px);
 }
 
 .contact-icon {
     font-size: 25px;
+
     margin-bottom: 18px;
 }
 
@@ -758,7 +757,6 @@ button {
 
     word-break: break-word;
 }
-
 
 /* =====================================================
    PORTFOLIO
@@ -793,28 +791,700 @@ button {
 }
 
 .portfolio-heading h2 {
-    font-size: clamp(24px,3vw,34px);
+    font-size: clamp(24px, 3vw, 34px);
 
     line-height: 1.3;
 }
 
-
 /* =====================================================
    CERTIFICATES
-   3 ช่องเป็นค่าเริ่มต้น
 ===================================================== */
 
 .certificate-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 18px;
 
     width: 100%;
 }
 
-.certificate-card {
+.certificate-card,
+.event-card {
+    overflow: hidden;
+
+    border: 1px solid #ddd;
+
+    border-radius: 22px;
+
+    background: white;
+
+    transition: 0.45s;
+}
+
+.certificate-card:hover,
+.event-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.image-placeholder {
     width: 100%;
-   
+
+    min-height: 240px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    color: #777;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0f0f0 25%,
+            #e5e5e5 25%,
+            #e5e5e5 50%,
+            #f0f0f0 50%,
+            #f0f0f0 75%,
+            #e5e5e5 75%
+        );
+
+    background-size: 26px 26px;
+
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    display: block;
+
+    width: auto;
+    max-width: 100%;
+
+    height: auto;
+    max-height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+}
+
+/* =====================================================
+   CARD DESCRIPTION
+===================================================== */
+
+.card-description {
+    padding: 20px;
+}
+
+.card-description h3 {
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.card-description p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+/* =====================================================
+   EVENTS
+===================================================== */
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+.image-placeholder.large {
+    min-height: 380px;
+}
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-button-container {
+    display: flex;
+
+    justify-content: center;
+
+    margin: 65px 0;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    text-align: center;
+
+    padding: 30px 20px 40px;
+
+    border-top: 1px solid #e5e5e5;
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+/* =====================================================
+   ANIMATION
+   ไม่ซ่อนเนื้อหา ป้องกันหน้าขาว
+===================================================== */
+
+.content-section,
+.portfolio-block,
+.contact-section {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.content-section.show-animation,
+.portfolio-block.show-animation,
+.contact-section.show-animation {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =====================================================
+   IPAD PORTRAIT
+   แนวตั้ง
+===================================================== */
+
+@media (min-width: 651px)
+and (max-width: 1100px)
+and (orientation: portrait) {
+
+    .page-container {
+        width: calc(100% - 60px);
+
+        padding-top: 125px;
+    }
+
+    /*
+       แนวตั้งให้กล่องเรียงบน/ล่าง
+       เพราะพื้นที่แนวนอนน้อย
+    */
+
+    .personal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .university-box,
+    .personal-box {
+        min-height: auto;
+    }
+
+    /*
+       เกียรติบัตร
+       ทำให้เล็กลงและอยู่ตรงกลาง
+    */
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        justify-items: center;
+    }
+
+    .certificate-card {
+        width: 70%;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    .certificate-card .image-placeholder {
+        min-height: 0;
+
+        padding: 15px;
+    }
+
+    .certificate-card .image-placeholder img {
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+    }
+
+    /*
+       รูปภาพรับรางวัล
+    */
+
+    .event-grid {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        justify-items: center;
+    }
+
+    .event-card {
+        width: 70%;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    .event-card .image-placeholder.large {
+        min-height: 0;
+
+        padding: 15px;
+    }
+
+    .event-card .image-placeholder.large img {
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+    }
+
+}
+
+/* =====================================================
+   IPAD LANDSCAPE
+   แนวนอน
+   มหาวิทยาลัยซ้าย / ข้อมูลส่วนตัวขวา
+===================================================== */
+
+@media (min-width: 651px)
+and (max-width: 1400px)
+and (orientation: landscape) {
+
+    .page-container {
+        width: calc(100% - 60px);
+
+        max-width: 1180px;
+
+        padding-top: 125px;
+    }
+
+    /*
+       สำคัญ:
+       iPad แนวนอนต้องเป็น 2 ช่อง
+       เหมือนจอใหญ่
+    */
+
+    .personal-grid {
+        display: grid;
+
+        grid-template-columns: 0.9fr 1.1fr;
+
+        gap: 18px;
+
+        width: 100%;
+    }
+
+    .university-box,
+    .personal-box {
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 520px;
+    }
+
+    /*
+       เกียรติบัตร
+       1 ใบต่อ 1 แถว
+       แต่ลดขนาดเหลือ 70%
+    */
+
+    .certificate-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        width: 100%;
+
+        justify-items: center;
+    }
+
+    .certificate-card {
+        width: 70%;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+
+        height: auto;
+    }
+
+    .certificate-card .image-placeholder {
+        width: 100%;
+
+        min-height: 0;
+
+        height: auto;
+
+        padding: 15px;
+    }
+
+    .certificate-card .image-placeholder img {
+        display: block;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        max-height: none;
+
+        object-fit: contain;
+    }
+
+    .certificate-card .card-description {
+        width: 100%;
+
+        padding: 18px 22px;
+    }
+
+    /*
+       รูปภาพการรับรางวัล
+       1 ใบต่อ 1 แถว
+       ขนาด 70%
+    */
+
+    .event-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        width: 100%;
+
+        justify-items: center;
+    }
+
+    .event-card {
+        width: 70%;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+
+        height: auto;
+    }
+
+    .event-card .image-placeholder.large {
+        width: 100%;
+
+        min-height: 0;
+
+        height: auto;
+
+        padding: 15px;
+    }
+
+    .event-card .image-placeholder.large img {
+        display: block;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        max-height: none;
+
+        object-fit: contain;
+    }
+
+    .event-card .card-description {
+        width: 100%;
+
+        padding: 18px 22px;
+    }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        width: calc(100% - 24px);
+
+        top: 12px;
+
+        height: 62px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+        right: 0;
+
+        padding: 10px;
+
+        flex-direction: column;
+
+        background: rgba(255, 255, 255, 0.97);
+
+        border: 1px solid #ddd;
+
+        border-radius: 22px;
+
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu a {
+        text-align: center;
+    }
+
+    /* =================================================
+       HERO
+    ================================================= */
+
+    .hero {
+        padding: 120px 16px 80px;
+    }
+
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .student-info {
+        font-size: 14px;
+    }
+
+    /* =================================================
+       BUTTONS
+    ================================================= */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: min(100%, 330px);
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-button {
+        width: 100%;
+    }
+
+    /* =================================================
+       PAGE
+    ================================================= */
+
+    .page-container {
+        width: calc(100% - 28px);
+
+        padding-top: 115px;
+    }
+
+    /* =================================================
+       PERSONAL
+    ================================================= */
+
+    .personal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .university-box,
+    .personal-box {
+        min-height: auto;
+
+        padding: 28px 22px;
+    }
+
+    .information-row {
+        grid-template-columns: 1fr;
+
+        gap: 3px;
+    }
+
+    /* =================================================
+       CONTACT
+    ================================================= */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* =================================================
+       CERTIFICATE
+    ================================================= */
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .certificate-card {
+        width: 100%;
+    }
+
+    .certificate-card .image-placeholder {
+        padding: 15px;
+
+        min-height: 0;
+    }
+
+    .certificate-card .image-placeholder img {
+        width: 100%;
+
+        height: auto;
+    }
+
+    .certificate-card .card-description {
+        padding: 18px;
+    }
+
+    /* =================================================
+       EVENT
+    ================================================= */
+
+    .event-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .event-card {
+        width: 100%;
+    }
+
+    .event-card .image-placeholder.large {
+        padding: 15px;
+
+        min-height: 0;
+    }
+
+    .event-card .image-placeholder.large img {
+        width: 100%;
+
+        height: auto;
+    }
+
+    .event-card .card-description {
+        padding: 18px;
+    }
+
+}
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1401px) {
+
+    .personal-grid {
+        display: grid;
+
+        grid-template-columns: 0.9fr 1.1fr;
+
+        gap: 18px;
+    }
+
+    .certificate-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =====================================================
+   CERTIFICATE GRID - 3 COLUMNS
+   บังคับให้เกียรติบัตรเรียง 3 ช่อง
+===================================================== */
+
+.certificate-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100%;
+}
+
+.certificate-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+.certificate-card .image-placeholder {
+    width: 100%;
+    min-height: 240px;
+    padding: 0;
+}
+
+.certificate-card .image-placeholder img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+เเก้ให้หน่อยตั้งเเต่เริ่ม
