@@ -1704,3 +1704,219 @@ and (orientation: landscape) {
             repeat(2, 1fr);
     }
 }
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
+
+.contact-page-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+.contact-page-card {
+
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 32px;
+
+    background: #f4f4f4;
+
+    border: 1px solid #dedede;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.contact-page-card:hover {
+
+    background: #080808;
+
+    color: #ffffff;
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+
+.contact-page-number {
+
+    position: absolute;
+
+    top: 25px;
+    right: 28px;
+
+    font-size: 11px;
+
+    color: #999;
+
+    font-weight: 700;
+}
+
+
+.contact-page-card:hover
+.contact-page-number {
+
+    color: #777;
+}
+
+
+.contact-page-card
+.contact-icon {
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #000000;
+
+    font-size: 25px;
+
+    margin-bottom: 35px;
+
+    border: 1px solid #ddd;
+
+    transition: 0.4s;
+}
+
+
+.contact-page-card:hover
+.contact-icon {
+
+    background: #ffffff;
+
+    color: #000000;
+
+    border-color: #ffffff;
+}
+
+
+.contact-page-card small {
+
+    display: block;
+
+    color: #888;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 7px;
+}
+
+
+.contact-page-card:hover small {
+
+    color: #999;
+}
+
+
+.contact-page-card h2 {
+
+    font-size: 22px;
+
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+
+    font-weight: 800;
+}
+
+
+.contact-page-card p {
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    word-break: break-word;
+}
+
+
+.contact-page-card:hover p {
+
+    color: #aaa;
+}
+
+
+/* =====================================================
+   CONTACT PAGE TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .contact-page-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* =====================================================
+   CONTACT PAGE MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .contact-page-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .contact-page-card {
+
+        min-height: 250px;
+
+        padding: 28px 24px;
+
+    }
+
+
+    .contact-page-card
+    .contact-icon {
+
+        margin-bottom: 28px;
+
+    }
+
+}
