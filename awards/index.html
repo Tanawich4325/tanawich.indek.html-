@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>รูปภาพการรับรางวัล | Tanawich</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="../index.html" class="logo">
+        T<span>.</span>
+    </a>
+
+    <nav class="nav-menu">
+
+        <a href="../index.html">
+            หน้าแรก
+        </a>
+
+        <a href="../personal/index.html">
+            ข้อมูลส่วนตัว
+        </a>
+
+        <a href="../portfolio/index.html">
+            แฟ้มสะสมผลงาน
+        </a>
+
+        <a href="index.html" class="active">
+            รูปภาพการรับรางวัล
+        </a>
+
+    </nav>
+
+    <button class="menu-button" type="button">
+        ☰
+    </button>
+
+</header>
+
+
+<main class="page-container">
+
+    <section class="content-section">
+
+        <div class="section-header">
+
+            <p class="small-title">
+                AWARDS
+            </p>
+
+            <h1>
+                รูปภาพการรับรางวัล
+            </h1>
+
+            <div class="title-line"></div>
+
+        </div>
+
+
+        <div class="event-grid">
+
+
+            <!-- AWARD 1 -->
+
+            <div class="event-card">
+
+                <div class="image-placeholder large">
+
+                    <img
+                        src="../images/award1.jpg"
+                        alt="รูปภาพการรับรางวัล 1"
+                    >
+
+                </div>
+
+                <div class="card-description">
+
+                    <h3>
+                        รับรางวัลการแข่งขันสื่อสร้างสรรค์
+                        ภาพยนตร์สั้นต่อต้านการทุจริต
+                    </h3>
+
+                    <p>
+                        ให้ไว้ วันที่ 3 กรกฎาคม พ.ศ.2568
+                        ณ โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- AWARD 2 -->
+
+            <div class="event-card">
+
+                <div class="image-placeholder large">
+
+                    <img
+                        src="../images/award2.jpg"
+                        alt="รูปภาพการรับรางวัล 2"
+                    >
+
+                </div>
+
+                <div class="card-description">
+
+                    <h3>
+                        รับรางวัลการแข่งขันสื่อสร้างสรรค์
+                        ภาพยนตร์สั้นต่อต้านการทุจริต
+                    </h3>
+
+                    <p>
+                        ให้ไว้ วันที่ 3 กรกฎาคม พ.ศ.2568
+                        ณ โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="back-button-container">
+
+            <a
+                href="../index.html"
+                class="main-button black-button"
+            >
+                ← กลับไปหน้าแรก
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    © 2026 Tanawich Kajornkidakan
+
+</footer>
+
+
+<script>
+
+const menuButton =
+    document.querySelector(".menu-button");
+
+const navMenu =
+    document.querySelector(".nav-menu");
+
+if (menuButton && navMenu) {
+
+    menuButton.addEventListener(
+        "click",
+        function () {
+
+            navMenu.classList.toggle("show");
+
+        }
+    );
+
+}
+
+document
+    .querySelectorAll(".nav-menu a")
+    .forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                navMenu.classList.remove("show");
+
+            }
+        );
+
+    });
+
+</script>
+
+</body>
+
+</html>
