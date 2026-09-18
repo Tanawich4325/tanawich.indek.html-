@@ -39,7 +39,6 @@ button {
     --gray: #777777;
     --border: #dedede;
 
-    /* ลดขนาดพื้นที่เว็บ */
     --max-width: 1080px;
 }
 
@@ -1135,6 +1134,7 @@ button {
 
 /* =====================================================
    BACK / NEXT BUTTONS
+   แก้ขนาดปุ่มไม่ให้โดน CSS ตัวอื่นขยาย
 ===================================================== */
 
 .back-button-container {
@@ -1146,7 +1146,7 @@ button {
 
     justify-content: center;
 
-    gap: 8px;
+    gap: 10px;
 
     margin:
         35px auto 20px;
@@ -1158,41 +1158,55 @@ button {
     clear: both;
 }
 
+
+/* รองรับทั้งปุ่มที่อยู่ใน container
+   และปุ่มที่ใช้ class .back-button / .next-button */
+
 .back-button-container a,
-.back-button-container button {
-    display: inline-flex;
+.back-button-container button,
+.back-button,
+.next-button {
+    display: inline-flex !important;
 
-    align-items: center;
-    justify-content: center;
+    align-items: center !important;
+    justify-content: center !important;
 
-    width: auto;
+    width: auto !important;
 
-    min-width: 95px;
+    min-width: 95px !important;
 
-    height: 36px;
+    height: 36px !important;
 
-    padding: 7px 14px;
+    padding: 7px 14px !important;
+
+    margin: 0 !important;
 
     border:
-        1px solid #d8d8d8;
+        1px solid #d8d8d8 !important;
 
-    border-radius: 50px;
+    border-radius: 50px !important;
 
-    background: #ffffff;
+    background: #ffffff !important;
 
-    color: #222222;
+    color: #222222 !important;
 
-    font-family: inherit;
+    font-family:
+        "Noto Sans Thai",
+        sans-serif !important;
 
-    font-size: 11px;
+    font-size: 11px !important;
 
-    font-weight: 600;
+    font-weight: 600 !important;
 
-    line-height: 1.4;
+    line-height: 1.4 !important;
+
+    text-decoration: none !important;
 
     cursor: pointer;
 
     white-space: nowrap;
+
+    box-sizing: border-box !important;
 
     transition:
         background 0.25s ease,
@@ -1202,13 +1216,18 @@ button {
         box-shadow 0.25s ease;
 }
 
+
+/* Hover */
+
 .back-button-container a:hover,
-.back-button-container button:hover {
-    background: #080808;
+.back-button-container button:hover,
+.back-button:hover,
+.next-button:hover {
+    background: #080808 !important;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
-    border-color: #080808;
+    border-color: #080808 !important;
 
     transform:
         translateY(-2px);
@@ -1476,6 +1495,7 @@ and (orientation: portrait) {
 
     .navbar {
         width: calc(100% - 50px);
+
         height: 62px;
         min-height: 62px;
     }
@@ -2223,15 +2243,21 @@ and (orientation: landscape) {
     }
 
     .back-button-container a,
-    .back-button-container button {
-        min-width: 88px;
+    .back-button-container button,
+    .back-button,
+    .next-button {
+        min-width: 88px !important;
 
-        height: 34px;
+        width: auto !important;
+
+        height: 34px !important;
 
         padding:
-            6px 12px;
+            6px 12px !important;
 
-        font-size: 10px;
+        font-size: 10px !important;
+
+        line-height: 1.4 !important;
     }
 
 
@@ -2283,6 +2309,29 @@ and (orientation: landscape) {
 
     .portfolio-heading h2 {
         font-size: 19px;
+    }
+
+
+    /* ==============================
+       BACK / NEXT SMALL PHONE
+    ============================== */
+
+    .back-button-container {
+        gap: 6px;
+    }
+
+    .back-button-container a,
+    .back-button-container button,
+    .back-button,
+    .next-button {
+        min-width: 84px !important;
+
+        height: 33px !important;
+
+        padding:
+            6px 10px !important;
+
+        font-size: 10px !important;
     }
 }
 
@@ -2346,14 +2395,18 @@ and (orientation: landscape) {
     }
 
     .back-button-container a,
-    .back-button-container button {
-        min-width: 95px;
+    .back-button-container button,
+    .back-button,
+    .next-button {
+        min-width: 95px !important;
 
-        height: 36px;
+        width: auto !important;
+
+        height: 36px !important;
 
         padding:
-            7px 14px;
+            7px 14px !important;
 
-        font-size: 11px;
+        font-size: 11px !important;
     }
 }
