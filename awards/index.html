@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>รูปภาพการรับรางวัล | Tanawich</title>
+    <title>Tanawich | Awards</title>
 
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -25,15 +25,15 @@
             หน้าแรก
         </a>
 
-        <a href="../personal/index.html">
+        <a href="../personal/personal.html">
             ข้อมูลส่วนตัว
         </a>
 
-        <a href="../portfolio/index.html">
+        <a href="../portfolio/portfolio.html">
             แฟ้มสะสมผลงาน
         </a>
 
-        <a href="index.html" class="active">
+        <a href="award.html" class="active">
             รูปภาพการรับรางวัล
         </a>
 
@@ -68,7 +68,7 @@
         <div class="event-grid">
 
 
-            <!-- AWARD 1 -->
+            <!-- รูปที่ 1 -->
 
             <div class="event-card">
 
@@ -90,7 +90,8 @@
 
                     <p>
                         ให้ไว้ วันที่ 3 กรกฎาคม พ.ศ.2568
-                        ณ โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+                        ณ โรงเรียนบ้านบึง
+                        "อุตสาหกรรมนุเคราะห์"
                     </p>
 
                 </div>
@@ -98,7 +99,7 @@
             </div>
 
 
-            <!-- AWARD 2 -->
+            <!-- รูปที่ 2 -->
 
             <div class="event-card">
 
@@ -120,7 +121,8 @@
 
                     <p>
                         ให้ไว้ วันที่ 3 กรกฎาคม พ.ศ.2568
-                        ณ โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+                        ณ โรงเรียนบ้านบึง
+                        "อุตสาหกรรมนุเคราะห์"
                     </p>
 
                 </div>
@@ -183,7 +185,9 @@ document
             "click",
             function() {
 
-                navMenu.classList.remove("show");
+                if (navMenu) {
+                    navMenu.classList.remove("show");
+                }
 
             }
         );
