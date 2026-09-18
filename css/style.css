@@ -132,7 +132,7 @@ button {
 }
 
 /* =====================================================
-   MOBILE BUTTON
+   MOBILE MENU
 ===================================================== */
 
 .menu-button {
@@ -247,10 +247,6 @@ button {
 .profile-image:hover {
     transform: scale(1.04);
 }
-
-/* =====================================================
-   PROFILE RING
-===================================================== */
 
 .profile-ring {
     position: absolute;
@@ -514,9 +510,6 @@ button {
 
 /* =====================================================
    PERSONAL GRID
-   DESKTOP
-   มหาวิทยาลัย = ซ้าย
-   ข้อมูลส่วนตัว = ขวา
 ===================================================== */
 
 .personal-grid {
@@ -803,7 +796,7 @@ button {
 .certificate-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 18px;
 
@@ -868,11 +861,11 @@ button {
 .image-placeholder img {
     display: block;
 
-    width: auto;
+    width: 100%;
     max-width: 100%;
 
     height: auto;
-    max-height: 100%;
+    max-height: none;
 
     object-fit: contain;
 
@@ -947,7 +940,6 @@ footer {
 
 /* =====================================================
    ANIMATION
-   ไม่ซ่อนเนื้อหา ป้องกันหน้าขาว
 ===================================================== */
 
 .content-section,
@@ -984,7 +976,6 @@ footer {
 
 /* =====================================================
    IPAD PORTRAIT
-   แนวตั้ง
 ===================================================== */
 
 @media (min-width: 651px)
@@ -997,11 +988,6 @@ and (orientation: portrait) {
         padding-top: 125px;
     }
 
-    /*
-       แนวตั้งให้กล่องเรียงบน/ล่าง
-       เพราะพื้นที่แนวนอนน้อย
-    */
-
     .personal-grid {
         grid-template-columns: 1fr;
     }
@@ -1011,81 +997,51 @@ and (orientation: portrait) {
         min-height: auto;
     }
 
-    /*
-       เกียรติบัตร
-       ทำให้เล็กลงและอยู่ตรงกลาง
-    */
-
     .certificate-grid {
         grid-template-columns: 1fr;
-
         gap: 28px;
-
         justify-items: center;
     }
 
     .certificate-card {
         width: 70%;
-
         max-width: 650px;
-
         margin: 0 auto;
     }
 
     .certificate-card .image-placeholder {
         min-height: 0;
-
         padding: 15px;
     }
 
     .certificate-card .image-placeholder img {
         width: 100%;
-
-        max-width: 100%;
-
-        height: auto;
     }
-
-    /*
-       รูปภาพรับรางวัล
-    */
 
     .event-grid {
         grid-template-columns: 1fr;
-
         gap: 28px;
-
         justify-items: center;
     }
 
     .event-card {
         width: 70%;
-
         max-width: 650px;
-
         margin: 0 auto;
     }
 
     .event-card .image-placeholder.large {
         min-height: 0;
-
         padding: 15px;
     }
 
     .event-card .image-placeholder.large img {
         width: 100%;
-
-        max-width: 100%;
-
-        height: auto;
     }
-
 }
 
 /* =====================================================
    IPAD LANDSCAPE
-   แนวนอน
-   มหาวิทยาลัยซ้าย / ข้อมูลส่วนตัวขวา
 ===================================================== */
 
 @media (min-width: 651px)
@@ -1100,147 +1056,66 @@ and (orientation: landscape) {
         padding-top: 125px;
     }
 
-    /*
-       สำคัญ:
-       iPad แนวนอนต้องเป็น 2 ช่อง
-       เหมือนจอใหญ่
-    */
-
     .personal-grid {
-        display: grid;
-
         grid-template-columns: 0.9fr 1.1fr;
-
-        gap: 18px;
-
-        width: 100%;
     }
 
     .university-box,
     .personal-box {
         width: 100%;
-
         min-width: 0;
-
         min-height: 520px;
     }
 
-    /*
-       เกียรติบัตร
-       1 ใบต่อ 1 แถว
-       แต่ลดขนาดเหลือ 70%
-    */
-
     .certificate-grid {
-        display: grid;
-
         grid-template-columns: 1fr;
-
         gap: 28px;
-
-        width: 100%;
-
         justify-items: center;
     }
 
     .certificate-card {
         width: 70%;
-
         max-width: 650px;
-
         margin: 0 auto;
-
-        height: auto;
     }
 
     .certificate-card .image-placeholder {
-        width: 100%;
-
         min-height: 0;
-
-        height: auto;
-
         padding: 15px;
     }
 
     .certificate-card .image-placeholder img {
-        display: block;
-
         width: 100%;
-
-        max-width: 100%;
-
-        height: auto;
-
-        max-height: none;
-
-        object-fit: contain;
     }
 
     .certificate-card .card-description {
-        width: 100%;
-
         padding: 18px 22px;
     }
 
-    /*
-       รูปภาพการรับรางวัล
-       1 ใบต่อ 1 แถว
-       ขนาด 70%
-    */
-
     .event-grid {
-        display: grid;
-
         grid-template-columns: 1fr;
-
         gap: 28px;
-
-        width: 100%;
-
         justify-items: center;
     }
 
     .event-card {
         width: 70%;
-
         max-width: 650px;
-
         margin: 0 auto;
-
-        height: auto;
     }
 
     .event-card .image-placeholder.large {
-        width: 100%;
-
         min-height: 0;
-
-        height: auto;
-
         padding: 15px;
     }
 
     .event-card .image-placeholder.large img {
-        display: block;
-
         width: 100%;
-
-        max-width: 100%;
-
-        height: auto;
-
-        max-height: none;
-
-        object-fit: contain;
     }
 
     .event-card .card-description {
-        width: 100%;
-
         padding: 18px 22px;
     }
-
 }
 
 /* =====================================================
@@ -1292,9 +1167,7 @@ and (orientation: landscape) {
         text-align: center;
     }
 
-    /* =================================================
-       HERO
-    ================================================= */
+    /* HERO */
 
     .hero {
         padding: 120px 16px 80px;
@@ -1313,9 +1186,7 @@ and (orientation: landscape) {
         font-size: 14px;
     }
 
-    /* =================================================
-       BUTTONS
-    ================================================= */
+    /* BUTTONS */
 
     .hero-buttons {
         flex-direction: column;
@@ -1330,9 +1201,7 @@ and (orientation: landscape) {
         width: 100%;
     }
 
-    /* =================================================
-       PAGE
-    ================================================= */
+    /* PAGE */
 
     .page-container {
         width: calc(100% - 28px);
@@ -1340,9 +1209,7 @@ and (orientation: landscape) {
         padding-top: 115px;
     }
 
-    /* =================================================
-       PERSONAL
-    ================================================= */
+    /* PERSONAL */
 
     .personal-grid {
         grid-template-columns: 1fr;
@@ -1361,17 +1228,13 @@ and (orientation: landscape) {
         gap: 3px;
     }
 
-    /* =================================================
-       CONTACT
-    ================================================= */
+    /* CONTACT */
 
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
-    /* =================================================
-       CERTIFICATE
-    ================================================= */
+    /* CERTIFICATE */
 
     .certificate-grid {
         grid-template-columns: 1fr;
@@ -1391,17 +1254,13 @@ and (orientation: landscape) {
 
     .certificate-card .image-placeholder img {
         width: 100%;
-
-        height: auto;
     }
 
     .certificate-card .card-description {
         padding: 18px;
     }
 
-    /* =================================================
-       EVENT
-    ================================================= */
+    /* EVENT */
 
     .event-grid {
         grid-template-columns: 1fr;
@@ -1421,14 +1280,11 @@ and (orientation: landscape) {
 
     .event-card .image-placeholder.large img {
         width: 100%;
-
-        height: auto;
     }
 
     .event-card .card-description {
         padding: 18px;
     }
-
 }
 
 /* =====================================================
@@ -1438,11 +1294,7 @@ and (orientation: landscape) {
 @media (min-width: 1401px) {
 
     .personal-grid {
-        display: grid;
-
         grid-template-columns: 0.9fr 1.1fr;
-
-        gap: 18px;
     }
 
     .certificate-grid {
@@ -1452,41 +1304,4 @@ and (orientation: landscape) {
     .event-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
-
-/* =====================================================
-   CERTIFICATE GRID - 3 COLUMNS
-   บังคับให้เกียรติบัตรเรียง 3 ช่อง
-===================================================== */
-
-.certificate-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 18px !important;
-    width: 100%;
-}
-
-.certificate-card {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-}
-
-.certificate-card .image-placeholder {
-    width: 100%;
-    min-height: 240px;
-    padding: 0;
-}
-
-.certificate-card .image-placeholder img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-เเก้ให้หน่อยตั้งเเต่เริ่ม
-
-
