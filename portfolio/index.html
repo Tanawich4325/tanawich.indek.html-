@@ -12,9 +12,10 @@
 
     <title>แฟ้มสะสมผลงาน | Tanawich</title>
 
+    <!-- CSS -->
     <link
         rel="stylesheet"
-        href="../style.css"
+        href="../css/style.css"
     >
 
 </head>
@@ -30,6 +31,8 @@
 <header class="navbar">
 
 
+    <!-- LOGO -->
+
     <a
         href="../index.html"
         class="logo"
@@ -37,6 +40,9 @@
         T<span>.</span>
     </a>
 
+
+
+    <!-- NAVIGATION -->
 
     <nav class="nav-menu">
 
@@ -59,13 +65,16 @@
         </a>
 
 
-        <a href="../award/index.html">
+        <a href="../awards/index.html">
             รูปภาพการรับรางวัล
         </a>
 
 
     </nav>
 
+
+
+    <!-- MOBILE MENU -->
 
     <button
         class="menu-button"
@@ -86,12 +95,14 @@
 <main class="page-container">
 
 
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
+
 <section class="content-section portfolio-section">
 
 
-    <!-- =================================================
-         HEADER
-    ================================================= -->
+    <!-- HEADER -->
 
     <div class="section-header">
 
@@ -154,7 +165,6 @@
 
                 </div>
 
-
                 <div class="card-description">
 
                     <h3>
@@ -191,7 +201,6 @@
 
                 </div>
 
-
                 <div class="card-description">
 
                     <h3>
@@ -221,7 +230,6 @@
                     >
 
                 </div>
-
 
                 <div class="card-description">
 
@@ -257,7 +265,6 @@
 
                 </div>
 
-
                 <div class="card-description">
 
                     <h3>
@@ -288,7 +295,6 @@
                     >
 
                 </div>
-
 
                 <div class="card-description">
 
@@ -321,7 +327,6 @@
 
                 </div>
 
-
                 <div class="card-description">
 
                     <h3>
@@ -341,58 +346,14 @@
 
         </div>
 
-    </div>
-
-
-
-    <!-- =================================================
-         LINK TO AWARD PAGE
-    ================================================= -->
-
-    <div class="portfolio-block">
-
-
-        <div class="portfolio-heading">
-
-            <span>
-                02
-            </span>
-
-            <div>
-
-                <p class="small-title">
-                    EVENTS
-                </p>
-
-                <h2>
-                    รูปภาพการรับรางวัล
-                </h2>
-
-            </div>
-
-        </div>
-
-
-        <div class="back-button-container">
-
-            <a
-                href="../award/index.html"
-                class="main-button black-button"
-            >
-                ดูรูปภาพการรับรางวัล
-                <span>↗</span>
-            </a>
-
-        </div>
-
 
     </div>
 
 
 
-    <!-- =================================================
-         BACK HOME
-    ================================================= -->
+    <!-- =====================================================
+         BACK BUTTON
+    ===================================================== -->
 
     <div class="back-button-container">
 
@@ -432,6 +393,8 @@
 <script>
 
 
+/* MOBILE MENU */
+
 const menuButton =
     document.querySelector(".menu-button");
 
@@ -453,6 +416,9 @@ if (menuButton && navMenu) {
 
 }
 
+
+
+/* CLOSE MOBILE MENU */
 
 document
     .querySelectorAll(".nav-menu a")
