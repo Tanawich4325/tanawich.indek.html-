@@ -54,20 +54,24 @@ button {
 
     width: calc(100% - 40px);
     max-width: var(--max-width);
-    height: 70px;
+
+    min-height: 70px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 22px;
+    padding: 0 18px;
 
     z-index: 999;
 
     background: rgba(255, 255, 255, 0.88);
+
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     border: 1px solid rgba(0, 0, 0, 0.08);
+
     border-radius: 50px;
 
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.07);
@@ -81,6 +85,8 @@ button {
 .logo {
     width: 42px;
     height: 42px;
+
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
@@ -108,15 +114,26 @@ button {
 
 /* =====================================================
    NAV MENU
+   4 ปุ่ม
 ===================================================== */
 
 .nav-menu {
     display: flex;
-    gap: 5px;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+
+    margin-left: auto;
 }
 
 .nav-menu a {
-    padding: 9px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 13px;
 
     border-radius: 30px;
 
@@ -124,6 +141,8 @@ button {
 
     font-size: 14px;
     font-weight: 600;
+
+    white-space: nowrap;
 
     transition: 0.35s;
 }
@@ -143,11 +162,14 @@ button {
     display: none;
 
     border: none;
+
     background: transparent;
 
     font-size: 24px;
 
     cursor: pointer;
+
+    padding: 5px;
 }
 
 
@@ -161,6 +183,7 @@ button {
     position: relative;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -171,8 +194,14 @@ button {
     overflow: hidden;
 }
 
+
+/* =====================================================
+   BACKGROUND GRID
+===================================================== */
+
 .background-grid {
     position: absolute;
+
     inset: 0;
 
     z-index: -1;
@@ -194,6 +223,7 @@ button {
 }
 
 @keyframes grid-animation {
+
     from {
         transform: translateY(0);
     }
@@ -201,6 +231,7 @@ button {
     to {
         transform: translateY(70px);
     }
+
 }
 
 
@@ -210,6 +241,7 @@ button {
 
 .hero-content {
     width: 100%;
+
     max-width: 950px;
 }
 
@@ -238,14 +270,18 @@ button {
     display: block;
 
     object-fit: cover;
+
     object-position: center top;
 
     border-radius: 50%;
+
     border: 7px solid #fff;
 
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.16);
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.16);
 
     position: relative;
+
     z-index: 2;
 
     transition: 0.5s;
@@ -299,9 +335,11 @@ button {
 }
 
 @keyframes rotate-ring {
+
     to {
         transform: rotate(360deg);
     }
+
 }
 
 
@@ -338,6 +376,7 @@ button {
 }
 
 @keyframes text-up {
+
     from {
         opacity: 0;
         transform: translateY(25px);
@@ -347,6 +386,7 @@ button {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 .student-info {
@@ -359,13 +399,17 @@ button {
 
 
 /* =====================================================
-   BUTTONS
+   HERO BUTTONS
+   รองรับ 4 ปุ่ม
 ===================================================== */
 
 .hero-buttons {
     display: flex;
 
+    align-items: center;
     justify-content: center;
+
+    flex-wrap: wrap;
 
     gap: 12px;
 
@@ -373,9 +417,9 @@ button {
 }
 
 .main-button {
-    min-width: 190px;
+    min-width: 180px;
 
-    padding: 14px 24px;
+    padding: 14px 22px;
 
     border: 1px solid #000;
 
@@ -386,9 +430,10 @@ button {
     align-items: center;
     justify-content: center;
 
-    gap: 15px;
+    gap: 12px;
 
     font-size: 14px;
+
     font-weight: 700;
 
     transition: 0.4s;
@@ -402,27 +447,38 @@ button {
     transform: translate(5px, -3px);
 }
 
+
+/* BLACK BUTTON */
+
 .black-button {
     color: white;
+
     background: black;
 }
 
 .black-button:hover {
     color: black;
+
     background: white;
 
     transform: translateY(-5px);
 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
 }
+
+
+/* WHITE BUTTON */
 
 .white-button {
     color: black;
+
     background: white;
 }
 
 .white-button:hover {
     color: white;
+
     background: black;
 
     transform: translateY(-5px);
@@ -437,6 +493,7 @@ button {
     position: absolute;
 
     bottom: 30px;
+
     left: 50%;
 
     transform: translateX(-50%);
@@ -458,6 +515,7 @@ button {
 
 .scroll-text span {
     width: 1px;
+
     height: 30px;
 
     background: #999;
@@ -466,6 +524,7 @@ button {
 }
 
 @keyframes scroll-line {
+
     0%,
     100% {
         transform: scaleY(0.5);
@@ -474,6 +533,7 @@ button {
     50% {
         transform: scaleY(1);
     }
+
 }
 
 
@@ -517,6 +577,7 @@ button {
 
 .title-line {
     width: 70px;
+
     height: 5px;
 
     background: #000;
@@ -527,9 +588,6 @@ button {
 
 /* =====================================================
    PERSONAL GRID
-   DESKTOP
-   มหาวิทยาลัย = ซ้าย
-   ข้อมูลส่วนตัว = ขวา
 ===================================================== */
 
 .personal-grid {
@@ -890,9 +948,11 @@ button {
     display: block;
 
     width: auto;
+
     max-width: 100%;
 
     height: auto;
+
     max-height: 100%;
 
     object-fit: contain;
@@ -973,7 +1033,6 @@ footer {
 
 /* =====================================================
    ANIMATION
-   ไม่ซ่อนเนื้อหา ป้องกันหน้าขาว
 ===================================================== */
 
 .content-section,
@@ -1001,7 +1060,13 @@ footer {
    TABLET
 ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+
+    .nav-menu a {
+        padding: 8px 10px;
+
+        font-size: 13px;
+    }
 
     .contact-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1012,7 +1077,6 @@ footer {
 
 /* =====================================================
    IPAD PORTRAIT
-   แนวตั้ง
 ===================================================== */
 
 @media (min-width: 651px)
@@ -1025,11 +1089,6 @@ and (orientation: portrait) {
         padding-top: 125px;
     }
 
-    /*
-       แนวตั้งให้กล่องเรียงบน/ล่าง
-       เพราะพื้นที่แนวนอนน้อย
-    */
-
     .personal-grid {
         grid-template-columns: 1fr;
     }
@@ -1038,11 +1097,6 @@ and (orientation: portrait) {
     .personal-box {
         min-height: auto;
     }
-
-    /*
-       เกียรติบัตร
-       ทำให้เล็กลงและอยู่ตรงกลาง
-    */
 
     .certificate-grid {
         grid-template-columns: 1fr;
@@ -1073,10 +1127,6 @@ and (orientation: portrait) {
 
         height: auto;
     }
-
-    /*
-       รูปภาพรับรางวัล
-    */
 
     .event-grid {
         grid-template-columns: 1fr;
@@ -1113,8 +1163,6 @@ and (orientation: portrait) {
 
 /* =====================================================
    IPAD LANDSCAPE
-   แนวนอน
-   มหาวิทยาลัยซ้าย / ข้อมูลส่วนตัวขวา
 ===================================================== */
 
 @media (min-width: 651px)
@@ -1129,6 +1177,304 @@ and (orientation: landscape) {
         padding-top: 125px;
     }
 
-    /*
-       สำคัญ:
-       iPad แนวนอนต้องเป็น 2 ช่อง
+    .personal-grid {
+        grid-template-columns: 0.9fr 1.1fr;
+    }
+
+    .university-box,
+    .personal-box {
+        min-height: 500px;
+    }
+
+    .certificate-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        top: 12px;
+
+        width: calc(100% - 24px);
+
+        min-height: 62px;
+
+        padding: 0 15px;
+
+        border-radius: 35px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        width: 40px;
+        height: 40px;
+
+        font-size: 18px;
+    }
+
+
+    /* MENU BUTTON */
+
+    .menu-button {
+        display: block;
+    }
+
+
+    /* NAV MENU */
+
+    .nav-menu {
+        position: absolute;
+
+        top: 72px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+
+        padding: 10px;
+
+        background: rgba(255, 255, 255, 0.97);
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        border: 1px solid #ddd;
+
+        border-radius: 22px;
+
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+
+        padding: 12px;
+
+        text-align: center;
+
+        font-size: 14px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 120px 18px 80px;
+    }
+
+    .profile-container {
+        width: 150px;
+        height: 150px;
+
+        margin-bottom: 28px;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 48px);
+
+        letter-spacing: -0.035em;
+    }
+
+    .student-info {
+        font-size: 14px;
+    }
+
+
+    /* HERO BUTTONS */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 10px;
+    }
+
+    .hero-buttons .main-button {
+        width: 100%;
+
+        max-width: 340px;
+
+        min-width: 0;
+    }
+
+
+    /* PAGE */
+
+    .page-container {
+        width: calc(100% - 28px);
+
+        padding-top: 110px;
+    }
+
+
+    /* PERSONAL */
+
+    .personal-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .university-box,
+    .personal-box {
+        min-height: auto;
+
+        padding: 28px 24px;
+    }
+
+    .university-box h2,
+    .personal-box h2 {
+        font-size: 28px;
+    }
+
+
+    /* INFORMATION */
+
+    .information-row {
+        grid-template-columns: 1fr;
+
+        gap: 3px;
+
+        padding: 14px 0;
+    }
+
+
+    /* TEXT */
+
+    .text-content {
+        margin-top: 55px;
+    }
+
+    .text-content h2 {
+        font-size: 25px;
+    }
+
+    .text-content p {
+        font-size: 14px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        margin-top: 60px;
+
+        padding: 55px 0 70px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .contact-card {
+        min-height: auto;
+    }
+
+
+    /* PORTFOLIO */
+
+    .portfolio-section {
+        margin-top: 50px;
+
+        padding-top: 60px;
+    }
+
+    .portfolio-block {
+        margin-top: 45px;
+    }
+
+
+    /* CERTIFICATES */
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .certificate-card {
+        width: 100%;
+    }
+
+
+    /* EVENTS */
+
+    .event-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .event-card {
+        width: 100%;
+    }
+
+    .image-placeholder {
+        min-height: 220px;
+    }
+
+    .image-placeholder.large {
+        min-height: 260px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 25px 15px 35px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .profile-container {
+        width: 135px;
+        height: 135px;
+    }
+
+    .main-button {
+        font-size: 13px;
+    }
+
+}
