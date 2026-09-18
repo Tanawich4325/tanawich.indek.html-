@@ -12,10 +12,10 @@
 
     <title>ข้อมูลส่วนตัว | Tanawich</title>
 
-    <!-- ย้อนจาก personal/ กลับไปหา style.css -->
+    <!-- CSS อยู่ในโฟลเดอร์ css -->
     <link
         rel="stylesheet"
-        href="../style.css"
+        href="../css/style.css"
     >
 
 </head>
@@ -41,15 +41,20 @@
     </a>
 
 
+
     <!-- NAVIGATION -->
 
     <nav class="nav-menu">
 
 
+        <!-- หน้าแรก -->
+
         <a href="../index.html">
             หน้าแรก
         </a>
 
+
+        <!-- ข้อมูลส่วนตัว -->
 
         <a
             href="index.html"
@@ -59,10 +64,14 @@
         </a>
 
 
+        <!-- แฟ้มสะสมผลงาน -->
+
         <a href="../portfolio/index.html">
             แฟ้มสะสมผลงาน
         </a>
 
+
+        <!-- รูปภาพการรับรางวัล -->
 
         <a href="../award/index.html">
             รูปภาพการรับรางวัล
@@ -70,6 +79,7 @@
 
 
     </nav>
+
 
 
     <!-- MOBILE MENU -->
@@ -125,9 +135,7 @@
     <div class="personal-grid">
 
 
-        <!-- =================================================
-             UNIVERSITY
-        ================================================= -->
+        <!-- UNIVERSITY -->
 
         <div class="university-box">
 
@@ -148,15 +156,14 @@
             </h2>
 
 
+
             <!-- UNIVERSITY 01 -->
 
             <div class="university-item">
 
-
                 <span>
                     01
                 </span>
-
 
                 <div>
 
@@ -171,19 +178,17 @@
 
                 </div>
 
-
             </div>
+
 
 
             <!-- UNIVERSITY 02 -->
 
             <div class="university-item">
 
-
                 <span>
                     02
                 </span>
-
 
                 <div>
 
@@ -197,7 +202,6 @@
                     </p>
 
                 </div>
-
 
             </div>
 
@@ -228,6 +232,7 @@
             </h2>
 
 
+
             <div class="information-list">
 
 
@@ -244,6 +249,7 @@
                 </div>
 
 
+
                 <div class="information-row">
 
                     <span>
@@ -255,6 +261,7 @@
                     </strong>
 
                 </div>
+
 
 
                 <div class="information-row">
@@ -270,6 +277,7 @@
                 </div>
 
 
+
                 <div class="information-row">
 
                     <span>
@@ -283,6 +291,7 @@
                 </div>
 
 
+
                 <div class="information-row">
 
                     <span>
@@ -294,6 +303,7 @@
                     </strong>
 
                 </div>
+
 
 
                 <div class="information-row">
@@ -435,6 +445,7 @@
             </div>
 
 
+
             <!-- PHONE -->
 
             <div class="contact-card">
@@ -452,6 +463,7 @@
                 </p>
 
             </div>
+
 
 
             <!-- INSTAGRAM -->
@@ -473,6 +485,7 @@
             </div>
 
 
+
             <!-- LINE -->
 
             <div class="contact-card">
@@ -490,6 +503,7 @@
                 </p>
 
             </div>
+
 
 
             <!-- EMAIL -->
@@ -543,6 +557,10 @@
 <script>
 
 
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
 const menuButton =
     document.querySelector(".menu-button");
 
@@ -557,4 +575,42 @@ if (menuButton && navMenu) {
         "click",
         function () {
 
-            nav
+            navMenu.classList.toggle("show");
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   CLOSE MOBILE MENU
+===================================================== */
+
+document
+    .querySelectorAll(".nav-menu a")
+    .forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                if (navMenu) {
+
+                    navMenu.classList.remove("show");
+
+                }
+
+            }
+        );
+
+    });
+
+
+</script>
+
+
+</body>
+
+</html>
