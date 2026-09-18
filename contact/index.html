@@ -1,1 +1,327 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ช่องทางการติดต่อ | Tanawich</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <a
+        href="../index.html"
+        class="logo"
+    >
+        T<span>.</span>
+    </a>
+
+
+    <nav class="nav-menu">
+
+        <a href="../index.html">
+            หน้าแรก
+        </a>
+
+        <a href="../personal/index.html">
+            ข้อมูลส่วนตัว
+        </a>
+
+        <a href="../portfolio/index.html">
+            แฟ้มสะสมผลงาน
+        </a>
+
+        <a href="../awards/index.html">
+            รูปภาพการรับรางวัล
+        </a>
+
+        <a
+            href="index.html"
+            class="active"
+        >
+            ช่องทางการติดต่อ
+        </a>
+
+    </nav>
+
+
+    <button
+        class="menu-button"
+        type="button"
+    >
+        ☰
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="page-container">
+
+<section class="content-section">
+
+
+    <!-- =================================================
+         HEADER
+    ================================================= -->
+
+    <div class="section-header">
+
+        <p class="small-title">
+            CONTACT
+        </p>
+
+        <h1>
+            ช่องทางการติดต่อ
+        </h1>
+
+        <div class="title-line"></div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CONTACT GRID
+    ================================================= -->
+
+    <div class="contact-page-grid">
+
+
+        <!-- ADDRESS -->
+
+        <div class="contact-page-card">
+
+            <span class="contact-page-number">
+                01
+            </span>
+
+            <div class="contact-icon">
+                ⌂
+            </div>
+
+            <small>
+                ที่อยู่
+            </small>
+
+            <h2>
+                ที่อยู่
+            </h2>
+
+            <p>
+                569/4 หมู่ 1 ตำบลหนองไผ่แก้ว
+                อำเภอบ้านบึง จังหวัดชลบุรี
+            </p>
+
+        </div>
+
+
+
+        <!-- PHONE -->
+
+        <div class="contact-page-card">
+
+            <span class="contact-page-number">
+                02
+            </span>
+
+            <div class="contact-icon">
+                ☎
+            </div>
+
+            <small>
+                PHONE
+            </small>
+
+            <h2>
+                เบอร์โทรศัพท์
+            </h2>
+
+            <p>
+                082-375-4325
+            </p>
+
+        </div>
+
+
+
+        <!-- INSTAGRAM -->
+
+        <div class="contact-page-card">
+
+            <span class="contact-page-number">
+                03
+            </span>
+
+            <div class="contact-icon">
+                ◎
+            </div>
+
+            <small>
+                INSTAGRAM
+            </small>
+
+            <h2>
+                Instagram
+            </h2>
+
+            <p>
+                _pxu.1
+            </p>
+
+        </div>
+
+
+
+        <!-- LINE -->
+
+        <div class="contact-page-card">
+
+            <span class="contact-page-number">
+                04
+            </span>
+
+            <div class="contact-icon">
+                ◌
+            </div>
+
+            <small>
+                LINE ID
+            </small>
+
+            <h2>
+                ID Line
+            </h2>
+
+            <p>
+                0823754325
+            </p>
+
+        </div>
+
+
+
+        <!-- EMAIL -->
+
+        <div class="contact-page-card">
+
+            <span class="contact-page-number">
+                05
+            </span>
+
+            <div class="contact-icon">
+                ✉
+            </div>
+
+            <small>
+                E-MAIL
+            </small>
+
+            <h2>
+                E-mail
+            </h2>
+
+            <p>
+                tanawich4325@gmail.com
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    © 2026 Tanawich Kajornkidakan
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+const menuButton =
+    document.querySelector(".menu-button");
+
+const navMenu =
+    document.querySelector(".nav-menu");
+
+
+if (menuButton && navMenu) {
+
+    menuButton.addEventListener(
+        "click",
+        function () {
+
+            navMenu.classList.toggle("show");
+
+        }
+    );
+
+}
+
+
+document
+    .querySelectorAll(".nav-menu a")
+    .forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                if (navMenu) {
+
+                    navMenu.classList.remove("show");
+
+                }
+
+            }
+        );
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
