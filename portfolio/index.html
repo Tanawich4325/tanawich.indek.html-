@@ -32,12 +32,16 @@
     <a
         href="../index.html"
         class="logo"
+        aria-label="กลับหน้าหลัก"
     >
         T<span>.</span>
     </a>
 
 
-    <nav class="nav-menu">
+    <nav
+        class="nav-menu"
+        aria-label="เมนูหลัก"
+    >
 
         <a href="../index.html">
             หน้าแรก
@@ -68,6 +72,8 @@
     <button
         class="menu-button"
         type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
     >
         ☰
     </button>
@@ -138,7 +144,9 @@
         <div class="certificate-grid">
 
 
-            <!-- CERTIFICATE 1 -->
+            <!-- =================================================
+                 CERTIFICATE 1
+            ================================================= -->
 
             <div class="certificate-card">
 
@@ -174,7 +182,9 @@
 
 
 
-            <!-- CERTIFICATE 2 -->
+            <!-- =================================================
+                 CERTIFICATE 2
+            ================================================= -->
 
             <div class="certificate-card">
 
@@ -204,7 +214,9 @@
 
 
 
-            <!-- CERTIFICATE 3 -->
+            <!-- =================================================
+                 CERTIFICATE 3
+            ================================================= -->
 
             <div class="certificate-card">
 
@@ -238,7 +250,9 @@
 
 
 
-            <!-- CERTIFICATE 4 -->
+            <!-- =================================================
+                 CERTIFICATE 4
+            ================================================= -->
 
             <div class="certificate-card">
 
@@ -269,7 +283,9 @@
 
 
 
-            <!-- CERTIFICATE 5 -->
+            <!-- =================================================
+                 CERTIFICATE 5
+            ================================================= -->
 
             <div class="certificate-card">
 
@@ -300,7 +316,9 @@
 
 
 
-            <!-- CERTIFICATE 6 -->
+            <!-- =================================================
+                 CERTIFICATE 6
+            ================================================= -->
 
             <div class="certificate-card">
 
@@ -337,29 +355,28 @@
 
 
 
-    <!-- =================================================
+    <!-- =====================================================
          PAGE NAVIGATION
-    ================================================= -->
+         ปุ่มเล็ก อยู่กลางด้านล่าง
+    ===================================================== -->
 
     <div class="page-navigation">
 
-        <!-- ย้อนกลับ -->
-
         <a
             href="../personal/index.html"
-            class="main-button white-button"
+            class="page-nav-button page-nav-back"
         >
-            ← ย้อนกลับ
+            <span>←</span>
+            <span>ย้อนกลับ</span>
         </a>
 
 
-        <!-- ต่อไป -->
-
         <a
             href="../awards/index.html"
-            class="main-button black-button"
+            class="page-nav-button page-nav-next"
         >
-            ต่อไป →
+            <span>ต่อไป</span>
+            <span>→</span>
         </a>
 
     </div>
@@ -403,32 +420,51 @@ if (menuButton && navMenu) {
         "click",
         function () {
 
-            navMenu.classList.toggle("show");
+            const isOpen =
+                navMenu.classList.toggle("show");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            menuButton.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "ปิดเมนู"
+                    : "เปิดเมนู"
+            );
 
         }
     );
 
-}
 
+    document
+        .querySelectorAll(".nav-menu a")
+        .forEach(function(link) {
 
-document
-    .querySelectorAll(".nav-menu a")
-    .forEach(function(link) {
-
-        link.addEventListener(
-            "click",
-            function() {
-
-                if (navMenu) {
+            link.addEventListener(
+                "click",
+                function() {
 
                     navMenu.classList.remove("show");
 
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuButton.setAttribute(
+                        "aria-label",
+                        "เปิดเมนู"
+                    );
+
                 }
+            );
 
-            }
-        );
+        });
 
-    });
+}
 
 </script>
 
