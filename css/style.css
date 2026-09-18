@@ -1032,7 +1032,6 @@ button {
 
 /* =====================================================
    CERTIFICATES
-   3 COLUMNS
 ===================================================== */
 
 .certificate-grid {
@@ -1169,16 +1168,96 @@ button {
 
 
 /* =====================================================
-   BACK BUTTON
+   BACK / NEXT BUTTONS
+   แก้ไขให้ตรงกลางด้านล่าง
 ===================================================== */
 
 .back-button-container {
 
+    width: 100%;
+
     display: flex;
+
+    align-items: center;
 
     justify-content: center;
 
-    margin: 65px 0;
+    gap: 10px;
+
+    margin: 45px auto 25px;
+
+    padding: 0;
+
+    text-align: center;
+
+    clear: both;
+}
+
+
+/* ปุ่มย้อนกลับ / ต่อไป */
+
+.back-button-container a,
+.back-button-container button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+
+    min-width: 105px;
+
+    height: 38px;
+
+    padding: 8px 16px;
+
+    border:
+        1px solid #d8d8d8;
+
+    border-radius: 50px;
+
+    background: #ffffff;
+
+    color: #222222;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.back-button-container a:hover,
+.back-button-container button:hover {
+
+    background: #080808;
+
+    color: #ffffff;
+
+    border-color: #080808;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -1490,7 +1569,6 @@ and (orientation: portrait) {
 
     /* ==============================
        CERTIFICATE
-       IPAD PORTRAIT = 1 COLUMN
     ============================== */
 
     .certificate-grid {
@@ -1569,7 +1647,6 @@ and (orientation: portrait) {
 
 /* =====================================================
    IPAD LANDSCAPE / SMALL DESKTOP
-   CERTIFICATE = 3 COLUMNS
 ===================================================== */
 
 @media (min-width: 651px)
@@ -1604,7 +1681,7 @@ and (orientation: landscape) {
 
 
     /* ==============================
-       SKILLS = 3 COLUMNS
+       SKILLS
     ============================== */
 
     .skills-grid {
@@ -1617,7 +1694,7 @@ and (orientation: landscape) {
 
 
     /* ==============================
-       CERTIFICATE = 3 COLUMNS
+       CERTIFICATE
     ============================== */
 
     .certificate-grid {
@@ -1662,7 +1739,7 @@ and (orientation: landscape) {
 
 
     /* ==============================
-       EVENTS = 2 COLUMNS
+       EVENTS
     ============================== */
 
     .event-grid {
@@ -1701,7 +1778,7 @@ and (orientation: landscape) {
 
 
     /* ==============================
-       CONTACT = 3 COLUMNS
+       CONTACT
     ============================== */
 
     .contact-page-grid {
@@ -1710,6 +1787,26 @@ and (orientation: landscape) {
             repeat(3, minmax(0, 1fr));
 
         gap: 18px;
+    }
+
+
+    /* ==============================
+       BACK / NEXT
+       CENTER
+    ============================== */
+
+    .back-button-container {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        margin:
+            45px auto 25px;
     }
 
 }
@@ -1952,7 +2049,6 @@ and (orientation: landscape) {
 
     /* =================================================
        CERTIFICATE MOBILE
-       = 1 COLUMN
     ================================================= */
 
     .certificate-grid {
@@ -2039,6 +2135,43 @@ and (orientation: landscape) {
         margin-bottom: 28px;
     }
 
+
+    /* =================================================
+       BACK / NEXT MOBILE
+       CENTER + SMALL
+    ================================================= */
+
+    .back-button-container {
+
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        margin:
+            35px auto 20px;
+
+        padding: 0;
+    }
+
+    .back-button-container a,
+    .back-button-container button {
+
+        min-width: 95px;
+
+        height: 36px;
+
+        padding:
+            7px 14px;
+
+        font-size: 11px;
+    }
+
 }
 
 
@@ -2060,7 +2193,7 @@ and (orientation: landscape) {
 
 
     /* ==============================
-       SKILLS = 3 COLUMNS
+       SKILLS
     ============================== */
 
     .skills-grid {
@@ -2073,7 +2206,7 @@ and (orientation: landscape) {
 
 
     /* ==============================
-       CERTIFICATE = 3 COLUMNS
+       CERTIFICATE
     ============================== */
 
     .certificate-grid {
@@ -2086,7 +2219,7 @@ and (orientation: landscape) {
 
 
     /* ==============================
-       EVENTS = 2 COLUMNS
+       EVENTS
     ============================== */
 
     .event-grid {
@@ -2099,7 +2232,7 @@ and (orientation: landscape) {
 
 
     /* ==============================
-       CONTACT = 3 COLUMNS
+       CONTACT
     ============================== */
 
     .contact-page-grid {
@@ -2108,6 +2241,41 @@ and (orientation: landscape) {
             repeat(3, minmax(0, 1fr));
 
         gap: 20px;
+    }
+
+
+    /* ==============================
+       BACK / NEXT
+       CENTER BOTTOM
+    ============================== */
+
+    .back-button-container {
+
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        margin:
+            45px auto 25px;
+    }
+
+    .back-button-container a,
+    .back-button-container button {
+
+        min-width: 105px;
+
+        height: 38px;
+
+        padding:
+            8px 16px;
+
+        font-size: 12px;
     }
 
 }
