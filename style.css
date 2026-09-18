@@ -1492,3 +1492,35 @@ and (orientation: landscape) {
     }
 
 }
+
+/* =====================================================
+   CERTIFICATE GRID - 3 COLUMNS
+   บังคับให้เกียรติบัตรเรียง 3 ช่อง
+===================================================== */
+
+.certificate-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100%;
+}
+
+.certificate-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+.certificate-card .image-placeholder {
+    width: 100%;
+    min-height: 240px;
+    padding: 0;
+}
+
+.certificate-card .image-placeholder img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
