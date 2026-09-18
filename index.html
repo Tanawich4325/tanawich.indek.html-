@@ -12,6 +12,23 @@
 
     <title>Tanawich | Portfolio</title>
 
+    <!-- Google Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
     <!-- CSS -->
     <link
         rel="stylesheet"
@@ -35,6 +52,7 @@
     <a
         href="index.html"
         class="logo"
+        aria-label="กลับหน้าหลัก"
     >
         T<span>.</span>
     </a>
@@ -42,9 +60,10 @@
 
     <!-- NAVIGATION -->
 
-    <nav class="nav-menu">
-
-        <!-- 1. หน้าแรก -->
+    <nav
+        class="nav-menu"
+        aria-label="เมนูหลัก"
+    >
 
         <a
             href="index.html"
@@ -53,17 +72,11 @@
             หน้าแรก
         </a>
 
-
-        <!-- 2. ข้อมูลส่วนตัว -->
-
         <a
             href="personal/index.html"
         >
             ข้อมูลส่วนตัว
         </a>
-
-
-        <!-- 3. แฟ้มสะสมผลงาน -->
 
         <a
             href="portfolio/index.html"
@@ -71,17 +84,11 @@
             แฟ้มสะสมผลงาน
         </a>
 
-
-        <!-- 4. รูปภาพการรับรางวัล -->
-
         <a
             href="awards/index.html"
         >
             รูปภาพการรับรางวัล
         </a>
-
-
-        <!-- 5. ช่องทางการติดต่อ -->
 
         <a
             href="contact/index.html"
@@ -98,6 +105,7 @@
         class="menu-button"
         type="button"
         aria-label="เปิดเมนู"
+        aria-expanded="false"
     >
         ☰
     </button>
@@ -125,12 +133,13 @@
     <div class="hero-content">
 
 
-        <!-- PROFILE -->
+        <!-- =================================================
+             PROFILE
+        ================================================= -->
 
         <div class="profile-container">
 
             <div class="profile-ring"></div>
-
 
             <img
                 src="images/profile.jpg"
@@ -141,14 +150,18 @@
         </div>
 
 
-        <!-- SMALL TITLE -->
+        <!-- =================================================
+             SMALL TITLE
+        ================================================= -->
 
         <p class="small-title">
             MY PORTFOLIO
         </p>
 
 
-        <!-- NAME -->
+        <!-- =================================================
+             NAME
+        ================================================= -->
 
         <h1>
 
@@ -161,7 +174,9 @@
         </h1>
 
 
-        <!-- STUDENT INFORMATION -->
+        <!-- =================================================
+             STUDENT INFORMATION
+        ================================================= -->
 
         <div class="student-info">
 
@@ -177,7 +192,9 @@
         </div>
 
 
-        <!-- HERO BUTTONS -->
+        <!-- =================================================
+             HERO BUTTONS
+        ================================================= -->
 
         <div class="hero-buttons">
 
@@ -187,11 +204,17 @@
             <a
                 href="personal/index.html"
                 class="main-button black-button"
+                aria-label="ไปยังหน้าข้อมูลส่วนตัว"
             >
 
-                ข้อมูลส่วนตัว
+                <span class="button-text">
+                    ข้อมูลส่วนตัว
+                </span>
 
-                <span>
+                <span
+                    class="button-arrow"
+                    aria-hidden="true"
+                >
                     ↗
                 </span>
 
@@ -203,11 +226,17 @@
             <a
                 href="portfolio/index.html"
                 class="main-button white-button"
+                aria-label="ไปยังหน้าแฟ้มสะสมผลงาน"
             >
 
-                แฟ้มสะสมผลงาน
+                <span class="button-text">
+                    แฟ้มสะสมผลงาน
+                </span>
 
-                <span>
+                <span
+                    class="button-arrow"
+                    aria-hidden="true"
+                >
                     ↗
                 </span>
 
@@ -220,9 +249,14 @@
     </div>
 
 
-    <!-- SCROLL -->
+    <!-- =================================================
+         SCROLL
+    ================================================= -->
 
-    <div class="scroll-text">
+    <div
+        class="scroll-text"
+        aria-hidden="true"
+    >
 
         <span></span>
 
@@ -262,38 +296,63 @@ const navMenu =
     document.querySelector(".nav-menu");
 
 
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
 if (menuButton && navMenu) {
 
     menuButton.addEventListener(
         "click",
         function () {
 
-            navMenu.classList.toggle("show");
+            const isOpen =
+                navMenu.classList.toggle("show");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            menuButton.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "ปิดเมนู"
+                    : "เปิดเมนู"
+            );
 
         }
     );
 
-}
 
+    /* ปิดเมนูเมื่อกดลิงก์ */
 
-document
-    .querySelectorAll(".nav-menu a")
-    .forEach(function(link) {
+    document
+        .querySelectorAll(".nav-menu a")
+        .forEach(function(link) {
 
-        link.addEventListener(
-            "click",
-            function() {
-
-                if (navMenu) {
+            link.addEventListener(
+                "click",
+                function() {
 
                     navMenu.classList.remove("show");
 
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuButton.setAttribute(
+                        "aria-label",
+                        "เปิดเมนู"
+                    );
+
                 }
+            );
 
-            }
-        );
+        });
 
-    });
+}
 
 </script>
 
