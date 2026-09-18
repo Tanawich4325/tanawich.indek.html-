@@ -31,10 +31,6 @@ button {
     font-family: inherit;
 }
 
-img {
-    max-width: 100%;
-}
-
 :root {
     --black: #080808;
     --dark: #151515;
@@ -63,7 +59,6 @@ img {
     max-width: var(--max-width);
 
     height: 64px;
-    min-height: 64px;
 
     display: flex;
     align-items: center;
@@ -71,7 +66,7 @@ img {
 
     padding: 0 18px;
 
-    z-index: 9999;
+    z-index: 999;
 
     background: rgba(255, 255, 255, 0.92);
 
@@ -109,7 +104,7 @@ img {
     font-size: 19px;
     font-weight: 800;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .logo span {
@@ -156,7 +151,7 @@ img {
 
 
 /* =====================================================
-   MOBILE MENU
+   MOBILE MENU BUTTON
 ===================================================== */
 
 .menu-button {
@@ -170,6 +165,8 @@ img {
     cursor: pointer;
 
     padding: 5px;
+
+    color: #000;
 }
 
 
@@ -193,8 +190,14 @@ img {
     overflow: hidden;
 }
 
+
+/* =====================================================
+   BACKGROUND GRID
+===================================================== */
+
 .background-grid {
     position: absolute;
+
     inset: 0;
 
     z-index: -1;
@@ -212,10 +215,12 @@ img {
 
     background-size: 65px 65px;
 
-    animation: grid-animation 18s linear infinite;
+    animation:
+        grid-animation 18s linear infinite;
 }
 
 @keyframes grid-animation {
+
     from {
         transform: translateY(0);
     }
@@ -223,6 +228,7 @@ img {
     to {
         transform: translateY(65px);
     }
+
 }
 
 
@@ -233,9 +239,6 @@ img {
 .hero-content {
     width: 100%;
     max-width: 850px;
-
-    position: relative;
-    z-index: 2;
 }
 
 
@@ -252,6 +255,7 @@ img {
     margin: 0 auto 25px;
 
     border-radius: 50%;
+
     overflow: visible;
 }
 
@@ -272,25 +276,33 @@ img {
         0 20px 50px rgba(0, 0, 0, 0.14);
 
     position: relative;
+
     z-index: 2;
 
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 
 .profile-image:hover {
     transform: scale(1.03);
 }
 
+
+/* =====================================================
+   PROFILE RING
+===================================================== */
+
 .profile-ring {
     position: absolute;
 
     inset: -8px;
 
-    border: 1px solid #aaa;
+    border:
+        1px solid #aaa;
 
     border-radius: 50%;
 
-    animation: rotate-ring 14s linear infinite;
+    animation:
+        rotate-ring 14s linear infinite;
 
     z-index: 1;
 }
@@ -320,9 +332,11 @@ img {
 }
 
 @keyframes rotate-ring {
+
     to {
         transform: rotate(360deg);
     }
+
 }
 
 
@@ -343,7 +357,8 @@ img {
 }
 
 .hero h1 {
-    font-size: clamp(32px, 4.3vw, 56px);
+    font-size:
+        clamp(32px, 4.3vw, 56px);
 
     line-height: 1.2;
 
@@ -351,7 +366,8 @@ img {
 
     font-weight: 400;
 
-    animation: text-up 0.8s ease both;
+    animation:
+        text-up 0.8s ease both;
 }
 
 .hero h1 strong {
@@ -359,6 +375,7 @@ img {
 }
 
 @keyframes text-up {
+
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -368,6 +385,7 @@ img {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 .student-info {
@@ -398,7 +416,8 @@ img {
 
     padding: 12px 20px;
 
-    border: 1px solid #000;
+    border:
+        1px solid #000;
 
     border-radius: 50px;
 
@@ -410,44 +429,65 @@ img {
     gap: 12px;
 
     font-size: 13px;
+
     font-weight: 700;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .main-button span {
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .main-button:hover span {
-    transform: translate(4px, -2px);
+    transform:
+        translate(4px, -2px);
 }
 
+
+/* BLACK BUTTON */
+
 .black-button {
-    color: white;
-    background: black;
+    color: #fff;
+
+    background: #000;
 }
 
 .black-button:hover {
-    color: black;
-    background: white;
+    color: #000;
 
-    transform: translateY(-3px);
+    background: #fff;
+
+    transform:
+        translateY(-3px);
 
     box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
+
+/* WHITE BUTTON */
+
 .white-button {
-    color: black;
-    background: white;
+    color: #000;
+
+    background: #fff;
 }
 
 .white-button:hover {
-    color: white;
-    background: black;
+    color: #fff;
 
-    transform: translateY(-3px);
+    background: #000;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -461,7 +501,8 @@ img {
     bottom: 25px;
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     font-size: 8px;
 
@@ -484,10 +525,12 @@ img {
 
     background: #999;
 
-    animation: scroll-line 1.5s infinite;
+    animation:
+        scroll-line 1.5s infinite;
 }
 
 @keyframes scroll-line {
+
     0%,
     100% {
         transform: scaleY(0.5);
@@ -496,6 +539,7 @@ img {
     50% {
         transform: scaleY(1);
     }
+
 }
 
 
@@ -504,23 +548,21 @@ img {
 ===================================================== */
 
 .page-container {
-    width: min(
-        calc(100% - 48px),
-        var(--max-width)
-    );
+    width:
+        min(
+            calc(100% - 48px),
+            var(--max-width)
+        );
 
-    margin: auto;
+    margin:
+        0 auto;
 
-    padding: 125px 0 60px;
+    padding:
+        125px 0 60px;
 }
 
 .content-section {
-    scroll-margin-top: 95px;
-
-    /* สำคัญ: บังคับให้แสดง */
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
+    width: 100%;
 }
 
 
@@ -534,7 +576,8 @@ img {
 
 .section-header h1,
 .section-header h2 {
-    font-size: clamp(30px, 4.2vw, 52px);
+    font-size:
+        clamp(30px, 4.2vw, 52px);
 
     line-height: 1.2;
 
@@ -544,7 +587,8 @@ img {
 }
 
 .section-header h2 {
-    font-size: clamp(27px, 3.5vw, 42px);
+    font-size:
+        clamp(27px, 3.5vw, 42px);
 }
 
 .title-line {
@@ -587,27 +631,30 @@ img {
 
     position: relative;
 
-    transition: 0.35s;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 
     width: 100%;
-
-    overflow: hidden;
 }
 
 .university-box {
-    color: white;
+    color: #fff;
+
     background: #080808;
 }
 
 .personal-box {
     background: #f4f4f4;
 
-    border: 1px solid #ddd;
+    border:
+        1px solid #ddd;
 }
 
 .university-box:hover,
 .personal-box:hover {
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.10);
@@ -645,7 +692,8 @@ img {
 
     line-height: 1.3;
 
-    margin: 10px 0 24px;
+    margin:
+        10px 0 24px;
 }
 
 
@@ -723,143 +771,6 @@ img {
 
 
 /* =====================================================
-   SKILLS
-===================================================== */
-
-.skills-section {
-    margin-top: 60px;
-}
-
-.skills-header {
-    margin-bottom: 28px;
-}
-
-.skills-header h2 {
-    font-size:
-        clamp(28px, 3.5vw, 42px);
-
-    line-height: 1.25;
-
-    letter-spacing: -0.03em;
-
-    font-weight: 800;
-
-    margin-top: 5px;
-}
-
-.skills-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 15px;
-
-    width: 100%;
-}
-
-.skill-card {
-    position: relative;
-
-    min-height: 220px;
-
-    padding: 25px;
-
-    border:
-        1px solid #ddd;
-
-    border-radius: 20px;
-
-    background: #fff;
-
-    overflow: hidden;
-
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-
-    background: #080808;
-
-    color: #fff;
-
-    box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.10);
-}
-
-.skill-number {
-    position: absolute;
-
-    top: 17px;
-    right: 19px;
-
-    font-size: 10px;
-
-    color: #999;
-
-    font-weight: 700;
-}
-
-.skill-card:hover .skill-number {
-    color: #777;
-}
-
-.skill-icon {
-    width: 46px;
-    height: 46px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #f2f2f2;
-
-    color: #000;
-
-    font-size: 20px;
-
-    margin-bottom: 22px;
-
-    transition: 0.3s;
-}
-
-.skill-card:hover .skill-icon {
-    background: #fff;
-    color: #000;
-}
-
-.skill-card h3 {
-    font-size: 16px;
-
-    line-height: 1.4;
-
-    margin-bottom: 8px;
-
-    font-weight: 800;
-}
-
-.skill-card p {
-    color: #777;
-
-    font-size: 12px;
-
-    line-height: 1.7;
-}
-
-.skill-card:hover p {
-    color: #aaa;
-}
-
-
-/* =====================================================
    TEXT CONTENT
 ===================================================== */
 
@@ -887,100 +798,15 @@ img {
 
 
 /* =====================================================
-   CONTACT
-===================================================== */
-
-.contact-section {
-    margin-top: 70px;
-
-    padding:
-        60px 0 80px;
-
-    border-top:
-        1px solid #ddd;
-}
-
-.contact-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(5, minmax(0, 1fr));
-
-    gap: 10px;
-}
-
-.contact-card {
-    min-height: 160px;
-
-    padding: 21px;
-
-    border:
-        1px solid #ddd;
-
-    border-radius: 18px;
-
-    transition: 0.3s;
-}
-
-.contact-card:hover {
-    color: white;
-    background: black;
-
-    transform: translateY(-5px);
-}
-
-.contact-icon {
-    font-size: 22px;
-
-    margin-bottom: 15px;
-}
-
-.contact-card small {
-    display: block;
-
-    color: #888;
-
-    font-size: 10px;
-
-    margin-bottom: 6px;
-}
-
-.contact-card:hover small {
-    color: #aaa;
-}
-
-.contact-card p {
-    font-size: 12px;
-
-    font-weight: 600;
-
-    word-break: break-word;
-}
-
-
-/* =====================================================
    PORTFOLIO
 ===================================================== */
 
 .portfolio-section {
-    margin-top: 65px;
-
-    padding-top: 65px;
-
-    border-top:
-        1px solid #ddd;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
+    margin-top: 0;
 }
 
 .portfolio-block {
     margin-top: 50px;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
 }
 
 .portfolio-heading {
@@ -997,6 +823,8 @@ img {
     color: #888;
 
     padding-top: 5px;
+
+    flex-shrink: 0;
 }
 
 .portfolio-heading h2 {
@@ -1031,14 +859,17 @@ img {
 
     border-radius: 19px;
 
-    background: white;
+    background: #fff;
 
-    transition: 0.35s;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .certificate-card:hover,
 .event-card:hover {
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
     box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.08);
@@ -1046,7 +877,7 @@ img {
 
 
 /* =====================================================
-   IMAGE
+   IMAGE PLACEHOLDER
 ===================================================== */
 
 .image-placeholder {
@@ -1088,6 +919,7 @@ img {
     height: auto;
 
     object-fit: contain;
+
     object-position: center;
 }
 
@@ -1097,13 +929,18 @@ img {
 ===================================================== */
 
 .card-description {
-    padding: 16px 18px;
+    padding:
+        16px 18px;
 }
 
 .card-description h3 {
     font-size: 15px;
 
-    margin-bottom: 4px;
+    line-height: 1.5;
+
+    margin-bottom: 5px;
+
+    font-weight: 800;
 }
 
 .card-description p {
@@ -1136,75 +973,60 @@ img {
 
 
 /* =====================================================
-   BACK / NEXT BUTTON
+   PAGE NAVIGATION
 ===================================================== */
 
-.back-button-container {
+.page-navigation {
     width: 100%;
 
     display: flex;
 
     align-items: center;
 
-    justify-content: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin:
+        45px 0 10px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid #ddd;
+}
+
+
+/* =====================================================
+   PAGE NAV BUTTON
+===================================================== */
+
+.page-nav-button {
+    display: inline-flex;
+
+    align-items: center;
 
     gap: 10px;
 
-    margin: 35px auto 20px;
+    min-width: 150px;
 
-    padding: 0;
+    min-height: 50px;
 
-    text-align: center;
+    padding:
+        9px 16px;
 
-    clear: both;
-}
+    border:
+        1px solid #d8d8d8;
 
-.back-button-container a,
-.back-button-container button,
-.back-button,
-.next-button {
-    display: inline-flex !important;
+    border-radius: 50px;
 
-    align-items: center !important;
-    justify-content: center !important;
+    background: #fff;
 
-    flex: 0 0 auto !important;
+    color: #222;
 
-    width: auto !important;
-    min-width: 95px !important;
-    max-width: max-content !important;
+    font-size: 12px;
 
-    height: 36px !important;
-
-    padding: 7px 14px !important;
-
-    margin: 0 !important;
-
-    border: 1px solid #d8d8d8 !important;
-
-    border-radius: 50px !important;
-
-    background: #ffffff !important;
-
-    color: #222222 !important;
-
-    font-family:
-        "Noto Sans Thai",
-        sans-serif !important;
-
-    font-size: 11px !important;
-
-    font-weight: 600 !important;
-
-    line-height: 1.4 !important;
-
-    text-decoration: none !important;
-
-    cursor: pointer;
-
-    white-space: nowrap !important;
-
-    box-sizing: border-box !important;
+    font-weight: 700;
 
     transition:
         background 0.25s ease,
@@ -1214,20 +1036,81 @@ img {
         box-shadow 0.25s ease;
 }
 
-.back-button-container a:hover,
-.back-button-container button:hover,
-.back-button:hover,
-.next-button:hover {
-    background: #080808 !important;
+.page-nav-button:hover {
+    background: #080808;
 
-    color: #ffffff !important;
+    color: #fff;
 
-    border-color: #080808 !important;
+    border-color: #080808;
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-3px);
 
     box-shadow:
-        0 7px 16px rgba(0, 0, 0, 0.10);
+        0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =====================================================
+   PAGE NAV ARROW
+===================================================== */
+
+.page-nav-arrow {
+    font-size: 17px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.page-nav-button:hover
+.page-nav-arrow {
+    transform:
+        translateX(2px);
+}
+
+
+/* =====================================================
+   PAGE NAV TEXT
+===================================================== */
+
+.page-nav-text {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.35;
+}
+
+.page-nav-text small {
+    color: #999;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    margin-bottom: 2px;
+}
+
+.page-nav-button:hover
+.page-nav-text small {
+    color: #aaa;
+}
+
+
+/* =====================================================
+   OLD MAIN BUTTON AS PAGE NAV
+   ใช้กับ awards/contact ที่ยังใช้ main-button
+===================================================== */
+
+.page-navigation .main-button {
+    min-width: 130px;
+
+    padding:
+        11px 18px;
+
+    font-size: 12px;
 }
 
 
@@ -1251,28 +1134,19 @@ footer {
 
 
 /* =====================================================
-   IMPORTANT
-   ป้องกัน JS animation ทำให้หน้าเว็บกลายเป็นว่าง
+   ANIMATION
 ===================================================== */
 
 .content-section,
-.portfolio-block,
-.contact-section {
-    opacity: 1 !important;
+.portfolio-block {
+    opacity: 1;
 
-    visibility: visible !important;
+    transform:
+        translateY(0);
 
-    transform: none !important;
-}
-
-.content-section.show-animation,
-.portfolio-block.show-animation,
-.contact-section.show-animation {
-    opacity: 1 !important;
-
-    visibility: visible !important;
-
-    transform: none !important;
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
 }
 
 
@@ -1290,6 +1164,11 @@ footer {
 
     width: 100%;
 }
+
+
+/* =====================================================
+   CONTACT PAGE CARD
+===================================================== */
 
 .contact-page-card {
     position: relative;
@@ -1317,9 +1196,10 @@ footer {
 .contact-page-card:hover {
     background: #080808;
 
-    color: #ffffff;
+    color: #fff;
 
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.12);
@@ -1343,7 +1223,8 @@ footer {
     font-weight: 700;
 }
 
-.contact-page-card:hover .contact-page-number {
+.contact-page-card:hover
+.contact-page-number {
     color: #777;
 }
 
@@ -1363,9 +1244,9 @@ footer {
 
     border-radius: 50%;
 
-    background: #ffffff;
+    background: #fff;
 
-    color: #000000;
+    color: #000;
 
     font-size: 22px;
 
@@ -1374,15 +1255,16 @@ footer {
     border:
         1px solid #ddd;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.contact-page-card:hover .contact-icon {
-    background: #ffffff;
+.contact-page-card:hover
+.contact-icon {
+    background: #fff;
 
-    color: #000000;
+    color: #000;
 
-    border-color: #ffffff;
+    border-color: #fff;
 }
 
 
@@ -1449,33 +1331,38 @@ footer {
 
 @media (max-width: 1100px) {
 
-    .skills-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+    .navbar {
+        width:
+            calc(100% - 40px);
+    }
+
+    .nav-menu a {
+        padding:
+            8px 10px;
+
+        font-size: 12px;
+    }
+
+    .page-container {
+        width:
+            calc(100% - 70px);
     }
 
     .contact-page-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
-}
 
-
-/* =====================================================
-   TABLET CONTACT
-===================================================== */
-
-@media (max-width: 900px) {
-
-    .contact-grid {
+    .certificate-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
+
 }
 
 
 /* =====================================================
-   IPAD PORTRAIT
+   TABLET / IPAD PORTRAIT
 ===================================================== */
 
 @media (min-width: 651px)
@@ -1483,20 +1370,23 @@ and (max-width: 1100px)
 and (orientation: portrait) {
 
     .navbar {
-        width: calc(100% - 50px);
+        width:
+            calc(100% - 50px);
 
         height: 62px;
-        min-height: 62px;
     }
 
     .page-container {
-        width: calc(100% - 70px);
+        width:
+            calc(100% - 70px);
 
-        padding-top: 115px;
+        padding-top:
+            115px;
     }
 
     .personal-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .university-box,
@@ -1504,19 +1394,9 @@ and (orientation: portrait) {
         min-height: auto;
     }
 
-    .skills-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 15px;
-    }
-
-    .skill-card {
-        min-height: 215px;
-    }
-
     .certificate-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 22px;
 
@@ -1528,21 +1408,25 @@ and (orientation: portrait) {
 
         max-width: 560px;
 
-        margin: 0 auto;
+        margin:
+            0 auto;
     }
 
-    .certificate-card .image-placeholder {
+    .certificate-card
+    .image-placeholder {
         min-height: 0;
 
         padding: 12px;
     }
 
-    .certificate-card .image-placeholder img {
+    .certificate-card
+    .image-placeholder img {
         width: 100%;
     }
 
     .event-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 22px;
 
@@ -1554,16 +1438,19 @@ and (orientation: portrait) {
 
         max-width: 560px;
 
-        margin: 0 auto;
+        margin:
+            0 auto;
     }
 
-    .event-card .image-placeholder.large {
+    .event-card
+    .image-placeholder.large {
         min-height: 0;
 
         padding: 12px;
     }
 
-    .event-card .image-placeholder.large img {
+    .event-card
+    .image-placeholder.large img {
         width: 100%;
     }
 
@@ -1571,6 +1458,7 @@ and (orientation: portrait) {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
+
 }
 
 
@@ -1582,19 +1470,15 @@ and (orientation: portrait) {
 and (max-width: 1400px)
 and (orientation: landscape) {
 
-    .navbar {
-        width: calc(100% - 50px);
-    }
-
     .page-container {
-        width: calc(100% - 70px);
+        width:
+            calc(100% - 70px);
 
-        max-width: 1080px;
+        max-width:
+            1080px;
 
-        padding-top: 115px;
-
-        opacity: 1 !important;
-        visibility: visible !important;
+        padding-top:
+            115px;
     }
 
     .personal-grid {
@@ -1611,20 +1495,11 @@ and (orientation: landscape) {
         min-height: 455px;
     }
 
-    .skills-grid {
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
-        gap: 15px;
-    }
-
     .certificate-grid {
         grid-template-columns:
             repeat(3, minmax(0, 1fr));
 
         gap: 15px;
-
-        width: 100%;
     }
 
     .certificate-card {
@@ -1635,13 +1510,15 @@ and (orientation: landscape) {
         margin: 0;
     }
 
-    .certificate-card .image-placeholder {
+    .certificate-card
+    .image-placeholder {
         min-height: 0;
 
         padding: 12px;
     }
 
-    .certificate-card .image-placeholder img {
+    .certificate-card
+    .image-placeholder img {
         width: 100%;
     }
 
@@ -1660,13 +1537,15 @@ and (orientation: landscape) {
         margin: 0;
     }
 
-    .event-card .image-placeholder.large {
+    .event-card
+    .image-placeholder.large {
         min-height: 0;
 
         padding: 12px;
     }
 
-    .event-card .image-placeholder.large img {
+    .event-card
+    .image-placeholder.large img {
         width: 100%;
     }
 
@@ -1676,6 +1555,7 @@ and (orientation: landscape) {
 
         gap: 15px;
     }
+
 }
 
 
@@ -1685,15 +1565,20 @@ and (orientation: landscape) {
 
 @media (max-width: 650px) {
 
+    /* ==============================
+       NAVBAR
+    ============================== */
+
     .navbar {
-        width: calc(100% - 24px);
+        width:
+            calc(100% - 24px);
 
         top: 10px;
 
         height: 58px;
-        min-height: 58px;
 
-        padding: 0 14px;
+        padding:
+            0 14px;
     }
 
     .logo {
@@ -1746,16 +1631,20 @@ and (orientation: landscape) {
 
         text-align: center;
 
-        padding: 10px 13px;
+        padding:
+            10px 13px;
 
         font-size: 13px;
     }
 
 
-    /* HERO */
+    /* ==============================
+       HERO
+    ============================== */
 
     .hero {
-        min-height: 100svh;
+        min-height:
+            100svh;
 
         padding:
             105px 16px 65px;
@@ -1793,12 +1682,15 @@ and (orientation: landscape) {
     }
 
 
-    /* HERO BUTTONS */
+    /* ==============================
+       HERO BUTTONS
+    ============================== */
 
     .hero-buttons {
         flex-direction: column;
 
-        width: min(100%, 290px);
+        width:
+            min(100%, 290px);
 
         margin-left: auto;
         margin-right: auto;
@@ -1813,24 +1705,32 @@ and (orientation: landscape) {
 
         min-width: 0;
 
-        padding: 11px 18px;
+        padding:
+            11px 18px;
 
         font-size: 12px;
     }
 
 
-    /* PAGE */
+    /* ==============================
+       PAGE
+    ============================== */
 
     .page-container {
-        width: calc(100% - 28px);
+        width:
+            calc(100% - 28px);
 
-        padding-top: 105px;
+        padding-top:
+            105px;
 
-        padding-bottom: 50px;
+        padding-bottom:
+            50px;
     }
 
 
-    /* HEADER */
+    /* ==============================
+       SECTION HEADER
+    ============================== */
 
     .section-header {
         margin-bottom: 28px;
@@ -1851,10 +1751,13 @@ and (orientation: landscape) {
     }
 
 
-    /* PERSONAL */
+    /* ==============================
+       PERSONAL
+    ============================== */
 
     .personal-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 12px;
     }
@@ -1883,7 +1786,8 @@ and (orientation: landscape) {
 
         gap: 8px;
 
-        padding: 14px 0;
+        padding:
+            14px 0;
     }
 
     .university-item h3 {
@@ -1895,70 +1799,32 @@ and (orientation: landscape) {
     }
 
 
-    /* INFORMATION */
+    /* ==============================
+       INFORMATION
+    ============================== */
 
     .information-row {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 2px;
 
-        padding: 12px 0;
+        padding:
+            12px 0;
 
         font-size: 12px;
     }
 
     .information-row strong {
         font-size: 13px;
+
+        line-height: 1.6;
     }
 
 
-    /* SKILLS */
-
-    .skills-section {
-        margin-top: 50px;
-    }
-
-    .skills-header {
-        margin-bottom: 23px;
-    }
-
-    .skills-header h2 {
-        font-size: 27px;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-    }
-
-    .skill-card {
-        min-height: auto;
-
-        padding: 22px;
-
-        border-radius: 19px;
-    }
-
-    .skill-icon {
-        width: 43px;
-        height: 43px;
-
-        font-size: 18px;
-
-        margin-bottom: 19px;
-    }
-
-    .skill-card h3 {
-        font-size: 15px;
-    }
-
-    .skill-card p {
-        font-size: 12px;
-    }
-
-
-    /* TEXT */
+    /* ==============================
+       TEXT
+    ============================== */
 
     .text-content {
         margin-top: 50px;
@@ -1977,37 +1843,9 @@ and (orientation: landscape) {
     }
 
 
-    /* CONTACT */
-
-    .contact-section {
-        margin-top: 60px;
-
-        padding:
-            50px 0 60px;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-
-        gap: 10px;
-    }
-
-    .contact-card {
-        min-height: auto;
-
-        padding: 20px;
-
-        border-radius: 18px;
-    }
-
-
-    /* PORTFOLIO */
-
-    .portfolio-section {
-        margin-top: 55px;
-
-        padding-top: 55px;
-    }
+    /* ==============================
+       PORTFOLIO
+    ============================== */
 
     .portfolio-block {
         margin-top: 42px;
@@ -2028,10 +1866,13 @@ and (orientation: landscape) {
     }
 
 
-    /* CERTIFICATE */
+    /* ==============================
+       CERTIFICATES
+    ============================== */
 
     .certificate-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 18px;
     }
@@ -2042,18 +1883,22 @@ and (orientation: landscape) {
         border-radius: 18px;
     }
 
-    .certificate-card .image-placeholder {
+    .certificate-card
+    .image-placeholder {
         padding: 10px;
 
         min-height: 0;
     }
 
-    .certificate-card .image-placeholder img {
+    .certificate-card
+    .image-placeholder img {
         width: 100%;
     }
 
-    .certificate-card .card-description {
-        padding: 14px 16px;
+    .certificate-card
+    .card-description {
+        padding:
+            14px 16px;
     }
 
     .card-description h3 {
@@ -2065,10 +1910,13 @@ and (orientation: landscape) {
     }
 
 
-    /* EVENTS */
+    /* ==============================
+       EVENTS
+    ============================== */
 
     .event-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 18px;
     }
@@ -2079,25 +1927,32 @@ and (orientation: landscape) {
         border-radius: 18px;
     }
 
-    .event-card .image-placeholder.large {
+    .event-card
+    .image-placeholder.large {
         padding: 10px;
 
         min-height: 0;
     }
 
-    .event-card .image-placeholder.large img {
+    .event-card
+    .image-placeholder.large img {
         width: 100%;
     }
 
-    .event-card .card-description {
-        padding: 14px 16px;
+    .event-card
+    .card-description {
+        padding:
+            14px 16px;
     }
 
 
-    /* CONTACT PAGE */
+    /* ==============================
+       CONTACT
+    ============================== */
 
     .contact-page-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 12px;
     }
@@ -2129,45 +1984,62 @@ and (orientation: landscape) {
     }
 
 
-    /* BACK BUTTON */
+    /* ==============================
+       PAGE NAVIGATION
+    ============================== */
 
-    .back-button-container {
-        width: 100%;
+    .page-navigation {
+        flex-direction: row;
 
-        display: flex;
+        justify-content: space-between;
 
-        align-items: center;
+        gap: 8px;
 
-        justify-content: center;
+        margin-top:
+            35px;
 
-        gap: 7px;
-
-        margin: 28px auto 18px;
-
-        padding: 0;
+        padding-top:
+            20px;
     }
 
-    .back-button-container a,
-    .back-button-container button,
-    .back-button,
-    .next-button {
-        flex: 0 0 auto !important;
+    .page-nav-button {
+        min-width: 0;
 
-        min-width: 88px !important;
-        max-width: max-content !important;
+        width: auto;
 
-        width: auto !important;
-
-        height: 34px !important;
+        min-height: 42px;
 
         padding:
-            6px 12px !important;
+            7px 13px;
 
-        font-size: 10px !important;
+        font-size: 10px;
+
+        gap: 7px;
+    }
+
+    .page-nav-arrow {
+        font-size: 15px;
+    }
+
+    .page-nav-text small {
+        font-size: 8px;
+    }
+
+    .page-navigation .main-button {
+        min-width: 100px;
+
+        width: auto;
+
+        padding:
+            9px 14px;
+
+        font-size: 10px;
     }
 
 
-    /* FOOTER */
+    /* ==============================
+       FOOTER
+    ============================== */
 
     footer {
         padding:
@@ -2175,6 +2047,7 @@ and (orientation: landscape) {
 
         font-size: 10px;
     }
+
 }
 
 
@@ -2202,7 +2075,8 @@ and (orientation: landscape) {
     }
 
     .page-container {
-        width: calc(100% - 24px);
+        width:
+            calc(100% - 24px);
     }
 
     .section-header h1,
@@ -2214,23 +2088,26 @@ and (orientation: landscape) {
         font-size: 19px;
     }
 
-    .back-button-container {
+    .page-navigation {
         gap: 6px;
     }
 
-    .back-button-container a,
-    .back-button-container button,
-    .back-button,
-    .next-button {
-        min-width: 84px !important;
+    .page-nav-button {
+        padding:
+            7px 10px;
 
-        height: 33px !important;
+        font-size: 9px;
+    }
+
+    .page-navigation .main-button {
+        min-width: 92px;
 
         padding:
-            6px 10px !important;
+            8px 11px;
 
-        font-size: 10px !important;
+        font-size: 9px;
     }
+
 }
 
 
@@ -2241,19 +2118,13 @@ and (orientation: landscape) {
 @media (min-width: 1401px) {
 
     .page-container {
-        max-width: 1080px;
+        max-width:
+            1080px;
     }
 
     .personal-grid {
         grid-template-columns:
             0.9fr 1.1fr;
-    }
-
-    .skills-grid {
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
-        gap: 15px;
     }
 
     .certificate-grid {
@@ -2277,33 +2148,4 @@ and (orientation: landscape) {
         gap: 15px;
     }
 
-    .back-button-container {
-        width: 100%;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        gap: 8px;
-
-        margin: 35px auto 20px;
-    }
-
-    .back-button-container a,
-    .back-button-container button,
-    .back-button,
-    .next-button {
-        min-width: 95px !important;
-
-        width: auto !important;
-
-        height: 36px !important;
-
-        padding:
-            7px 14px !important;
-
-        font-size: 11px !important;
-    }
 }
